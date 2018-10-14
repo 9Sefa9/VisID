@@ -1,7 +1,9 @@
 #main-pane{
-    -fx-background-color: rgba(218, 239, 251, 1);
+    -fx-background-color: rgb(192, 233, 214);
 }
-#form-main-pane{
+#form-main-pane {
     -fx-background-color: rgba(177, 221, 246, 1);
 }
-
+#mid-main-pane{
+    -fx-background-color: rgba(177, 221, 246, 1);
+}
