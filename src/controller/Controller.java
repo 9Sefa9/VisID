@@ -22,12 +22,13 @@ public class Controller {
     public void initialize(){
 
     }
+    //füge Form.fxml zu mid-main-pane hinzu
     @FXML
     public void createVisitButtonAction(ActionEvent event){
+        Parent form;
         try {
-
-            Parent form = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
-            contentPane.getChildren().setAll(form);
+           form = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
+           contentPane.getChildren().setAll(form);
         }catch(IOException i){
             i.printStackTrace();
         }
