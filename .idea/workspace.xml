@@ -51,14 +51,14 @@
           <entry key="css" value="62" />
           <entry key="fxml" value="64" />
           <entry key="java" value="2456" />
-          <entry key="txt" value="243" />
+          <entry key="txt" value="262" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="62" />
           <entry key="JAVA" value="2456" />
-          <entry key="PLAIN_TEXT" value="243" />
+          <entry key="PLAIN_TEXT" value="262" />
           <entry key="XML" value="64" />
         </counts>
       </usages-collector>
@@ -84,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -124,12 +124,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fxml/Form.fxml">
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
             <state relative-caret-position="6258">
-              <caret line="298" column="14" selection-start-line="298" selection-start-column="14" selection-end-line="298" selection-end-column="14" />
+              <caret line="299" column="14" selection-start-line="299" selection-start-column="14" selection-end-line="299" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -427,7 +427,7 @@
       <workItem from="1539552870779" duration="6888000" />
       <workItem from="1539596614075" duration="2380000" />
       <workItem from="1539635071858" duration="6990000" />
-      <workItem from="1539707472138" duration="6495000" />
+      <workItem from="1539707472138" duration="7196000" />
     </task>
     <task id="LOCAL-00001" summary="Form done!">
       <created>1539556290487</created>
@@ -499,11 +499,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539715262215</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="first alpha version">
+      <created>1539716193622</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1539716193622</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23080000" />
+    <option name="totallyTimeSpent" value="23781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -556,7 +563,8 @@
     <MESSAGE value="-" />
     <MESSAGE value="gefällt mir" />
     <MESSAGE value="first good formula" />
-    <option name="LAST_COMMIT_MESSAGE" value="first good formula" />
+    <MESSAGE value="first alpha version" />
+    <option name="LAST_COMMIT_MESSAGE" value="first alpha version" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
@@ -611,14 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fxml/Form.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="6258">
-          <caret line="298" column="14" selection-start-line="298" selection-start-column="14" selection-end-line="298" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -626,6 +626,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fxml/Form.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="6258">
+          <caret line="299" column="14" selection-start-line="299" selection-start-column="14" selection-end-line="299" selection-end-column="14" />
         </state>
       </provider>
     </entry>
