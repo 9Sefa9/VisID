@@ -23,7 +23,7 @@ public class Controller {
             if(form == null)
               form = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
             this.contentPane.getChildren().setAll(form);
-            this.contentPane.autosize();
+
         }catch(IOException i){
             i.printStackTrace();
         }

@@ -19,9 +19,10 @@ public class Main extends Application {
        // GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
        // int width = gd.getDisplayMode().getWidth();
        // int height = gd.getDisplayMode().getHeight();
-        primaryStage.setScene(new Scene(root, 1024, 640));
+        primaryStage.setScene(new Scene(root, 1020, 620));
 
         primaryStage.setResizable(false);
+
         primaryStage.show();
 
     }
