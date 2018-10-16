@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
 
+import java.awt.*;
+
 
 public class Main extends Application {
 
@@ -14,7 +16,10 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
         primaryStage.setTitle("VisID");
-        primaryStage.setScene(new Scene(root, 1024 , 620));
+       // GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+       // int width = gd.getDisplayMode().getWidth();
+       // int height = gd.getDisplayMode().getHeight();
+        primaryStage.setScene(new Scene(root, 1024, 640));
 
         primaryStage.setResizable(false);
         primaryStage.show();

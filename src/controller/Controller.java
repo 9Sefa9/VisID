@@ -22,8 +22,8 @@ public class Controller {
             //sorgt dafür, dass daten erhalten bleiben bei fxml scene wechsel
             if(form == null)
               form = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
-
             this.contentPane.getChildren().setAll(form);
+            this.contentPane.autosize();
         }catch(IOException i){
             i.printStackTrace();
         }

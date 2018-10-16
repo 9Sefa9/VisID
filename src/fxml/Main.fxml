@@ -52,8 +52,12 @@
          </top>
          <center>
             <AnchorPane>
-            <Pane id="mid-main-pane" fx:id="contentPane" prefHeight="511.0" prefWidth="1024.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                  <Pane id="mid-main-pane" fx:id="contentPane" prefHeight="511.0" prefWidth="1024.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             </Pane>
+                  </children>
+               </AnchorPane>
             </AnchorPane>
          </center>
          <right>
