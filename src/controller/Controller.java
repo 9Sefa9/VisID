@@ -24,6 +24,8 @@ public class Controller {
             if(form == null)
               form = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
             this.content.getChildren().setAll(form);
+
+
         }catch(IOException i){
             i.printStackTrace();
         }
