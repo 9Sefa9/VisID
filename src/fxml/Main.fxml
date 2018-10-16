@@ -51,8 +51,8 @@
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane>
-            <Pane id="mid-main-pane" fx:id="contentPane" prefHeight="511.0" prefWidth="1024.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="content">
+            <Pane id="mid-main-pane" prefHeight="511.0" prefWidth="1024.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             </Pane>
             </AnchorPane>
          </center>
@@ -67,7 +67,7 @@
                         <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#visitButtonAction" prefHeight="61.0" prefWidth="230.0" stylesheets="@../css/Button.css" text="Besucher eintragen" textAlignment="CENTER" />
                      </children>
                   </Pane>
-                  <Button contentDisplay="CENTER" layoutX="512.0" layoutY="21.0" mnemonicParsing="false" onAction="#test" prefHeight="61.0" prefWidth="230.0" stylesheets="@../css/Button.css" text="Test" textAlignment="CENTER" />
+                  <Button contentDisplay="CENTER" layoutX="519.0" layoutY="28.0" mnemonicParsing="false" onAction="#test" prefHeight="61.0" prefWidth="230.0" stylesheets="@../css/Button.css" text="Test" textAlignment="CENTER" />
                </children></AnchorPane>
          </bottom>
       </BorderPane>

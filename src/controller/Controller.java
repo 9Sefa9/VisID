@@ -2,6 +2,7 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
@@ -11,7 +12,7 @@ public class Controller {
     private Parent form;
     private Parent test;
 
-    @FXML public Pane contentPane;
+    @FXML public AnchorPane content;
 
     @FXML
     public void initialize()throws IOException{}
@@ -22,8 +23,7 @@ public class Controller {
             //sorgt dafür, dass daten erhalten bleiben bei fxml scene wechsel
             if(form == null)
               form = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
-            this.contentPane.getChildren().setAll(form);
-
+            this.content.getChildren().setAll(form);
         }catch(IOException i){
             i.printStackTrace();
         }
@@ -33,9 +33,8 @@ public class Controller {
     public void test(){
         try {
             if(test == null)
-            test = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Test.fxml"));
-
-            this.contentPane.getChildren().setAll(test);
+               test = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Test.fxml"));
+            this.content.getChildren().setAll(test);
         }catch(IOException i){
             i.printStackTrace();
         }
