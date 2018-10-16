@@ -1,130 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
-      <Pane id="mid-main-pane" layoutX="-2.0" layoutY="-6.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="511.0" prefWidth="1021.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1758.0" prefWidth="1021.0">
          <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="114.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="350.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="1.0" prefWidth="128.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="429.0" minWidth="10.0" prefWidth="412.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="0.0" prefWidth="17.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="227.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="113.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="1.0" prefWidth="273.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="429.0" minWidth="10.0" prefWidth="139.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="0.0" prefWidth="269.0" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints maxHeight="132.0" minHeight="4.0" prefHeight="67.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="144.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="64.0" minHeight="3.0" prefHeight="48.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="101.0" minHeight="1.0" prefHeight="8.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="153.0" minHeight="4.0" prefHeight="105.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="209.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="206.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="124.0" minHeight="0.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="275.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="321.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="1020.0" minHeight="10.0" prefHeight="328.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="839.0" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="608.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField prefHeight="21.0" prefWidth="170.0" promptText="Mustermann" GridPane.columnIndex="1">
+            <TextField prefHeight="21.0" prefWidth="170.0" promptText="Max Mustermann" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <font>
                   <Font name="System Italic" size="20.0" />
                </font>
             </TextField>
-            <Label alignment="CENTER" prefHeight="4.0" prefWidth="114.0" text="Nachname:" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="117.0" prefWidth="227.0" text="Ansprechpartner der Bayer 04 Unternehmensgruppe" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField prefHeight="44.0" prefWidth="401.0" promptText="Max" GridPane.columnIndex="3">
+            <TextField prefHeight="44.0" prefWidth="401.0" promptText="Max" GridPane.columnIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
             </TextField>
-            <Label alignment="CENTER" prefHeight="45.0" prefWidth="190.0" text="Vorname:" textAlignment="CENTER" GridPane.columnIndex="2">
+            <Label alignment="CENTER" prefHeight="265.0" prefWidth="112.0" text="Firma:" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="4.0" prefWidth="114.0" text="Firma:" textAlignment="CENTER" GridPane.rowIndex="1">
+            <Label alignment="CENTER" prefHeight="101.0" prefWidth="227.0" text="Name der Firma / Vorgesetzter der Mitarbeiter" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField prefHeight="21.0" prefWidth="170.0" promptText="Muster GmbH" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField prefHeight="21.0" prefWidth="170.0" promptText="Muster GmbH" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                    <Font name="System Italic" size="20.0" />
+               </font>
+            </TextField>
+            <TextField prefHeight="21.0" prefWidth="170.0" promptText="+490000000000" GridPane.columnIndex="4">
                <font>
                   <Font name="System Italic" size="20.0" />
                </font>
             </TextField>
-            <TextField prefHeight="21.0" prefWidth="170.0" promptText="+490000000000" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Label alignment="CENTER" prefHeight="184.0" prefWidth="160.0" text="Fon/Mobil" textAlignment="CENTER" GridPane.columnIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="165.0" prefWidth="227.0" text="Ausweis gütlig ( max. 3 Monate):" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <DatePicker prefHeight="40.0" prefWidth="370.0" promptText="10.10.2010" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" prefHeight="186.0" prefWidth="274.0" text="Bis:" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <DatePicker prefHeight="40.0" prefWidth="432.0" promptText="10.10.2010" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" prefHeight="221.0" prefWidth="116.0" text="Name:" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField prefHeight="44.0" prefWidth="401.0" promptText="max.hat@feierabend.de" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" prefHeight="221.0" prefWidth="116.0" text="E-Mail:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="225.0" prefWidth="139.0" text="Vorgesetzter:" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="169.0" prefWidth="227.0" text="Anschrift der Firma:" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField prefHeight="44.0" prefWidth="378.0" promptText="Muster Straße 48" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font name="System Italic" size="20.0" />
                </font>
             </TextField>
-            <Label alignment="CENTER" prefHeight="4.0" prefWidth="114.0" text="Telefon:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" prefHeight="4.0" prefWidth="114.0" text="Kommt:" textAlignment="CENTER" GridPane.rowIndex="2">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <DatePicker prefHeight="40.0" prefWidth="370.0" promptText="10.10.2010" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label alignment="CENTER" prefHeight="30.0" prefWidth="129.0" text=" Wird gehen:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <DatePicker prefHeight="40.0" prefWidth="432.0" promptText="10.10.2010" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Label alignment="CENTER" prefHeight="4.0" prefWidth="114.0" text="Uhrzeit:" textAlignment="CENTER" GridPane.rowIndex="3">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" prefHeight="4.0" prefWidth="114.0" text="Uhrzeit:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <TextField prefHeight="21.0" prefWidth="170.0" promptText="09:05" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TextField prefHeight="21.0" prefWidth="170.0" promptText="51373 Leverkusen" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <font>
                   <Font name="System Italic" size="20.0" />
                </font>
             </TextField>
-            <TextField prefHeight="21.0" prefWidth="170.0" promptText="09:05" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <font>
-                  <Font name="System Italic" size="20.0" />
-               </font>
-            </TextField>
-            <Label alignment="CENTER" layoutX="10.0" layoutY="28.0" prefHeight="30.0" prefWidth="220.0" text="Bemerkungen/Zusatz:" textAlignment="CENTER" textFill="#2018ad" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Label alignment="CENTER" prefHeight="221.0" prefWidth="116.0" text="Str.:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0" prefWidth="413.0" promptText="Text" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <Label alignment="CENTER" prefHeight="125.0" prefWidth="148.0" text="PLZ/Ort:" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
-                  <Font size="15.0" />
+                  <Font size="20.0" />
                </font>
-            </TextArea>
-            <TextField prefHeight="21.0" prefWidth="170.0" promptText="X" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            </Label>
+            <Label alignment="CENTER" prefHeight="65.0" prefWidth="248.0" text="Notwendige Arbeitsbereiche" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="795.0" promptText="Text" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font name="System Italic" size="20.0" />
                </font>
             </TextField>
-            <Label alignment="CENTER" layoutX="10.0" layoutY="24.0" prefHeight="4.0" prefWidth="114.0" text="Pforte:" textAlignment="CENTER" GridPane.rowIndex="4">
+            <Label alignment="CENTER" prefHeight="165.0" prefWidth="227.0" text="Von:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="20.0" />
+               </font>
+            </Label>
+            <CheckBox contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></CheckBox>
+            <Label alignment="CENTER" prefHeight="165.0" prefWidth="227.0" text="Ankreuzen:" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="6">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="680.0" text="Deponierten Schlüssel nach Prüfung der Person aushändigen / Erfassung im Übergabebuch" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <CheckBox contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="613.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </CheckBox>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="595.0" prefHeight="165.0" prefWidth="227.0" text="Ankreuzen:" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="7">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="350.0" layoutY="594.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="680.0" text="Zugang zu Räumlichkeiten nur in Begleitung eines B04- Mitarbeiters oder des Unternehmensschutzes" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="680.0" text="Schlüssel wird von TecArena+ bereit gestellt / Türen geöffnet" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="680.0" text="Firma darf mit Dienstwagen das Gelände der BayArena befahren" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="506.0" prefHeight="165.0" prefWidth="227.0" text="Ankreuzen:" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="558.0" prefHeight="165.0" prefWidth="227.0" text="Ankreuzen:" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="9">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <CheckBox contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="517.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </CheckBox>
+            <CheckBox contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="573.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </CheckBox>
+            <Label alignment="CENTER" prefHeight="165.0" prefWidth="227.0" text="Ankreuzen - Zugang in folgende Bereiche: " textAlignment="CENTER" wrapText="true" GridPane.rowIndex="10">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="116.0" prefWidth="113.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <CheckBox mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="2" GridPane.columnIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="4" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="3" GridPane.columnIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="7" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+               </children>
+            </GridPane>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="680.0" text="Zone 1: Umgriff EG, 3. OG, Logen Ost, Schwadbud &#10;Zone 2: Süd UG-2. OG, Technik 4./5. OG&#10;Zone 3: Süd 3. OG GF Zone 4: West UG&#10;Zone 5: West UG Heimbereich &#10;Zone 6: West EG – 2. OG / 4. OG Dach&#10;Zone 7: Werkstatt 3. OG West Zone 8: Nord UGZone 9: Reserve" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="10">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="792.0" text=" Hinweise für Fremdfirmen:&#10; •Der Schlüssel ist inkl. Ausweis beim Empfang Süd abzugeben, wenn das Stadion verlassen wird; beianderen Liegenschaften sind    Schlüssel und Ausweis beim jeweiligen Ansprechpartner abzugeben&#10;&#10; •Sollte es bei Ihren Arbeiten zu einer unmittelbaren Gefahr für sich oder andere Personen kommen,dann stellen Sie die Arbeiten  sofort ein und wenden sich an Ihren direkten Vorgesetzten und nächstenAnsprechpartner des Auftraggebers.&#10;&#10; •Im Falle der Nichtbeachtung der Fremdfirmenanmeldung und der dazugehörigenSicherheitsunterweisung kann ein Mitarbeiter  vom Gelände verwiesen werden. In schweren Fällenwird ein Dienstleister oder Lieferant komplett gesperrt." wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="153.0" prefWidth="815.0" text="Ausweisbeantragung und Ausstellung:&#10;Hiermit bestätigen wir, die Richtlinie für Fremdfirmen und Sicherheitsunterweisung (Seite 1-2 erhalten, gelesen und verstanden zu haben, und verpflichten uns, die hier aufgeführten Bestimmungen und Vorschriften nebst Anlagen einzuhalten.&#10;" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="12">
+               <font>
+                  <Font size="17.0" />
                </font>
             </Label>
          </children>
-      </GridPane>
+       </GridPane>
    </children>
 </AnchorPane>
