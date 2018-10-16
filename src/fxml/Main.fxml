@@ -19,7 +19,7 @@
          <top>
             <AnchorPane prefHeight="92.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
                <children>
-                  <GridPane prefHeight="93.0" prefWidth="1024.0" AnchorPane.topAnchor="0.0">
+                  <GridPane prefHeight="93.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="55.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="443.0" minWidth="10.0" prefWidth="345.0" />
@@ -52,7 +52,7 @@
          </top>
          <center>
             <AnchorPane>
-            <Pane id="mid-main-pane" fx:id="contentPane" prefHeight="511.0" prefWidth="1024.0" stylesheets="@../css/Pane.css">
+            <Pane id="mid-main-pane" fx:id="contentPane" prefHeight="511.0" prefWidth="1024.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             </Pane>
             </AnchorPane>
          </center>
