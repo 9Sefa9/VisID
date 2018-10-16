@@ -32,7 +32,7 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ImageView fitHeight="77.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                        <ImageView fitHeight="77.0" fitWidth="243.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                            <image>
                               <Image url="@../image/861e771ad625eaa1c9d58227b96c3093.png" />
                            </image>
@@ -62,7 +62,7 @@
          <bottom>
             <AnchorPane prefHeight="117.0" prefWidth="1024.0" BorderPane.alignment="BOTTOM_CENTER">
                <children>
-                  <Pane layoutX="253.0" layoutY="28.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="253.0" AnchorPane.rightAnchor="541.0" AnchorPane.topAnchor="28.0">
+                  <Pane layoutX="253.0" layoutY="28.0" AnchorPane.bottomAnchor="28.0">
                      <children>
                         <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#visitButtonAction" prefHeight="61.0" prefWidth="230.0" stylesheets="@../css/Button.css" text="Besucher eintragen" textAlignment="CENTER" />
                      </children>

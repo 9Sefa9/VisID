@@ -14,9 +14,9 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
         primaryStage.setTitle("VisID");
-        primaryStage.setScene(new Scene(root, 1024 , 720));
+        primaryStage.setScene(new Scene(root, 1024 , 620));
 
-        primaryStage.setResizable(true);
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }

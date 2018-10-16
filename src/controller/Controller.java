@@ -14,16 +14,14 @@ public class Controller {
     @FXML public Pane contentPane;
 
     @FXML
-    public void initialize()throws IOException{
-
-    }
+    public void initialize()throws IOException{}
     //füge Form.fxml zu mid-main-pane hinzu
     @FXML
     public void visitButtonAction(){
         try {
             //sorgt dafür, dass daten erhalten bleiben bei fxml scene wechsel
             if(form == null)
-           form = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
+              form = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
 
             this.contentPane.getChildren().setAll(form);
         }catch(IOException i){
