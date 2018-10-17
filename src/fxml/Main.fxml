@@ -52,9 +52,15 @@
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane fx:id="contentPane">
-            <Pane id="mid-main-pane" prefHeight="511.0" prefWidth="1024.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            </Pane>
+            <AnchorPane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1024.0">
+            <Pane id="mid-main-pane" prefHeight="550.0" prefWidth="1024.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                     <Label layoutX="106.0" layoutY="71.0" prefHeight="365.0" prefWidth="813.0" text="Label" textAlignment="CENTER">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Label>
+                  </children></Pane>
             </AnchorPane>
          </center>
          <right>
