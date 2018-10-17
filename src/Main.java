@@ -1,3 +1,4 @@
+import viewController.ViewController;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -7,14 +8,21 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
+import model.Model;
 
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        Model model = new Model();
+        ViewController viewController = new ViewController(model);
+        //Parent root = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
 
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
+        FXMLLoader load = new FXMLLoader(getClass().getResource("fxml/Main.fxml"));
+        load.setController(viewController);
+
+        Parent root = load.load();
         primaryStage.setTitle("VisID");
 
         primaryStage.setScene(new Scene(root, 1024, 768));
