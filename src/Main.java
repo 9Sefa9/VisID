@@ -1,12 +1,12 @@
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import javafx.stage.Stage;
-
-import java.awt.*;
+import javafx.scene.image.Image;
 
 
 public class Main extends Application {
@@ -16,14 +16,14 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
         primaryStage.setTitle("VisID");
-       // GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-       // int width = gd.getDisplayMode().getWidth();
-       // int height = gd.getDisplayMode().getHeight();
+
         primaryStage.setScene(new Scene(root, 1024, 768));
-
-        primaryStage.setResizable(true);
-
+        primaryStage.getIcons().add(new Image("image/Logo1.png"));
+        primaryStage.setResizable(false);
         primaryStage.show();
+
+
+        primaryStage.setOnCloseRequest(e -> Platform.exit());
 
     }
 

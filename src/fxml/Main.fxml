@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
@@ -34,7 +35,7 @@
                      <children>
                         <ImageView fitHeight="77.0" fitWidth="243.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                            <image>
-                              <Image url="@../image/861e771ad625eaa1c9d58227b96c3093.png" />
+                              <Image url="@../image/Logo2.png" />
                            </image>
                         </ImageView>
                         <Label prefHeight="28.0" prefWidth="267.0" text="v1.0.alpha0" textAlignment="CENTER" GridPane.columnIndex="3">
@@ -51,7 +52,7 @@
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane fx:id="content">
+            <AnchorPane fx:id="contentPane">
             <Pane id="mid-main-pane" prefHeight="511.0" prefWidth="1024.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             </Pane>
             </AnchorPane>
@@ -62,12 +63,20 @@
          <bottom>
             <AnchorPane prefHeight="117.0" prefWidth="1024.0" BorderPane.alignment="BOTTOM_CENTER">
                <children>
-                  <Pane layoutX="253.0" layoutY="28.0" AnchorPane.bottomAnchor="28.0">
+                  <Pane layoutX="-1.0" prefHeight="120.0" prefWidth="1024.0">
                      <children>
-                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#visitButtonAction" prefHeight="61.0" prefWidth="230.0" stylesheets="@../css/Button.css" text="Besucher eintragen" textAlignment="CENTER" />
+                        <HBox alignment="CENTER" prefHeight="121.0" prefWidth="1024.0">
+                           <children>
+                              <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#visitFormAction" prefHeight="61.0" prefWidth="230.0" stylesheets="@../css/Button.css" text="Besucher eintragen" textAlignment="CENTER" />
+                              <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#visitFormResetAction" prefHeight="61.0" prefWidth="266.0" stylesheets="@../css/Button.css" text="Formular zurücksetzen" textAlignment="CENTER" />
+                              <Button contentDisplay="CENTER" layoutX="504.0" layoutY="40.0" mnemonicParsing="false" onAction="#sendFormAction" prefHeight="61.0" prefWidth="266.0" stylesheets="@../css/Button.css" text="Formular senden" textAlignment="CENTER" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
                      </children>
                   </Pane>
-                  <Button contentDisplay="CENTER" layoutX="519.0" layoutY="28.0" mnemonicParsing="false" onAction="#test" prefHeight="61.0" prefWidth="230.0" stylesheets="@../css/Button.css" text="Test" textAlignment="CENTER" />
                </children></AnchorPane>
          </bottom>
       </BorderPane>
