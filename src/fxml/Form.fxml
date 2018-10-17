@@ -54,7 +54,7 @@
                   </Label>
                   <TextField prefHeight="44.0" prefWidth="401.0" promptText="Max" GridPane.columnIndex="2">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="System Italic" size="20.0" />
                      </font>
                   </TextField>
                   <Label alignment="CENTER" prefHeight="265.0" prefWidth="112.0" text="Firma:" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -101,7 +101,7 @@
                   </Label>
                   <TextField prefHeight="44.0" prefWidth="401.0" promptText="max.hat@feierabend.de" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="System Italic" size="20.0" />
                      </font>
                   </TextField>
                   <Label alignment="CENTER" prefHeight="221.0" prefWidth="116.0" text="E-Mail:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
