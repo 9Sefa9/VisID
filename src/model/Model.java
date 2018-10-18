@@ -3,6 +3,7 @@ package model;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
+import viewController.ViewController;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -11,28 +12,33 @@ import java.io.PrintWriter;
 import java.time.LocalDate;
 
 public class Model {
-    public Model(){
+    private ViewController viewController;
 
+    //übertrage ViewController objekt zu model um manipulationen durchzuführen
+    public void setViewController(ViewController viewController){
+        this.viewController = viewController;
     }
+
     //Funktionalität für das "Besucher eintragen" Button
-    public void visitFormAction(Parent formFXML, AnchorPane contentPane){
+    public void visitFormAction(){
         try {
             //sorgt dafür, dass daten erhalten bleiben bei fxml scene wechsel
-            if(formFXML== null)
-                formFXML= FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
+            if(this.viewController.formFXML== null)
+                this.viewController.formFXML= FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
 
-            contentPane.getChildren().setAll(formFXML);
+            this.viewController.contentPane.getChildren().setAll(this.viewController.formFXML);
 
         }catch(IOException i){
             i.printStackTrace();
             appendToFile(i);
         }
     }
-    public void visitFormResetAction(Parent formFXML, AnchorPane contentPane){
+    //Funktionalität für das "Formular zurücksetzen" Button
+    public void visitFormResetAction(){
         try {
-            if(formFXML != null) {
-                formFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
-                visitFormAction(formFXML, contentPane);
+            if(this.viewController.formFXML != null) {
+                this.viewController.formFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
+                visitFormAction();
             }
 
         }catch(IOException i){

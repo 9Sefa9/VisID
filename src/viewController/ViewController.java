@@ -14,13 +14,15 @@ import java.time.LocalDate;
 public class ViewController {
 
     private Model model;
-    private Parent formFXML;
-    private Parent sendFXML;
+    public Parent formFXML;
+    public Parent sendFXML;
 
-    @FXML private AnchorPane contentPane;
+    @FXML
+    public AnchorPane contentPane;
 
     public ViewController(Model model){
         this.model = model;
+        model.setViewController(this);
     }
 
     @FXML
@@ -29,18 +31,18 @@ public class ViewController {
     //@Button -> Besucher eintragen
     @FXML
     public void visitFormAction(){
-        this.model.visitFormAction(this.formFXML,this.contentPane);
-
+        this.model.visitFormAction();
     }
 
     //@Button -> Formula zurücksetzen
     @FXML
     public void visitFormResetAction(){
-        this.model.visitFormResetAction(this.formFXML,this.contentPane);
+        this.model.visitFormResetAction();
     }
 
     @FXML
     public void sendFormAction(){
+
         this.model.sendFormAction(this.sendFXML,this.contentPane);
     }
 
