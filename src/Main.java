@@ -25,7 +25,7 @@ public class Main extends Application {
         Parent root = load.load();
         primaryStage.setTitle("VisID");
 
-        primaryStage.setScene(new Scene(root, 1200, 720));
+        primaryStage.setScene(new Scene(root, 1150, 720));
         primaryStage.getIcons().add(new Image("image/Logo1.png"));
         primaryStage.setResizable(true);
         primaryStage.show();
