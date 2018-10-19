@@ -1,17 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
-        <Pane id="mid-main-pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="815.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Pane id="mid-main-pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="815.0" stylesheets="@../css/Pane.css">
       <children>
-         <VBox alignment="CENTER" layoutX="338.0" layoutY="251.0">
+         <GridPane prefHeight="550.0" prefWidth="815.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
             <children>
-               <Button alignment="CENTER" mnemonicParsing="false" prefHeight="48.0" prefWidth="140.0" stylesheets="@../css/Button.css" text="Senden!" textAlignment="CENTER" />
+               <VBox alignment="CENTER" prefHeight="0.0" prefWidth="815.0" GridPane.rowIndex="3">
+                  <children>
+                     <Button alignment="CENTER" disable="true" mnemonicParsing="false" prefHeight="48.0" prefWidth="140.0" stylesheets="@../css/Button.css" text="Senden!" textAlignment="CENTER" />
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <children>
+                     <Label alignment="CENTER" text="Verbindungsaufbau ?">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" layoutX="329.0" layoutY="64.0" text="OK:" textFill="#0a9a00">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                  <children>
+                     <Label alignment="CENTER" text="Formular ausgefüllt ?">
+                        <font>
+                           <Font size="20.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" text="OK:" textFill="#0a9a00">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                  <children>
+                     <Label alignment="CENTER" prefHeight="175.0" prefWidth="815.0" text="                              Anforderungen zum Senden eines Formulars:&#10;→ Internetverbindung zwingend notwendig!&#10;→ Vor dem Senden müssen die Pflichtfelder bei einem Formular ausgefüllt werden!&#10;→ Leere Formulare werden nicht gesendet!&#10;" textFill="#970808">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
             </children>
-         </VBox>
-      </children></Pane>
+         </GridPane>
+      </children>
+   </Pane>
 </AnchorPane>
