@@ -16,6 +16,7 @@ public class ViewController {
     private Model model;
     public Parent formFXML;
     public Parent sendFXML;
+    public Parent updateFXML;
 
     @FXML
     public AnchorPane contentPane;
@@ -43,12 +44,12 @@ public class ViewController {
     @FXML
     public void sendFormAction(){
 
-        this.model.sendFormAction(this.sendFXML,this.contentPane);
+        this.model.sendFormAction();
     }
 
     @FXML
     public void updateProgramAction(){
-
+        this.model.updateProgramAction();
     }
 
 

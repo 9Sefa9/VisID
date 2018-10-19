@@ -46,11 +46,11 @@ public class Model {
             appendToFile(i);
         }
     }
-    public void sendFormAction(Parent sendFXML,AnchorPane contentPane){
+    public void sendFormAction(){
         try {
-            if (sendFXML == null)
-                sendFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
-            contentPane.getChildren().setAll(sendFXML);
+            if (this.viewController.sendFXML == null)
+                this.viewController.sendFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
+            this.viewController.contentPane.getChildren().setAll(this.viewController.sendFXML);
         }catch(IOException i){
             i.printStackTrace();
             appendToFile(i);
@@ -69,6 +69,17 @@ public class Model {
         }
         catch (Exception ie) {
             throw new RuntimeException("Could not write Exception to file", ie);
+        }
+    }
+    public void updateProgramAction(){
+        try {
+            if (this.viewController.updateFXML == null)
+                this.viewController.updateFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Update.fxml"));
+
+            this.viewController.contentPane.getChildren().setAll(this.viewController.updateFXML);
+        }catch(IOException i){
+            i.printStackTrace();
+            appendToFile(i);
         }
     }
 }

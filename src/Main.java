@@ -27,7 +27,7 @@ public class Main extends Application {
 
         primaryStage.setScene(new Scene(root, 1150, 720));
         primaryStage.getIcons().add(new Image("image/Logo1.png"));
-        primaryStage.setResizable(true);
+        primaryStage.setResizable(false);
         primaryStage.show();
 
 
