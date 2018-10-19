@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
         <Pane id="mid-main-pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="815.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <children>
-         <Button alignment="CENTER" layoutX="355.0" layoutY="260.0" mnemonicParsing="false" stylesheets="@../css/Button.css" text="Senden!" textAlignment="CENTER" />
-      </children></Pane>
+     </Pane>
 </AnchorPane>

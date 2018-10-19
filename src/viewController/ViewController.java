@@ -46,5 +46,10 @@ public class ViewController {
         this.model.sendFormAction(this.sendFXML,this.contentPane);
     }
 
+    @FXML
+    public void updateProgramAction(){
+
+    }
+
 
 }
