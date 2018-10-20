@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
         <Pane id="mid-main-pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="815.0" stylesheets="@../css/Pane.css">
       <children>
          <GridPane prefHeight="550.0" prefWidth="815.0">
@@ -59,11 +59,15 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
                   <children>
-                     <Label alignment="CENTER" prefHeight="175.0" prefWidth="815.0" text="                              Anforderungen zum Senden eines Formulars:&#10;→ Internetverbindung zwingend notwendig!&#10;→ Vor dem Senden müssen die Pflichtfelder bei einem Formular ausgefüllt werden!&#10;→ Leere Formulare werden nicht gesendet!&#10;" textFill="#970808">
-                        <font>
-                           <Font size="18.0" />
-                        </font>
-                     </Label>
+                     <Pane prefHeight="137.0" prefWidth="803.0" style="-fx-border-color: rgb(250, 60, 60); -fx-border-width: 5px;">
+                        <children>
+                           <Label alignment="CENTER" prefHeight="137.0" prefWidth="815.0" text="                              Anforderungen zum Senden eines Formulars:&#10;→ Internetverbindung zwingend notwendig!&#10;→ Vor dem Senden müssen die Pflichtfelder bei einem Formular ausgefüllt werden!&#10;→ Leere Formulare werden nicht gesendet!&#10;" textFill="#970808">
+                              <font>
+                                 <Font size="18.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </Pane>
                   </children>
                </VBox>
             </children>

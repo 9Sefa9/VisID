@@ -22,6 +22,9 @@ public class Model {
     //Funktionalität für das "Besucher eintragen" Button
     public void visitFormAction(){
         try {
+            //Notification Text aktuaisiern
+            this.viewController.notificationText.setText("Formular erstellen");
+
             //sorgt dafür, dass daten erhalten bleiben bei fxml scene wechsel
             if(this.viewController.formFXML== null)
                 this.viewController.formFXML= FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
@@ -36,10 +39,17 @@ public class Model {
     //Funktionalität für das "Formular zurücksetzen" Button
     public void visitFormResetAction(){
         try {
+
+
             if(this.viewController.formFXML != null) {
                 this.viewController.formFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
                 visitFormAction();
+
+                //Notification Text am Ende aktualisieren
+                this.viewController.notificationText.setText("Formular wurde zurückgesetzt!");
             }
+
+
 
         }catch(IOException i){
             i.printStackTrace();
@@ -48,15 +58,32 @@ public class Model {
     }
     public void sendFormAction(){
         try {
+            //Notification Text aktuaisiern
+            this.viewController.notificationText.setText("Formular senden");
+
             if (this.viewController.sendFXML == null)
                 this.viewController.sendFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
+
             this.viewController.contentPane.getChildren().setAll(this.viewController.sendFXML);
         }catch(IOException i){
             i.printStackTrace();
             appendToFile(i);
         }
     }
+    public void updateProgramAction(){
+        try {
+            //Notification Text aktuaisiern
+            this.viewController.notificationText.setText("Updates");
 
+            if (this.viewController.updateFXML == null)
+                this.viewController.updateFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Update.fxml"));
+
+            this.viewController.contentPane.getChildren().setAll(this.viewController.updateFXML);
+        }catch(IOException i){
+            i.printStackTrace();
+            appendToFile(i);
+        }
+    }
     //speichert exceptions in ein File. Nützlich für den Entwickler
     public synchronized void appendToFile(Exception e) {
         try {
@@ -71,15 +98,5 @@ public class Model {
             throw new RuntimeException("Could not write Exception to file", ie);
         }
     }
-    public void updateProgramAction(){
-        try {
-            if (this.viewController.updateFXML == null)
-                this.viewController.updateFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Update.fxml"));
 
-            this.viewController.contentPane.getChildren().setAll(this.viewController.updateFXML);
-        }catch(IOException i){
-            i.printStackTrace();
-            appendToFile(i);
-        }
-    }
 }

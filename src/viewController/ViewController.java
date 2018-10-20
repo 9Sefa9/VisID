@@ -1,15 +1,12 @@
 package viewController;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import model.Model;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.time.LocalDate;
 
 public class ViewController {
 
@@ -20,6 +17,21 @@ public class ViewController {
 
     @FXML
     public AnchorPane contentPane;
+
+    @FXML
+    public Label notificationText;
+
+    //Formular definitionen:
+    @FXML
+    private TextField name,mobil,email,firma,vorgesetzter,strasse,plzOrt,notwendigeArbeitsbereiche;
+    @FXML
+    private DatePicker vonDatum,bisDatum;
+
+    @FXML
+    private ChoiceBox kreuz0,kreuz1,kreuz2,kreuz3;
+    @FXML
+    private ChoiceBox kreuz00,kreuz01,kreuz02,kreuz10,kreuz11,kreuz12,kreuz20,kreuz21,kreuz22;
+
 
     public ViewController(Model model){
         this.model = model;
