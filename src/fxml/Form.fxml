@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FormController">
    <children>
       <ScrollPane hbarPolicy="ALWAYS" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="815.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
@@ -154,7 +154,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="kreuzZero" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <CheckBox fx:id="kreuz0" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="6">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -169,7 +169,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="kreuzOne" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="613.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                  <CheckBox fx:id="kreuz1" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="613.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="7">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -204,12 +204,12 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="kreuzTwo" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="517.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                  <CheckBox fx:id="kreuz2" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="517.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="8">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                   </CheckBox>
-                  <CheckBox fx:id="kreuzThree" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="573.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                  <CheckBox fx:id="kreuz3" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="573.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="9">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -231,47 +231,47 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <CheckBox fx:id="kreuzZeroZero" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="1">
+                        <CheckBox fx:id="kreuz00" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuzOneTwo" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <CheckBox fx:id="kreuz12" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuzOneOne" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <CheckBox fx:id="kreuz11" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuzZeroOne" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="2" GridPane.columnIndex="1">
+                        <CheckBox fx:id="kreuz01" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="2" GridPane.columnIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuzOneZero" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="4" GridPane.rowIndex="1">
+                        <CheckBox fx:id="kreuz10" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="4" GridPane.rowIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuzZeroTwo" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="3" GridPane.columnIndex="2">
+                        <CheckBox fx:id="kreuz02" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="3" GridPane.columnIndex="2">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuzTwoOne" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <CheckBox fx:id="kreuz21" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuzTwoZero" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="7" GridPane.rowIndex="2">
+                        <CheckBox fx:id="kreuz20" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="7" GridPane.rowIndex="2">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuzTwoTwo" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <CheckBox fx:id="kreuz22" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>

@@ -9,7 +9,10 @@ import model.Model;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SendController implements Initializable {
+public class SendController{
+    @FXML
+    private ViewController viewController;
+
     private Model model;
 
     @FXML
@@ -20,21 +23,21 @@ public class SendController implements Initializable {
 
     @FXML
     public Button send;
-
     public SendController(Model model){
-
         this.model = model;
     }
+    public void setViewController(ViewController viewController) {
+        this.viewController = viewController;
+    }
+
     @FXML
     public void initialize(){
-        System.out.println("test");
-    }
-    public void setIsFilled(String text){
-        this.send.setText(text);
+        if(this.model.formIsFilled(viewController,viewController.form)){
+            this.isFilled.setText("OK");
+        }else{
+            this.isFilled.setText("NOT OK");
+        }
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
 
-    }
 }

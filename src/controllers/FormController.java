@@ -1,13 +1,15 @@
 package controllers;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import model.Model;
 
 public class FormController{
+    @FXML
+    private ViewController viewController;
 
     private Model model;
 
@@ -42,35 +44,43 @@ public class FormController{
     public DatePicker bisDatum;
 
     @FXML
-    public ChoiceBox kreuzZero;
+    public CheckBox kreuz0;
 
     @FXML
-    public ChoiceBox kreuzOne;
+    public CheckBox kreuz1;
 
     @FXML
-    public ChoiceBox kreuzTwo;
+    public CheckBox kreuz2;
 
     @FXML
-    public ChoiceBox kreuzThree;
+    public CheckBox kreuz3;
 
     @FXML
-    public ChoiceBox kreuzZeroZero;
+    public CheckBox kreuz00;
+
     @FXML
-    public ChoiceBox kreuzZeroOne;
+    public CheckBox kreuz01;
+
     @FXML
-    public ChoiceBox kreuzZeroTwo;
+    public CheckBox kreuz02;
+
     @FXML
-    public ChoiceBox kreuzOneZero;
+    public CheckBox kreuz10;
+
     @FXML
-    public ChoiceBox kreuzOneOne;
+    public CheckBox kreuz11;
+
     @FXML
-    public ChoiceBox kreuzOneTwo;
+    public CheckBox kreuz12;
+
     @FXML
-    public ChoiceBox kreuzTwoZero;
+    public CheckBox kreuz20;
+
     @FXML
-    public ChoiceBox kreuzTwoOne;
+    public CheckBox kreuz21;
+
     @FXML
-    public ChoiceBox kreuzTwoTwo;
+    public CheckBox kreuz22;
 
     public FormController(Model model){
         this.model = model;
@@ -78,4 +88,8 @@ public class FormController{
 
     @FXML
     public void initialize(){}
+
+    public void setViewController(ViewController viewController) {
+        this.viewController = viewController;
+    }
 }

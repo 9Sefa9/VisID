@@ -60,11 +60,7 @@ public class Model {
 
             viewController.contentPane.getChildren().setAll(viewController.sendFXML);
 
-            if(formIsFilled(viewController,formController)){
-                sendController.setIsFilled("OK");
-            }else{
-                sendController.setIsFilled("NOT OK");
-            }
+
         }catch(IOException i){
             i.printStackTrace();
             appendToFile(i);

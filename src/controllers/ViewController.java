@@ -1,21 +1,23 @@
 package controllers;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import model.Model;
 
-import java.io.IOException;
+import javax.swing.text.View;
+
 
 public class ViewController {
-
-    private FormController formController;
-    private SendController sendController;
-    private UpdateController updateController;
-    private RecentsController recentsController;
-
     private Model model;
+
+    @FXML public FormController form;
+
+    @FXML public SendController send;
+
+    @FXML public UpdateController update;
+
+    @FXML public RecentsController recents;
 
     //wichtig um andere FXML öffnen zu können
     public Parent formFXML;
@@ -30,21 +32,16 @@ public class ViewController {
     public Label notificationText;
 
     @FXML
-    public TextField test;
-    
-    public ViewController(Model model){
-        this.model = model;
-
+    public void initialize(){
+        this.model = new Model();
     }
-
-
-    public void setAllControllers(FormController formController, RecentsController recentsController, SendController sendController, UpdateController updateController){
-        this.formController = formController;
-        this.sendController = sendController;
-        this.updateController = updateController;
-        this.recentsController = recentsController;
+    public ViewController(){
+        //TODO
+        form.setViewController(this);
+        recents.setViewController(this);
+        send.setViewController(this);
+        update.setViewController(this);
     }
-
     //@Button -> Besucher eintragen
     @FXML
     public void visitFormAction(){
@@ -59,7 +56,7 @@ public class ViewController {
 
     @FXML
     public void sendFormAction(){
-        this.model.sendForm(this,this.sendController,this.formController);
+        this.model.sendForm(this,this.send,this.form);
     }
 
     @FXML

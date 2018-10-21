@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SendController">
         <Pane id="mid-main-pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="815.0" stylesheets="@../css/Pane.css">
       <children>
          <GridPane prefHeight="550.0" prefWidth="815.0">
