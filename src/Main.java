@@ -41,9 +41,8 @@ public class Main extends Application {
 
         Parent root = main.load();
 
-
         //ViewController
-        viewController.setAllControllers(formController,recentsController,sendController,updateController);
+        viewController.setAllControllers(form.getController(),recents.getController(),send.getController(),update.getController());
         primaryStage.setTitle("VisID");
 
         primaryStage.setScene(new Scene(root, 1150, 720));

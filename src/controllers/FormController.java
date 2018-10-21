@@ -1,12 +1,13 @@
 package controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import model.Model;
 
-public class FormController {
+public class FormController{
 
     private Model model;
 
@@ -74,4 +75,7 @@ public class FormController {
     public FormController(Model model){
         this.model = model;
     }
+
+    @FXML
+    public void initialize(){}
 }

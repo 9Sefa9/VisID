@@ -51,6 +51,7 @@ public class Model {
     }
     public void sendForm(ViewController viewController,SendController sendController,FormController formController){
         try {
+
             //Notification Text aktuaisiern
             viewController.notificationText.setText("Formular senden");
 
