@@ -17,6 +17,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Model model = new Model();
         ViewController viewController = new ViewController(model);
+
         FormController formController = new FormController(model);
         RecentsController recentsController = new RecentsController(model);
         SendController sendController = new SendController(model);
@@ -39,6 +40,9 @@ public class Main extends Application {
         main.setController(viewController);
 
         Parent root = main.load();
+
+
+        //ViewController
         viewController.setAllControllers(formController,recentsController,sendController,updateController);
         primaryStage.setTitle("VisID");
 

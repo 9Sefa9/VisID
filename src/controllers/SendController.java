@@ -25,6 +25,6 @@ public class SendController {
 
     }
     public void setIsFilled(String text){
-        this.isFilled.setText(text);
+        this.send.setText(text);
     }
 }
