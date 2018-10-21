@@ -81,7 +81,9 @@ public class FormController{
 
     @FXML
     public CheckBox kreuz22;
+    public FormController(){
 
+    }
     public FormController(Model model){
         this.model = model;
     }

@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import model.Model;
 
+import javax.swing.text.View;
+
 
 public class Main extends Application {
 
@@ -21,6 +23,8 @@ public class Main extends Application {
 
         Parent root = main.load();
 
+        //ViewController viewController = main.getController();
+        //viewController.form = new FormController();
         //ViewController
         //viewController.setAllControllers(form.getController(),recents.getController(),send.getController(),update.getController());
         primaryStage.setTitle("VisID");

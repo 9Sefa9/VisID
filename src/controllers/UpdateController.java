@@ -13,6 +13,9 @@ public class UpdateController implements Initializable {
 
     private Model model;
 
+    public UpdateController(){
+
+    }
     public UpdateController(Model model){
         this.model = model;
     }

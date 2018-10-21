@@ -37,10 +37,10 @@ public class ViewController {
     }
     public ViewController(){
         //TODO
-        form.setViewController(this);
-        recents.setViewController(this);
-        send.setViewController(this);
-        update.setViewController(this);
+        // form.setViewController(this);
+      //  recents.setViewController(this);
+       // send.setViewController(this);
+       // update.setViewController(this);
     }
     //@Button -> Besucher eintragen
     @FXML

@@ -23,6 +23,9 @@ public class SendController{
 
     @FXML
     public Button send;
+    public SendController(){
+
+    }
     public SendController(Model model){
         this.model = model;
     }

@@ -8,7 +8,9 @@ public class RecentsController {
     private ViewController viewController;
 
     private Model model;
+    public RecentsController(){
 
+    }
     public RecentsController(Model model){
         this.model = model;
     }
