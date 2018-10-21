@@ -1,9 +1,7 @@
 package model;
 
+import controllers.*;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.layout.AnchorPane;
-import viewController.ViewController;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -12,24 +10,18 @@ import java.io.PrintWriter;
 import java.time.LocalDate;
 
 public class Model {
-    private ViewController viewController;
-
-    //übertrage ViewController objekt zu model um manipulationen durchzuführen
-    public void setViewController(ViewController viewController){
-        this.viewController = viewController;
-    }
 
     //Funktionalität für das "Besucher eintragen" Button
-    public void visitFormAction(){
+    public void visitForm(ViewController viewController){
         try {
             //Notification Text aktuaisiern
-            this.viewController.notificationText.setText("Formular erstellen");
+            viewController.notificationText.setText("Formular erstellen");
 
             //sorgt dafür, dass daten erhalten bleiben bei fxml scene wechsel
-            if(this.viewController.formFXML== null)
-                this.viewController.formFXML= FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
+            if(viewController.formFXML== null)
+                viewController.formFXML= FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
 
-            this.viewController.contentPane.getChildren().setAll(this.viewController.formFXML);
+            viewController.contentPane.getChildren().setAll(viewController.formFXML);
 
         }catch(IOException i){
             i.printStackTrace();
@@ -37,16 +29,16 @@ public class Model {
         }
     }
     //Funktionalität für das "Formular zurücksetzen" Button
-    public void visitFormResetAction(){
+    public void visitFormReset(ViewController viewController){
         try {
 
 
-            if(this.viewController.formFXML != null) {
-                this.viewController.formFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
-                visitFormAction();
+            if(viewController.formFXML != null) {
+                viewController.formFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
+                visitForm(viewController);
 
                 //Notification Text am Ende aktualisieren
-                this.viewController.notificationText.setText("Formular wurde zurückgesetzt!");
+                viewController.notificationText.setText("Formular wurde zurückgesetzt!");
             }
 
 
@@ -56,33 +48,63 @@ public class Model {
             appendToFile(i);
         }
     }
-    public void sendFormAction(){
+    public void sendForm(ViewController viewController,SendController sendController,FormController formController){
         try {
             //Notification Text aktuaisiern
-            this.viewController.notificationText.setText("Formular senden");
+            viewController.notificationText.setText("Formular senden");
 
-            if (this.viewController.sendFXML == null)
-                this.viewController.sendFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
+            if (viewController.sendFXML == null)
+                viewController.sendFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
 
-            this.viewController.contentPane.getChildren().setAll(this.viewController.sendFXML);
+            viewController.contentPane.getChildren().setAll(viewController.sendFXML);
+
+            if(formIsFilled(viewController,formController)){
+                sendController.formFilled.setText("OK");
+            }else{
+                sendController.formFilled.setText("NOT OK - Formular nicht ausgefüllt!");
+            }
         }catch(IOException i){
             i.printStackTrace();
             appendToFile(i);
         }
     }
-    public void updateProgramAction(){
+    public void updateProgram(ViewController viewController){
         try {
             //Notification Text aktuaisiern
-            this.viewController.notificationText.setText("Updates");
+            viewController.notificationText.setText("Updates");
 
-            if (this.viewController.updateFXML == null)
-                this.viewController.updateFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Update.fxml"));
+            if(viewController.updateFXML == null)
+                viewController.updateFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Update.fxml"));
 
-            this.viewController.contentPane.getChildren().setAll(this.viewController.updateFXML);
+            viewController.contentPane.getChildren().setAll(viewController.updateFXML);
         }catch(IOException i){
             i.printStackTrace();
             appendToFile(i);
         }
+    }
+    public void visitFormRecents(ViewController viewController){
+        try {
+            viewController.notificationText.setText("Verlauf");
+
+            if (viewController.recentsFXML == null)
+                viewController.recentsFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Recents.fxml"));
+
+            viewController.contentPane.getChildren().setAll(viewController.recentsFXML);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    public boolean formIsFilled(ViewController viewController,FormController formController){
+       // formular gilt as gefüllt, wenn der Name und oder Mobil eingetragen ist.
+        if(viewController.formFXML != null) {
+
+            if ((!formController.name.getText().trim().isEmpty()) && (!formController.mobil.getText().trim().isEmpty())) {
+                return true;
+            } else {
+               return false;
+           }
+        }
+        return false;
     }
     //speichert exceptions in ein File. Nützlich für den Entwickler
     public synchronized void appendToFile(Exception e) {
