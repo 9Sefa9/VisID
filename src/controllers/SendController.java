@@ -9,18 +9,22 @@ public class SendController {
     private Model model;
 
     @FXML
-    public Label connectionOK;
+    public Label isConnected;
 
     @FXML
-    public Label formFilled;
+    public Label isFilled;
 
     @FXML
     public Button send;
+
     public SendController(Model model){
         this.model = model;
     }
     @FXML
     public void initialize(){
 
+    }
+    public void setIsFilled(String text){
+        this.isFilled.setText(text);
     }
 }

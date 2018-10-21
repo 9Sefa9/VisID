@@ -2,6 +2,7 @@ package model;
 
 import controllers.*;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -59,9 +60,9 @@ public class Model {
             viewController.contentPane.getChildren().setAll(viewController.sendFXML);
 
             if(formIsFilled(viewController,formController)){
-                sendController.formFilled.setText("OK");
+                sendController.setIsFilled("OK");
             }else{
-                sendController.formFilled.setText("NOT OK - Formular nicht ausgefüllt!");
+                sendController.setIsFilled("NOT OK");
             }
         }catch(IOException i){
             i.printStackTrace();

@@ -29,6 +29,9 @@ public class ViewController {
     @FXML
     public Label notificationText;
 
+    @FXML
+    public TextField test;
+    
     public ViewController(Model model){
         this.model = model;
 
