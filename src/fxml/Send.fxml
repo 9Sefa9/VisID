@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SendController">
+<AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SendController">
         <Pane id="mid-main-pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="815.0" stylesheets="@../css/Pane.css">
       <children>
          <GridPane prefHeight="550.0" prefWidth="815.0">
@@ -36,7 +36,7 @@
                            <Font size="20.0" />
                         </font>
                      </Label>
-                     <Label fx:id="isConnected" alignment="CENTER" layoutX="329.0" layoutY="64.0" text="OK:" textFill="#0a9a00">
+                     <Label fx:id="isConnected" alignment="CENTER" layoutX="329.0" layoutY="64.0" text="OK">
                         <font>
                            <Font size="24.0" />
                         </font>
@@ -50,7 +50,7 @@
                            <Font size="20.0" />
                         </font>
                      </Label>
-                     <Label fx:id="isFilled" alignment="CENTER" text="OK:" textFill="#0a9a00">
+                     <Label fx:id="isFilled" alignment="CENTER" text="OK">
                         <font>
                            <Font size="24.0" />
                         </font>

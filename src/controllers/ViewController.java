@@ -11,6 +11,7 @@ import javax.swing.text.View;
 public class ViewController {
     private Model model;
 
+    //die jeweiligen Contorller von den FXMLs
     @FXML public FormController form;
 
     @FXML public SendController send;
@@ -19,7 +20,7 @@ public class ViewController {
 
     @FXML public RecentsController recents;
 
-    //wichtig um andere FXML öffnen zu können
+    //Parents : zum öffnen bzw einsetzen von FXMl dokumenten in bestimmten Panes
     public Parent formParent;
     public Parent sendParent;
     public Parent updateParent;
@@ -37,11 +38,6 @@ public class ViewController {
         this.model = new Model();
     }
     public ViewController(){
-        //TODO
-        // form.setViewController(this);
-      //  recents.setViewController(this);
-       // send.setViewController(this);
-       // update.setViewController(this);
     }
     //@Button -> Besucher eintragen
     @FXML

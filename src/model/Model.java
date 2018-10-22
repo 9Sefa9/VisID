@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
+import java.util.Set;
 
 public class Model {
 
@@ -50,7 +51,6 @@ public class Model {
     }
     public void sendForm(ViewController viewController,SendController sendController,FormController formController){
         try {
-
             //Notification Text aktuaisiern
             viewController.notificationText.setText("Formular senden");
 
@@ -60,9 +60,11 @@ public class Model {
             viewController.contentPane.getChildren().setAll(viewController.sendParent);
 
             if(formIsFilled(viewController,formController)){
+                sendController.isFilled.setStyle("-fx-text-fill: green");
                 sendController.isFilled.setText("OK");
 
             }else{
+                sendController.isFilled.setStyle("-fx-text-fill: red");
                 sendController.isFilled.setText("NOT OK");
             }
 
