@@ -16,10 +16,10 @@ public class SendController{
     private Model model;
 
     @FXML
-    public Label isConnected;
+    public Label connectedText;
 
     @FXML
-    public Label isFilled;
+    public Label filledText;
 
     @FXML
     public Button send;

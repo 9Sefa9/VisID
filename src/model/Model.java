@@ -1,17 +1,17 @@
 package model;
 
 import controllers.*;
+import external.CheckConnection;
+import external.ExceptionLogger;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.time.LocalDate;
-import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 
 public class Model {
-
+    private boolean isConnectedToServer;
     //Funktionalität für das "Besucher eintragen" Button
     public void visitForm(ViewController viewController){
         try {
@@ -26,7 +26,7 @@ public class Model {
 
         }catch(IOException i){
             i.printStackTrace();
-            appendToFile(i);
+            ExceptionLogger.appendToFile(i);
         }
     }
     //Funktionalität für das "Formular zurücksetzen" Button
@@ -46,7 +46,7 @@ public class Model {
 
         }catch(IOException i){
             i.printStackTrace();
-            appendToFile(i);
+            ExceptionLogger.appendToFile(i);
         }
     }
     public void sendForm(ViewController viewController,SendController sendController,FormController formController){
@@ -54,25 +54,71 @@ public class Model {
             //Notification Text aktuaisiern
             viewController.notificationText.setText("Formular senden");
 
+            //contentpane aktualisieren
             if (viewController.sendParent == null)
                 viewController.sendParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
 
             viewController.contentPane.getChildren().setAll(viewController.sendParent);
 
+            //überprüfen ob Formular wenigstens etwas aufgefüllt wurde vor dem eigentlichen connection test
             if(formIsFilled(viewController,formController)){
-                sendController.isFilled.setStyle("-fx-text-fill: green");
-                sendController.isFilled.setText("OK");
+                sendController.filledText.setStyle("-fx-text-fill: green");
+                sendController.filledText.setText("OK!");
 
             }else{
-                sendController.isFilled.setStyle("-fx-text-fill: red");
-                sendController.isFilled.setText("NOT OK");
+                sendController.filledText.setStyle("-fx-text-fill: red");
+                sendController.filledText.setText("NOT OK!");
             }
+
+            connectionTest(viewController,sendController);
 
         }catch(IOException i){
             i.printStackTrace();
-            appendToFile(i);
+            ExceptionLogger.appendToFile(i);
         }
     }
+
+    //Diese Methode testet in 10 sekunden abschnitten über die Verfügbarkeit des Servers.
+    private void connectionTest(ViewController viewController,SendController sendController) {
+
+        new Thread(new Runnable(){
+            @Override
+
+            public synchronized void run(){
+                CheckConnection cc;
+                CompletableFuture<Boolean> solution;
+
+                try
+                {
+                    while(true) {
+                        cc = new CheckConnection();
+                        solution = CompletableFuture.supplyAsync(cc);
+
+                        //Ergebnis in Model abspeichern für weitere Verwendungszwecke
+                        isConnectedToServer = solution.get();
+
+                        Platform.runLater(() -> {
+                        if (isConnectedToServer) {
+                                sendController.connectedText.setStyle("-fx-text-fill: green");
+                                sendController.connectedText.setText("OK!");
+                        } else {
+                                sendController.connectedText.setStyle("-fx-text-fill: red");
+                                sendController.connectedText.setText("NOT OK!");
+                        }
+                        });
+                        Thread.sleep(10000);
+                    }
+                } catch(InterruptedException ie) {
+                     ie.printStackTrace();
+                }
+                  catch(ExecutionException ee) {
+                        ee.printStackTrace();
+                }
+            }
+
+        }).start();
+    }
+
     public void updateProgram(ViewController viewController){
         try {
             //Notification Text aktuaisiern
@@ -84,7 +130,7 @@ public class Model {
             viewController.contentPane.getChildren().setAll(viewController.updateParent);
         }catch(IOException i){
             i.printStackTrace();
-            appendToFile(i);
+            ExceptionLogger.appendToFile(i);
         }
     }
     public void visitFormRecents(ViewController viewController){
@@ -97,6 +143,7 @@ public class Model {
             viewController.contentPane.getChildren().setAll(viewController.recentsParent);
         }catch (IOException e){
             e.printStackTrace();
+            ExceptionLogger.appendToFile(e);
         }
     }
     public boolean formIsFilled(ViewController viewController,FormController formController){
@@ -111,19 +158,6 @@ public class Model {
         }
         return false;
     }
-    //speichert exceptions in ein File. Nützlich für den Entwickler
-    public synchronized void appendToFile(Exception e) {
-        try {
-            FileWriter fstream = new FileWriter("Exceptions.txt", true);
-            BufferedWriter out = new BufferedWriter(fstream);
-            PrintWriter pWriter = new PrintWriter(out, true);
-            pWriter.write("\n occured:"+LocalDate.now() +" printStackTrace ::");
-            e.printStackTrace(pWriter);
 
-        }
-        catch (Exception ie) {
-            throw new RuntimeException("Could not write Exception to file", ie);
-        }
-    }
 
 }

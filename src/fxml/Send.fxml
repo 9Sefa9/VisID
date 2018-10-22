@@ -31,12 +31,12 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                   <children>
-                     <Label alignment="CENTER" text="Verbindungsaufbau ?">
+                     <Label alignment="CENTER" text="Verbindungsaufbau:">
                         <font>
                            <Font size="20.0" />
                         </font>
                      </Label>
-                     <Label fx:id="isConnected" alignment="CENTER" layoutX="329.0" layoutY="64.0" text="OK">
+                     <Label fx:id="connectedText" alignment="CENTER" layoutX="329.0" layoutY="64.0" text="Loading...">
                         <font>
                            <Font size="24.0" />
                         </font>
@@ -45,12 +45,12 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                   <children>
-                     <Label alignment="CENTER" text="Formular ausgefüllt ?">
+                     <Label alignment="CENTER" text="Formular ausgefüllt:">
                         <font>
                            <Font size="20.0" />
                         </font>
                      </Label>
-                     <Label fx:id="isFilled" alignment="CENTER" text="OK">
+                     <Label fx:id="filledText" alignment="CENTER" text="OK">
                         <font>
                            <Font size="24.0" />
                         </font>
