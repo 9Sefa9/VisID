@@ -35,11 +35,7 @@ public class SendController{
 
     @FXML
     public void initialize(){
-        if(this.model.formIsFilled(viewController,viewController.form)){
-            this.isFilled.setText("OK");
-        }else{
-            this.isFilled.setText("NOT OK");
-        }
+        System.out.println("INITIALIZE :: "+this.getClass());
     }
 
 

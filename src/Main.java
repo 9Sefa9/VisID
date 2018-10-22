@@ -20,13 +20,29 @@ public class Main extends Application {
 
         FXMLLoader main = new FXMLLoader(getClass().getResource("fxml/Main.fxml"));
         //main.setController(viewController);
-
         Parent root = main.load();
 
-        //ViewController viewController = main.getController();
-        //viewController.form = new FormController();
-        //ViewController
-        //viewController.setAllControllers(form.getController(),recents.getController(),send.getController(),update.getController());
+        FXMLLoader form = new FXMLLoader(getClass().getResource("fxml/Form.fxml"));
+        FXMLLoader send = new FXMLLoader(getClass().getResource("fxml/Send.fxml"));
+        FXMLLoader recents = new FXMLLoader(getClass().getResource("fxml/Recents.fxml"));
+        FXMLLoader update = new FXMLLoader(getClass().getResource("fxml/Update.fxml"));
+
+        form.load();
+        send.load();
+        recents.load();
+        update.load();
+
+        ViewController vc = main.getController();
+        FormController f = form.getController();
+        SendController s = send.getController();
+        RecentsController r = recents.getController();
+        UpdateController u = update.getController();
+
+        f.setViewController(vc);
+        s.setViewController(vc);
+        r.setViewController(vc);
+        u.setViewController(vc);
+
         primaryStage.setTitle("VisID");
 
         primaryStage.setScene(new Scene(root, 1150, 720));

@@ -33,6 +33,7 @@ public class ViewController {
 
     @FXML
     public void initialize(){
+        System.out.println("INITIALIZE :: "+this.getClass());
         this.model = new Model();
     }
     public ViewController(){

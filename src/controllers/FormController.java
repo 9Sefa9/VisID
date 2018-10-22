@@ -89,7 +89,7 @@ public class FormController{
     }
 
     @FXML
-    public void initialize(){}
+    public void initialize(){System.out.println("INITIALIZE :: "+this.getClass());}
 
     public void setViewController(ViewController viewController) {
         this.viewController = viewController;

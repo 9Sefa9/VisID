@@ -7,7 +7,7 @@ import model.Model;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class UpdateController implements Initializable {
+public class UpdateController {
     @FXML
     private ViewController viewController;
 
@@ -20,9 +20,9 @@ public class UpdateController implements Initializable {
         this.model = model;
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+    @FXML
+    public void initialize() {
+        System.out.println("INITIALIZE :: "+this.getClass());
     }
 
     public void setViewController(ViewController viewController) {
