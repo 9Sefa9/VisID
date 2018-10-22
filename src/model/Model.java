@@ -2,7 +2,6 @@ package model;
 
 import controllers.*;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Label;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -19,10 +18,10 @@ public class Model {
             viewController.notificationText.setText("Formular erstellen");
 
             //sorgt dafür, dass daten erhalten bleiben bei fxml scene wechsel
-            if(viewController.formFXML== null)
-                viewController.formFXML= FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
+            if(viewController.formParent == null)
+                viewController.formParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
 
-            viewController.contentPane.getChildren().setAll(viewController.formFXML);
+            viewController.contentPane.getChildren().setAll(viewController.formParent);
 
         }catch(IOException i){
             i.printStackTrace();
@@ -34,8 +33,8 @@ public class Model {
         try {
 
 
-            if(viewController.formFXML != null) {
-                viewController.formFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
+            if(viewController.formParent != null) {
+                viewController.formParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
                 visitForm(viewController);
 
                 //Notification Text am Ende aktualisieren
@@ -55,10 +54,10 @@ public class Model {
             //Notification Text aktuaisiern
             viewController.notificationText.setText("Formular senden");
 
-            if (viewController.sendFXML == null)
-                viewController.sendFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
+            if (viewController.sendParent == null)
+                viewController.sendParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
 
-            viewController.contentPane.getChildren().setAll(viewController.sendFXML);
+            viewController.contentPane.getChildren().setAll(viewController.sendParent);
 
             if(formIsFilled(viewController,formController)){
                 sendController.isFilled.setText("OK");
@@ -77,10 +76,10 @@ public class Model {
             //Notification Text aktuaisiern
             viewController.notificationText.setText("Updates");
 
-            if(viewController.updateFXML == null)
-                viewController.updateFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Update.fxml"));
+            if(viewController.updateParent == null)
+                viewController.updateParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Update.fxml"));
 
-            viewController.contentPane.getChildren().setAll(viewController.updateFXML);
+            viewController.contentPane.getChildren().setAll(viewController.updateParent);
         }catch(IOException i){
             i.printStackTrace();
             appendToFile(i);
@@ -90,17 +89,17 @@ public class Model {
         try {
             viewController.notificationText.setText("Verlauf");
 
-            if (viewController.recentsFXML == null)
-                viewController.recentsFXML = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Recents.fxml"));
+            if (viewController.recentsParent == null)
+                viewController.recentsParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Recents.fxml"));
 
-            viewController.contentPane.getChildren().setAll(viewController.recentsFXML);
+            viewController.contentPane.getChildren().setAll(viewController.recentsParent);
         }catch (IOException e){
             e.printStackTrace();
         }
     }
     public boolean formIsFilled(ViewController viewController,FormController formController){
        // formular gilt as gefüllt, wenn der Name und oder Mobil eingetragen ist.
-        if(viewController.formFXML != null) {
+        if(viewController.formParent != null) {
 
             if ((!formController.name.getText().trim().isEmpty()) && (!formController.mobil.getText().trim().isEmpty())) {
                 return true;

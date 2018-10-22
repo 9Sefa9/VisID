@@ -8,9 +8,6 @@ import javafx.scene.Scene;
 
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
-import model.Model;
-
-import javax.swing.text.View;
 
 
 public class Main extends Application {
@@ -27,12 +24,13 @@ public class Main extends Application {
         FXMLLoader recents = new FXMLLoader(getClass().getResource("fxml/Recents.fxml"));
         FXMLLoader update = new FXMLLoader(getClass().getResource("fxml/Update.fxml"));
 
-        form.load();
-        send.load();
-        recents.load();
-        update.load();
-
         ViewController vc = main.getController();
+
+        vc.formParent = form.load();
+        vc.sendParent = send.load();
+        vc.recentsParent = recents.load();
+        vc.updateParent = update.load();
+
         FormController f = form.getController();
         SendController s = send.getController();
         RecentsController r = recents.getController();

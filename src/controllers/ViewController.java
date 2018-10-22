@@ -20,10 +20,10 @@ public class ViewController {
     @FXML public RecentsController recents;
 
     //wichtig um andere FXML öffnen zu können
-    public Parent formFXML;
-    public Parent sendFXML;
-    public Parent updateFXML;
-    public Parent recentsFXML;
+    public Parent formParent;
+    public Parent sendParent;
+    public Parent updateParent;
+    public Parent recentsParent;
 
     @FXML
     public AnchorPane contentPane;
