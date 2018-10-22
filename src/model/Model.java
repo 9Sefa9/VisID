@@ -62,6 +62,7 @@ public class Model {
 
             if(formIsFilled(viewController,formController)){
                 sendController.isFilled.setText("OK");
+
             }else{
                 sendController.isFilled.setText("NOT OK");
             }
