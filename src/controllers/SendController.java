@@ -21,6 +21,9 @@ public class SendController{
     private Model model;
 
     @FXML
+    private Label sendedText;
+
+    @FXML
     public Label connectedText;
 
     @FXML
@@ -57,6 +60,8 @@ public class SendController{
                     this.formIsSent = solution.get();
                     if(this.formIsSent){
                         //Forumlar wurde erfolgreich gesendet!
+                        this.sendedText.setStyle("-fx-text-fill: green");
+                        this.sendedText.setText("Formular wurde erfolgreich gesendet !");
                     }
                 }
             }
