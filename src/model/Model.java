@@ -11,7 +11,9 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 public class Model {
-    private boolean isConnectedToServer;
+    //aussage darüber ob eine verbindung überhaupt aufgebaut werden kann in 10 sec. takt
+    public boolean canConnectToServer;
+
     //Funktionalität für das "Besucher eintragen" Button
     public void visitForm(ViewController viewController){
         try {
@@ -49,6 +51,7 @@ public class Model {
             ExceptionLogger.appendToFile(i);
         }
     }
+    //Funktionalität für das "Senden" Button
     public void sendForm(ViewController viewController,SendController sendController,FormController formController){
         try {
             //Notification Text aktuaisiern
@@ -79,7 +82,7 @@ public class Model {
     }
 
     //Diese Methode testet in 10 sekunden abschnitten über die Verfügbarkeit des Servers.
-    private void connectionTest(ViewController viewController,SendController sendController) {
+    public synchronized void connectionTest(ViewController viewController,SendController sendController) {
 
         new Thread(new Runnable(){
             @Override
@@ -95,10 +98,10 @@ public class Model {
                         solution = CompletableFuture.supplyAsync(cc);
 
                         //Ergebnis in Model abspeichern für weitere Verwendungszwecke
-                        isConnectedToServer = solution.get();
+                        canConnectToServer = solution.get();
 
                         Platform.runLater(() -> {
-                        if (isConnectedToServer) {
+                        if (canConnectToServer) {
                                 sendController.connectedText.setStyle("-fx-text-fill: green");
                                 sendController.connectedText.setText("OK!");
                         } else {
@@ -118,7 +121,7 @@ public class Model {
 
         }).start();
     }
-
+    //Funktionalität für das "Auf Updates überprüfen" Button
     public void updateProgram(ViewController viewController){
         try {
             //Notification Text aktuaisiern
@@ -133,6 +136,7 @@ public class Model {
             ExceptionLogger.appendToFile(i);
         }
     }
+    //Funktionalität für das "Historie" Button
     public void visitFormRecents(ViewController viewController){
         try {
             viewController.notificationText.setText("Verlauf");
@@ -146,6 +150,7 @@ public class Model {
             ExceptionLogger.appendToFile(e);
         }
     }
+
     public boolean formIsFilled(ViewController viewController,FormController formController){
        // formular gilt as gefüllt, wenn der Name und oder Mobil eingetragen ist.
         if(viewController.formParent != null) {
