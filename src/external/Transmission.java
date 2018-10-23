@@ -14,12 +14,13 @@ public class Transmission implements Supplier<Boolean> {
 
             client = new Socket();
             client.connect(isa);
-            //TODO return true;
+          return false;
         }catch (SocketException s){
             s.printStackTrace();
         }catch (IOException uhe){
             uhe.printStackTrace();
         }
+        return false;
     }
 
     @Override

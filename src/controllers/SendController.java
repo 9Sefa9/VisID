@@ -55,6 +55,7 @@ public class SendController{
         try {
             if (model.formIsFilled(this.viewController, this.viewController.form)) {
                 if (model.canConnectToServer) {
+                    
                     Transmission transmission = new Transmission();
                     CompletableFuture<Boolean> solution = CompletableFuture.supplyAsync(transmission);
                     this.formIsSent = solution.get();

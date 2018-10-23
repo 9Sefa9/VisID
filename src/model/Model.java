@@ -54,6 +54,7 @@ public class Model {
     //Funktionalität für das "Senden" Button
     public void sendForm(ViewController viewController,SendController sendController,FormController formController){
         try {
+
             //Notification Text aktuaisiern
             viewController.notificationText.setText("Formular senden");
 
