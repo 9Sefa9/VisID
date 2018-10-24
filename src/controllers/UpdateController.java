@@ -16,9 +16,6 @@ public class UpdateController {
     public UpdateController(){
 
     }
-    public UpdateController(Model model){
-        this.model = model;
-    }
 
     @FXML
     public void initialize() {
@@ -27,5 +24,9 @@ public class UpdateController {
 
     public void setViewController(ViewController viewController) {
         this.viewController = viewController;
+        setModel(this.viewController.model);
+    }
+    private void setModel(Model model){
+        this.model = model;
     }
 }

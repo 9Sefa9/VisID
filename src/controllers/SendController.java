@@ -2,6 +2,7 @@ package controllers;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.sun.xml.internal.ws.util.CompletedFuture;
+import external.Text;
 import external.Transmission;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -17,6 +18,7 @@ public class SendController{
 
     @FXML
     private ViewController viewController;
+
 
     private Model model;
 
@@ -36,11 +38,13 @@ public class SendController{
     public SendController(){
 
     }
-    public SendController(Model model){
-        this.model = model;
-    }
+
     public void setViewController(ViewController viewController) {
         this.viewController = viewController;
+        setModel(this.viewController.model);
+    }
+    private void setModel(Model model){
+        this.model = model;
     }
 
     @FXML
@@ -51,18 +55,21 @@ public class SendController{
     @FXML
     public void sendFilledForm(){
         //sende nur , wenn das Formular gefüllt war.
-
         try {
             if (model.formIsFilled(this.viewController, this.viewController.form)) {
                 if (model.canConnectToServer) {
-                    
-                    Transmission transmission = new Transmission();
+
+                    //hier findet die Tatsächliche Datenübertragung statt!
+                    Transmission transmission = new Transmission(this.viewController.form.getCompletedForm());
                     CompletableFuture<Boolean> solution = CompletableFuture.supplyAsync(transmission);
                     this.formIsSent = solution.get();
                     if(this.formIsSent){
                         //Forumlar wurde erfolgreich gesendet!
                         this.sendedText.setStyle("-fx-text-fill: green");
-                        this.sendedText.setText("Formular wurde erfolgreich gesendet !");
+                        this.sendedText.setText(Text.formSendOk);
+                    }else{
+                        this.sendedText.setStyle("-fx-text-fill: red");
+                        this.sendedText.setText(Text.formSendNotOk);
                     }
                 }
             }

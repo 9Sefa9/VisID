@@ -9,14 +9,18 @@ public class RecentsController {
 
     private Model model;
     public RecentsController(){ }
-    public RecentsController(Model model){
-        this.model = model;
-    }
+
     @FXML
     public void initialize(){
         System.out.println("INITIALIZE :: "+this.getClass());
     }
+
     public void setViewController(ViewController viewController) {
         this.viewController = viewController;
+        setModel(this.viewController.model);
+    }
+    private void setModel(Model model){
+        this.model = model;
     }
 }
+

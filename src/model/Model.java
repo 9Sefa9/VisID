@@ -3,6 +3,7 @@ package model;
 import controllers.*;
 import external.CheckConnection;
 import external.ExceptionLogger;
+import external.Text;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 
@@ -18,7 +19,7 @@ public class Model {
     public void visitForm(ViewController viewController){
         try {
             //Notification Text aktuaisiern
-            viewController.notificationText.setText("Formular erstellen");
+            viewController.notificationText.setText(Text.notificationTextFormular);
 
             //sorgt dafür, dass daten erhalten bleiben bei fxml scene wechsel
             if(viewController.formParent == null)
@@ -41,7 +42,7 @@ public class Model {
                 visitForm(viewController);
 
                 //Notification Text am Ende aktualisieren
-                viewController.notificationText.setText("Formular wurde zurückgesetzt!");
+                viewController.notificationText.setText(Text.notificationTextResetFormular);
             }
 
 
@@ -56,7 +57,7 @@ public class Model {
         try {
 
             //Notification Text aktuaisiern
-            viewController.notificationText.setText("Formular senden");
+            viewController.notificationText.setText(Text.notificationTextSendFormular);
 
             //contentpane aktualisieren
             if (viewController.sendParent == null)
@@ -67,11 +68,11 @@ public class Model {
             //überprüfen ob Formular wenigstens etwas aufgefüllt wurde vor dem eigentlichen connection test
             if(formIsFilled(viewController,formController)){
                 sendController.filledText.setStyle("-fx-text-fill: green");
-                sendController.filledText.setText("OK!");
+                sendController.filledText.setText(Text.filledOk);
 
             }else{
                 sendController.filledText.setStyle("-fx-text-fill: red");
-                sendController.filledText.setText("NOT OK!");
+                sendController.filledText.setText(Text.filledNotOk);
             }
 
             connectionTest(viewController,sendController);
@@ -104,10 +105,10 @@ public class Model {
                         Platform.runLater(() -> {
                         if (canConnectToServer) {
                                 sendController.connectedText.setStyle("-fx-text-fill: green");
-                                sendController.connectedText.setText("OK!");
+                                sendController.connectedText.setText(Text.connectedTOHostOk);
                         } else {
                                 sendController.connectedText.setStyle("-fx-text-fill: red");
-                                sendController.connectedText.setText("NOT OK!");
+                                sendController.connectedText.setText(Text.connectedToHostNotOk);
                         }
                         });
                         Thread.sleep(10000);
@@ -126,7 +127,7 @@ public class Model {
     public void updateProgram(ViewController viewController){
         try {
             //Notification Text aktuaisiern
-            viewController.notificationText.setText("Updates");
+            viewController.notificationText.setText(Text.notificationTextUpdate);
 
             if(viewController.updateParent == null)
                 viewController.updateParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Update.fxml"));
@@ -140,7 +141,7 @@ public class Model {
     //Funktionalität für das "Historie" Button
     public void visitFormRecents(ViewController viewController){
         try {
-            viewController.notificationText.setText("Verlauf");
+            viewController.notificationText.setText(Text.notificationTextRecent);
 
             if (viewController.recentsParent == null)
                 viewController.recentsParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Recents.fxml"));

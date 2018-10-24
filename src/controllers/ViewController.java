@@ -9,7 +9,7 @@ import javax.swing.text.View;
 
 
 public class ViewController {
-    private Model model;
+    public Model model;
 
     //die jeweiligen Contorller von den FXMLs
     @FXML public FormController form;
