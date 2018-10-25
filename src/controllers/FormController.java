@@ -192,6 +192,7 @@ public class FormController{
     public void setViewController(ViewController viewController) {
         this.viewController = viewController;
     }
+
     public ObservableList getCompletedForm(){
         try {
             this.formList.clear();
