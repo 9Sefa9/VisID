@@ -3,6 +3,7 @@ package model;
 import controllers.*;
 import external.CheckConnection;
 import external.ExceptionLogger;
+import external.Form;
 import external.Text;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
@@ -194,6 +195,109 @@ public class Model {
            // recentTableView.setItems(formList);
            for(int i = 0 ; i<formList.size();i++)
            recentTableView.getItems().add(formList.get(i));
+    }
+    //Diese Listener updatet das Formular und die Form Klasse jedesmal wenn eine veränderung vorliegt. Invoked at FormController.
+    public void choiceBoxListeners(FormController formController, Form form){
+
+        formController.kreuz0.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz0.selectedProperty().setValue(ne);
+            form.kreuz0.set(ne.toString());
+
+        });
+        formController.kreuz1.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz1.selectedProperty().setValue(ne);
+            form.kreuz1.set(ne.toString());
+        });
+        formController.kreuz2.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz2.selectedProperty().setValue(ne);
+            form.kreuz2.set(ne.toString());
+        });
+        formController.kreuz3.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz3.selectedProperty().setValue(ne);
+            form.kreuz3.set(ne.toString());
+        });
+        formController.kreuz00.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz00.selectedProperty().setValue(ne);
+            form.kreuz00.set(ne.toString());
+        });
+        formController.kreuz01.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz01.selectedProperty().setValue(ne);
+            form.kreuz01.set(ne.toString());
+        });
+        formController.kreuz02.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz02.selectedProperty().setValue(ne);
+            form.kreuz02.set(ne.toString());
+        });
+        formController.kreuz10.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz10.selectedProperty().setValue(ne);
+            form.kreuz10.set(ne.toString());
+        });
+        formController.kreuz11.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz11.selectedProperty().setValue(ne);
+            form.kreuz11.set(ne.toString());
+        });
+        formController.kreuz12.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz12.selectedProperty().setValue(ne);
+            form.kreuz12.set(ne.toString());
+        });
+        formController.kreuz20.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz20.selectedProperty().setValue(ne);
+            form.kreuz20.set(ne.toString());
+        });
+        formController.kreuz21.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz21.selectedProperty().setValue(ne);
+            form.kreuz21.set(ne.toString());
+        });
+        formController.kreuz22.selectedProperty().addListener((ob,old,ne) -> {
+            formController.kreuz22.selectedProperty().setValue(ne);
+            form.kreuz22.set(ne.toString());
+        });
+    }
+    public void datePickerListeners(FormController formController,Form form){
+        formController.vonDatum.valueProperty().addListener((ob,old,ne) -> {
+            formController.vonDatum.valueProperty().setValue(ne);
+            form.vonDatum.set(ne.toString());
+        });
+        formController.bisDatum.valueProperty().addListener((ob,old,ne) -> {
+            formController.bisDatum.valueProperty().setValue(ne);
+            form.bisDatum.set(ne.toString());
+        });
+    }
+    public void labelListeners(FormController formController,Form form){
+        formController.name.textProperty().addListener((obs,old,ne) -> {
+            formController.name.setText(ne);
+            form.name.set(ne.toString());
+        });
+
+        formController.mobil.textProperty().addListener((obs,old,ne) -> {
+            formController.mobil.setText(ne);
+            form.mobil.set(ne.toString());
+        });
+        formController.email.textProperty().addListener((obs,old,ne) -> {
+            formController.email.setText(ne);
+            form.email.set(ne.toString());
+        });
+        formController.firma.textProperty().addListener((obs,old,ne) -> {
+            formController.firma.setText(ne);
+            form.firma.set(ne.toString());
+        });
+        formController.vorgesetzter.textProperty().addListener((obs,old,ne) -> {
+            formController.vorgesetzter.setText(ne);
+            form.vorgesetzter.set(ne.toString());
+        });
+        formController.strasse.textProperty().addListener((obs,old,ne) -> {
+            formController.strasse.setText(ne);
+            form.strasse.set(ne.toString());
+        });
+        formController.plzOrt.textProperty().addListener((obs,old,ne) -> {
+            formController.plzOrt.setText(ne);
+            form.plzOrt.set(ne.toString());
+        });
+        formController.notwendigeArbeitsbereiche.textProperty().addListener((obs,old,ne) -> {
+            formController.notwendigeArbeitsbereiche.setText(ne);
+            form.notwendigeArbeitsbereiche.set(ne.toString());
+        });
+
     }
 
 }

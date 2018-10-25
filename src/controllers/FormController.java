@@ -1,5 +1,6 @@
 package controllers;
 
+import external.Form;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
@@ -93,108 +94,29 @@ public class FormController{
 
     @FXML
     public CheckBox kreuz22;
+
     public ObservableList formList = FXCollections.observableArrayList();
-
+    public Form form;
     public FormController(){
-    }
-    public FormController(Model model){
-        this.model = model;
 
     }
-
     @FXML
     public void initialize(){
         System.out.println("INITIALIZE :: "+this.getClass());
-
-        labelListeners();
-        datePickerListeners();
-        choiceBoxListeners();
-
     }
-    //bei kleinster veränderung werden die unten aufgeführten Listener aufgerufen
-    private void choiceBoxListeners(){
 
-        this.kreuz0.selectedProperty().addListener((ob,old,ne) -> {
-           this.kreuz0.selectedProperty().setValue(ne);
-        });
-        this.kreuz1.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz1.selectedProperty().setValue(ne);
-        });
-        this.kreuz2.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz2.selectedProperty().setValue(ne);
-        });
-        this.kreuz3.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz3.selectedProperty().setValue(ne);
-        });
-        this.kreuz00.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz00.selectedProperty().setValue(ne);
-        });
-        this.kreuz01.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz01.selectedProperty().setValue(ne);
-        });
-        this.kreuz02.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz02.selectedProperty().setValue(ne);
-        });
-        this.kreuz10.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz10.selectedProperty().setValue(ne);
-        });
-        this.kreuz11.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz11.selectedProperty().setValue(ne);
-        });
-        this.kreuz12.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz12.selectedProperty().setValue(ne);
-        });
-        this.kreuz20.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz20.selectedProperty().setValue(ne);
-        });
-        this.kreuz21.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz21.selectedProperty().setValue(ne);
-        });
-        this.kreuz22.selectedProperty().addListener((ob,old,ne) -> {
-            this.kreuz22.selectedProperty().setValue(ne);
-        });
-    }
-    private void datePickerListeners(){
-        this.vonDatum.valueProperty().addListener((ob,old,ne) -> {
-            this.vonDatum.valueProperty().setValue(ne);
-        });
-        this.bisDatum.valueProperty().addListener((ob,old,ne) -> {
-            this.bisDatum.valueProperty().setValue(ne);
-        });
-    }
-    private void labelListeners(){
-        this.name.textProperty().addListener((obs,old,ne) -> {
-           this.name.setText(ne);
-        });
-
-        this.mobil.textProperty().addListener((obs,old,ne) -> {
-            this.mobil.setText(ne);
-        });
-        this.email.textProperty().addListener((obs,old,ne) -> {
-            this.email.setText(ne);
-        });
-        this.firma.textProperty().addListener((obs,old,ne) -> {
-            this.firma.setText(ne);
-        });
-        this.vorgesetzter.textProperty().addListener((obs,old,ne) -> {
-            this.vorgesetzter.setText(ne);
-        });
-        this.strasse.textProperty().addListener((obs,old,ne) -> {
-            this.strasse.setText(ne);
-        });
-        this.plzOrt.textProperty().addListener((obs,old,ne) -> {
-            this.plzOrt.setText(ne);
-        });
-        this.notwendigeArbeitsbereiche.textProperty().addListener((obs,old,ne) -> {
-            this.notwendigeArbeitsbereiche.setText(ne);
-        });
-
-    }
     public void setViewController(ViewController viewController) {
         this.viewController = viewController;
+        setModel(this.viewController.model);
     }
-
-
-
+    private void setModel(Model model){
+        this.model = model;
+        form = new Form();
+        //lauscht auf die komponente und update es dementsprechend im FormulaController und in der Form Klasse
+        //warum ist es hier drin ? der model wird nicht als erstes im initializer erkannt. deswegen hier drin.
+        model.labelListeners(this,form);
+        model.datePickerListeners(this,form);
+        model.choiceBoxListeners(this,form);
+    }
 
 }

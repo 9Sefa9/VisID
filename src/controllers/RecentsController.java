@@ -52,8 +52,6 @@ public class RecentsController {
     @FXML
     public void initialize(){
         System.out.println("INITIALIZE :: "+this.getClass());
-//TODO!
-       // this.nameColumn.setCellValueFactory();
     }
 
     public void setViewController(ViewController viewController) {
