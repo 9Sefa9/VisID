@@ -7,6 +7,7 @@ import external.Text;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TableView;
 
 import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
@@ -187,6 +188,12 @@ public class Model {
         }catch(IOException i){
             i.printStackTrace();
         }
+    }
+    public void addFormToRecent(TableView recentTableView, ObservableList formList){
+           if(formList!=null)
+           // recentTableView.setItems(formList);
+           for(int i = 0 ; i<formList.size();i++)
+           recentTableView.getItems().add(formList.get(i));
     }
 
 }

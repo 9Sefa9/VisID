@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RecentsController">
-   <ScrollPane hbarPolicy="ALWAYS" layoutX="14.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="523.0" prefWidth="788.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="15.0">
-      <content>
-         <TableView prefHeight="511.0">
-           <columns>
-             <TableColumn prefWidth="75.0" />
-             <TableColumn prefWidth="171.0" text="Name" />
-               <TableColumn prefWidth="192.0" text="Mobil" />
-               <TableColumn prefWidth="192.0" text="E-Mail" />
-               <TableColumn prefWidth="192.0" text="Firma" />
-               <TableColumn prefWidth="192.0" text="Vorgesetzter" />
-               <TableColumn prefWidth="192.0" text="Strasse" />
-               <TableColumn prefWidth="192.0" text="PLZ/Ort" />
-               <TableColumn prefWidth="192.0" text="Notwendige Arbeitsbereiche" />
-               <TableColumn prefWidth="192.0" text="Von" />
-               <TableColumn prefWidth="192.0" text="Bis" />
-           </columns>
-         </TableView>
-      </content>
-   </ScrollPane>
+<AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RecentsController">
+   <TableView fx:id="recentTableView" prefHeight="550.0" prefWidth="815.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+     <columns>
+       <TableColumn prefWidth="75.0" />
+       <TableColumn fx:id="nameColumn" prefWidth="171.0" text="Name" />
+         <TableColumn fx:id="mobilColumn" prefWidth="192.0" text="Mobil" />
+         <TableColumn fx:id="emailColumn" prefWidth="192.0" text="E-Mail" />
+         <TableColumn fx:id="firmaColumn" prefWidth="192.0" text="Firma" />
+         <TableColumn fx:id="vorgesetzterColumn" prefWidth="192.0" text="Vorgesetzter" />
+         <TableColumn fx:id="strasseColumn" prefWidth="192.0" text="Strasse" />
+         <TableColumn fx:id="plzOrtColumn" prefWidth="192.0" text="PLZ/Ort" />
+         <TableColumn fx:id="notwendigeArbeitsbereicheColumn" prefWidth="192.0" text="Notwendige Arbeitsbereiche" />
+         <TableColumn fx:id="vonColumn" prefWidth="192.0" text="Von" />
+         <TableColumn fx:id="bisColumn" prefWidth="192.0" text="Bis" />
+     </columns>
+   </TableView>
 </AnchorPane>

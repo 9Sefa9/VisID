@@ -52,22 +52,24 @@ public class SendController{
         System.out.println("INITIALIZE :: "+this.getClass());
     }
 
+    //TODO Ausrufezeichen entfernen.
     @FXML
     public void sendFilledForm(){
         //sende nur , wenn das Formular gefüllt war.
         try {
             if (model.formIsFilled(this.viewController, this.viewController.form)) {
-                if (model.canConnectToServer) {
+                if (!model.canConnectToServer) {
 
                     //hier findet die Tatsächliche Datenübertragung statt!
                     Transmission transmission = new Transmission(this.model.getCompletedForm(this.viewController.form));
                     CompletableFuture<Boolean> solution = CompletableFuture.supplyAsync(transmission);
                     this.formIsSent = solution.get();
-                    if(this.formIsSent){
+                    if(!this.formIsSent){
                         //Forumlar wurde erfolgreich gesendet!
                         this.sendedText.setStyle("-fx-text-fill: green");
                         this.sendedText.setText(Text.formSendOk);
                         //in die Historie einfügen!
+                        this.model.addFormToRecent(this.viewController.recents.recentTableView,this.viewController.form.formList);
                         this.model.clearCompletedForm(this.viewController);
                     }else{
 
