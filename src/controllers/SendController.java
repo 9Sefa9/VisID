@@ -60,17 +60,23 @@ public class SendController{
                 if (model.canConnectToServer) {
 
                     //hier findet die Tatsächliche Datenübertragung statt!
-                    Transmission transmission = new Transmission(this.viewController.form.getCompletedForm());
+                    Transmission transmission = new Transmission(this.model.getCompletedForm(this.viewController.form));
                     CompletableFuture<Boolean> solution = CompletableFuture.supplyAsync(transmission);
                     this.formIsSent = solution.get();
                     if(this.formIsSent){
                         //Forumlar wurde erfolgreich gesendet!
                         this.sendedText.setStyle("-fx-text-fill: green");
                         this.sendedText.setText(Text.formSendOk);
+                        //in die Historie einfügen!
+                        this.model.clearCompletedForm(this.viewController);
                     }else{
+
                         this.sendedText.setStyle("-fx-text-fill: red");
                         this.sendedText.setText(Text.formSendNotOk);
                     }
+                }else{
+                    this.sendedText.setStyle("-fx-text-fill: red");
+                    this.sendedText.setText(Text.formSendNotOk);
                 }
             }
         }catch (InterruptedException ie){

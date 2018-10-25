@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FormController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FormController">
    <children>
       <ScrollPane hbarPolicy="ALWAYS" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="815.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
@@ -42,21 +42,73 @@
                   <RowConstraints maxHeight="608.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <TextField fx:id="vorgesetzter" prefHeight="21.0" prefWidth="170.0" promptText="Max Mustermann" GridPane.columnIndex="4" GridPane.rowIndex="2">
-                     <font>
-                        <Font name="System Italic" size="20.0" />
-                     </font>
-                  </TextField>
-                  <Label alignment="CENTER" prefHeight="117.0" prefWidth="227.0" text="Ansprechpartner der Bayer 04 Unternehmensgruppe" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
                   <TextField fx:id="name" prefHeight="44.0" prefWidth="191.0" promptText="Max" GridPane.columnIndex="2">
                      <font>
                         <Font name="System Italic" size="20.0" />
                      </font>
                   </TextField>
+                  <TextField fx:id="mobil" prefHeight="21.0" prefWidth="170.0" promptText="+490000000000" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="System Italic" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="email" prefHeight="44.0" prefWidth="401.0" promptText="max.hat@feierabend.de" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Italic" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="firma" prefHeight="21.0" prefWidth="170.0" promptText="Muster GmbH" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                          <Font name="System Italic" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="vorgesetzter" prefHeight="21.0" prefWidth="170.0" promptText="Max Mustermann" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Italic" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="strasse" prefHeight="44.0" prefWidth="378.0" promptText="Muster Straße 48" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Italic" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="plzOrt" prefHeight="21.0" prefWidth="170.0" promptText="51373 Leverkusen" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Italic" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="notwendigeArbeitsbereiche" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="760.0" promptText="Text" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Italic" size="20.0" />
+                     </font>
+                  </TextField>
+                  <DatePicker fx:id="vonDatum" prefHeight="40.0" prefWidth="370.0" promptText="10.10.2010" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <DatePicker fx:id="bisDatum" prefHeight="40.0" prefWidth="144.0" promptText="10.10.2010" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <CheckBox fx:id="kreuz0" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox fx:id="kreuz1" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="613.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox fx:id="kreuz2" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="517.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <CheckBox fx:id="kreuz3" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="573.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </CheckBox>
+                  <Label alignment="CENTER" prefHeight="117.0" prefWidth="227.0" text="Ansprechpartner der Bayer 04 Unternehmensgruppe" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
                   <Label alignment="CENTER" prefHeight="265.0" prefWidth="112.0" text="Firma:" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font size="20.0" />
@@ -67,16 +119,6 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="firma" prefHeight="21.0" prefWidth="170.0" promptText="Muster GmbH" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                     <font>
-                          <Font name="System Italic" size="20.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="mobil" prefHeight="21.0" prefWidth="170.0" promptText="+490000000000" GridPane.columnIndex="4">
-                     <font>
-                        <Font name="System Italic" size="20.0" />
-                     </font>
-                  </TextField>
                   <Label alignment="CENTER" prefHeight="184.0" prefWidth="160.0" text="Fon/Mobil" textAlignment="CENTER" GridPane.columnIndex="3">
                      <font>
                         <Font size="20.0" />
@@ -87,23 +129,16 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="vonDatum" prefHeight="40.0" prefWidth="370.0" promptText="10.10.2010" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                   <Label alignment="CENTER" prefHeight="186.0" prefWidth="274.0" text="Bis:" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="bisDatum" prefHeight="40.0" prefWidth="432.0" promptText="10.10.2010" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                   <Label alignment="CENTER" prefHeight="221.0" prefWidth="116.0" text="Name:" textAlignment="CENTER" GridPane.columnIndex="1">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="email" prefHeight="44.0" prefWidth="401.0" promptText="max.hat@feierabend.de" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                     <font>
-                        <Font name="System Italic" size="20.0" />
-                     </font>
-                  </TextField>
                   <Label alignment="CENTER" prefHeight="221.0" prefWidth="116.0" text="E-Mail:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="20.0" />
@@ -119,16 +154,6 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="strasse" prefHeight="44.0" prefWidth="378.0" promptText="Muster Straße 48" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                     <font>
-                        <Font name="System Italic" size="20.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="plzOrt" prefHeight="21.0" prefWidth="170.0" promptText="51373 Leverkusen" GridPane.columnIndex="4" GridPane.rowIndex="3">
-                     <font>
-                        <Font name="System Italic" size="20.0" />
-                     </font>
-                  </TextField>
                   <Label alignment="CENTER" prefHeight="221.0" prefWidth="116.0" text="Str.:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
                         <Font size="20.0" />
@@ -144,21 +169,11 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="notwendigeArbeitsbereiche" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="760.0" promptText="Text" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                     <font>
-                        <Font name="System Italic" size="20.0" />
-                     </font>
-                  </TextField>
                   <Label alignment="CENTER" prefHeight="165.0" prefWidth="227.0" text="Von:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="kreuz0" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </CheckBox>
                   <Label alignment="CENTER" prefHeight="165.0" prefWidth="227.0" text="Ankreuzen:" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="6">
                      <font>
                         <Font size="20.0" />
@@ -169,11 +184,6 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="kreuz1" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="613.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </CheckBox>
                   <Label alignment="CENTER" layoutX="10.0" layoutY="595.0" prefHeight="165.0" prefWidth="227.0" text="Ankreuzen:" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="7">
                      <font>
                         <Font size="20.0" />
@@ -204,16 +214,6 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="kreuz2" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="517.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="8">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </CheckBox>
-                  <CheckBox fx:id="kreuz3" contentDisplay="GRAPHIC_ONLY" layoutX="237.0" layoutY="573.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Ankreuzen" GridPane.columnIndex="1" GridPane.rowIndex="9">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </CheckBox>
                   <Label alignment="CENTER" prefHeight="165.0" prefWidth="227.0" text="Ankreuzen - Zugang in folgende Bereiche: " textAlignment="CENTER" wrapText="true" GridPane.rowIndex="10">
                      <font>
                         <Font size="20.0" />
@@ -236,22 +236,7 @@
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuz12" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                        </CheckBox>
-                        <CheckBox fx:id="kreuz11" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                        </CheckBox>
                         <CheckBox fx:id="kreuz01" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="2" GridPane.columnIndex="1">
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                        </CheckBox>
-                        <CheckBox fx:id="kreuz10" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="4" GridPane.rowIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -261,12 +246,27 @@
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
-                        <CheckBox fx:id="kreuz21" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <CheckBox fx:id="kreuz10" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="4" GridPane.rowIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </CheckBox>
+                        <CheckBox fx:id="kreuz11" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </CheckBox>
+                        <CheckBox fx:id="kreuz12" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </CheckBox>
                         <CheckBox fx:id="kreuz20" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="7" GridPane.rowIndex="2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </CheckBox>
+                        <CheckBox fx:id="kreuz21" mnemonicParsing="false" prefHeight="56.0" prefWidth="55.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>

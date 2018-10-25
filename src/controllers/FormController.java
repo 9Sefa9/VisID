@@ -8,12 +8,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import model.Model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -91,7 +93,7 @@ public class FormController{
 
     @FXML
     public CheckBox kreuz22;
-    private  ObservableList formList = FXCollections.observableArrayList();
+    public ObservableList formList = FXCollections.observableArrayList();
 
     public FormController(){
     }
@@ -160,7 +162,6 @@ public class FormController{
             this.bisDatum.valueProperty().setValue(ne);
         });
     }
-
     private void labelListeners(){
         this.name.textProperty().addListener((obs,old,ne) -> {
            this.name.setText(ne);
@@ -193,18 +194,7 @@ public class FormController{
         this.viewController = viewController;
     }
 
-    public ObservableList getCompletedForm(){
-        try {
-            this.formList.clear();
-            formList.addAll(this.name.getText(), this.mobil.getText(), this.email.getText(), this.firma.getText(), this.vorgesetzter.getText(),
-                    this.strasse.getText(), this.plzOrt.getText(), this.notwendigeArbeitsbereiche.getText(),
-                    this.vonDatum.getValue(), this.bisDatum.getValue(), this.kreuz0.isSelected(), this.kreuz1.isSelected(), this.kreuz2.isSelected(), this.kreuz3.isSelected(),
-                    this.kreuz00.isSelected(), this.kreuz01.isSelected(), this.kreuz02.isSelected(), this.kreuz10.isSelected(), this.kreuz11.isSelected(),
-                    this.kreuz12.isSelected(), this.kreuz20.isSelected(), this.kreuz21.isSelected(), this.kreuz22.isSelected());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return this.formList;
-    }
+
+
 
 }

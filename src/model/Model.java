@@ -5,6 +5,7 @@ import external.CheckConnection;
 import external.ExceptionLogger;
 import external.Text;
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class Model {
     //aussage darüber ob eine verbindung überhaupt aufgebaut werden kann in 10 sec. takt
     public boolean canConnectToServer;
 
-    //Funktionalität für das "Besucher eintragen" Button
+    //Funktionalität für das "Besucher eintragen" Button im Main Menu
     public void visitForm(ViewController viewController){
         try {
             //Notification Text aktuaisiern
@@ -32,7 +33,7 @@ public class Model {
             ExceptionLogger.appendToFile(i);
         }
     }
-    //Funktionalität für das "Formular zurücksetzen" Button
+    //Funktionalität für das "Formular zurücksetzen" Button im Main Menu
     public void visitFormReset(ViewController viewController){
         try {
 
@@ -52,7 +53,7 @@ public class Model {
             ExceptionLogger.appendToFile(i);
         }
     }
-    //Funktionalität für das "Senden" Button
+    //Funktionalität für das "Formular Senden" Button im Main Menu
     public void sendForm(ViewController viewController,SendController sendController,FormController formController){
         try {
 
@@ -123,7 +124,7 @@ public class Model {
 
         }).start();
     }
-    //Funktionalität für das "Auf Updates überprüfen" Button
+    //Funktionalität für das "Auf Updates überprüfen" Button im Main
     public void updateProgram(ViewController viewController){
         try {
             //Notification Text aktuaisiern
@@ -138,7 +139,7 @@ public class Model {
             ExceptionLogger.appendToFile(i);
         }
     }
-    //Funktionalität für das "Historie" Button
+    //Funktionalität für das "Historie" Button im Main
     public void visitFormRecents(ViewController viewController){
         try {
             viewController.notificationText.setText(Text.notificationTextRecent);
@@ -165,6 +166,27 @@ public class Model {
         }
         return false;
     }
+    public ObservableList getCompletedForm(FormController formController){
+        try {
+            formController.formList.clear();
+            formController.formList.addAll(formController.name.getText(), formController.mobil.getText(), formController.email.getText(), formController.firma.getText(), formController.vorgesetzter.getText(),
+                    formController.strasse.getText(), formController.plzOrt.getText(), formController.notwendigeArbeitsbereiche.getText(),
+                    formController.vonDatum.getValue(), formController.bisDatum.getValue(), formController.kreuz0.isSelected(), formController.kreuz1.isSelected(), formController.kreuz2.isSelected(), formController.kreuz3.isSelected(),
+                    formController.kreuz00.isSelected(), formController.kreuz01.isSelected(), formController.kreuz02.isSelected(), formController.kreuz10.isSelected(), formController.kreuz11.isSelected(),
+                    formController.kreuz12.isSelected(), formController.kreuz20.isSelected(), formController.kreuz21.isSelected(), formController.kreuz22.isSelected());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return formController.formList;
+    }
+    public void clearCompletedForm(ViewController viewController) {
+        try {
+            if (viewController.formParent != null)
+                viewController.formParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
 
+        }catch(IOException i){
+            i.printStackTrace();
+        }
+    }
 
 }
