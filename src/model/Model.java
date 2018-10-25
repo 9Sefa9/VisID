@@ -191,10 +191,7 @@ public class Model {
         }
     }
     public void addFormToRecent(TableView recentTableView, ObservableList formList){
-           if(formList!=null)
-           // recentTableView.setItems(formList);
-           for(int i = 0 ; i<formList.size();i++)
-           recentTableView.getItems().add(formList.get(i));
+           //TODO!!! sowohl inhalt als auch parameter!
     }
     //Diese Listener updatet das Formular und die Form Klasse jedesmal wenn eine veränderung vorliegt. Invoked at FormController.
     public void choiceBoxListeners(FormController formController, Form form){
