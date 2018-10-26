@@ -9,6 +9,7 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -194,12 +195,8 @@ public class Model {
     }
     public void addFormToRecent(RecentsController recentsController,FormController formController){
            //TODO!!! sowohl inhalt als auch parameter!
-        ObservableList<Form> formData = FXCollections.observableArrayList(new Form());
-
-        recentsController.recentTableView.setEditable(true);
-
+        ObservableList<Form> formData = FXCollections.observableArrayList(formController.form);
         recentsController.nameColumn.setCellFactory(new PropertyValueFactory<Form,String>("name"));
-        recentsController.mobilColumn.setCellFactory(new PropertyValueFactory<Form,String>("mobil"));
         recentsController.recentTableView.setItems(formData);
     }
     //Diese Listener updatet das Formular und die Form Klasse jedesmal wenn eine veränderung vorliegt. Invoked at FormController.
