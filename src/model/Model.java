@@ -6,9 +6,11 @@ import external.ExceptionLogger;
 import external.Form;
 import external.Text;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
@@ -190,8 +192,15 @@ public class Model {
             i.printStackTrace();
         }
     }
-    public void addFormToRecent(TableView recentTableView, ObservableList formList){
+    public void addFormToRecent(RecentsController recentsController,FormController formController){
            //TODO!!! sowohl inhalt als auch parameter!
+        ObservableList<Form> formData = FXCollections.observableArrayList(new Form());
+
+        recentsController.recentTableView.setEditable(true);
+
+        recentsController.nameColumn.setCellFactory(new PropertyValueFactory<Form,String>("name"));
+        recentsController.mobilColumn.setCellFactory(new PropertyValueFactory<Form,String>("mobil"));
+        recentsController.recentTableView.setItems(formData);
     }
     //Diese Listener updatet das Formular und die Form Klasse jedesmal wenn eine veränderung vorliegt. Invoked at FormController.
     public void choiceBoxListeners(FormController formController, Form form){

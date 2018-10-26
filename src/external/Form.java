@@ -3,6 +3,8 @@ package external;
 import controllers.FormController;
 import controllers.ViewController;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Form {
 
@@ -56,5 +58,6 @@ public class Form {
             this.kreuz22  = new SimpleStringProperty();
 
         }
+
 
 }
