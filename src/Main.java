@@ -36,10 +36,10 @@ public class Main extends Application {
         RecentsController r = recents.getController();
         UpdateController u = update.getController();
 
-        vc.form = form.getController();
-        vc.send = send.getController();
-        vc.recents = recents.getController();
-        vc.update = update.getController();
+        vc.formController = form.getController();
+        vc.sendController = send.getController();
+        vc.recentsController = recents.getController();
+        vc.updateController = update.getController();
 
         f.setViewController(vc);
         s.setViewController(vc);

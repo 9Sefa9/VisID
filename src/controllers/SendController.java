@@ -1,7 +1,5 @@
 package controllers;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import com.sun.xml.internal.ws.util.CompletedFuture;
 import external.Text;
 import external.Transmission;
 import javafx.fxml.FXML;
@@ -57,11 +55,11 @@ public class SendController{
     public void sendFilledForm(){
         //sende nur , wenn das Formular gefüllt war.
         try {
-            if (model.formIsFilled(this.viewController, this.viewController.form)) {
+            if (model.formIsFilled(this.viewController, this.viewController.formController)) {
                 if (!model.canConnectToServer) {
 
                     //hier findet die Tatsächliche Datenübertragung statt!
-                    Transmission transmission = new Transmission(this.model.getCompletedForm(this.viewController.form));
+                    Transmission transmission = new Transmission(this.model.getCompletedForm(this.viewController.formController));
                     CompletableFuture<Boolean> solution = CompletableFuture.supplyAsync(transmission);
                     this.formIsSent = solution.get();
                     if(!this.formIsSent){
@@ -69,7 +67,7 @@ public class SendController{
                         this.sendedText.setStyle("-fx-text-fill: green");
                         this.sendedText.setText(Text.formSendOk);
                         //in die Historie einfügen!
-                        this.model.addFormToRecent(this.viewController.recents,this.viewController.form);
+                        this.model.addFormToRecent(this.viewController.recentsController,this.viewController.formController.form);
                         this.model.clearCompletedForm(this.viewController);
                     }else{
 

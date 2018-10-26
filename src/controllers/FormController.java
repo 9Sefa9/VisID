@@ -96,6 +96,7 @@ public class FormController{
     public CheckBox kreuz22;
 
     public ObservableList formList = FXCollections.observableArrayList();
+    //Form wichtig für TableView
     public Form form;
     public FormController(){
 
@@ -112,11 +113,11 @@ public class FormController{
     private void setModel(Model model){
         this.model = model;
         form = new Form();
-        //lauscht auf die komponente und update es dementsprechend im FormulaController und in der Form Klasse
-        //warum ist es hier drin ? der model wird nicht als erstes im initializer erkannt. deswegen hier drin.
-        model.labelListeners(this,form);
-        model.datePickerListeners(this,form);
-        model.choiceBoxListeners(this,form);
+        //lauscht auf die komponente und updateController es dementsprechend in formList und in formController
+
+        model.labelListeners(this,this.form);
+        model.datePickerListeners(this,this.form);
+        model.choiceBoxListeners(this,this.form);
     }
 
 }

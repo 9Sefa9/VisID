@@ -21,6 +21,19 @@
                <TableColumn fx:id="notwendigeArbeitsbereicheColumn" prefWidth="192.0" text="Notwendige Arbeitsbereiche" />
                <TableColumn fx:id="vonColumn" prefWidth="192.0" text="Von" />
                <TableColumn fx:id="bisColumn" prefWidth="192.0" text="Bis" />
+               <TableColumn fx:id="kreuz0Column" prefWidth="192.0" text="Ankreuzen 1" />
+               <TableColumn fx:id="kreuz1Column" prefWidth="192.0" text="Ankreuzen 2" />
+               <TableColumn fx:id="kreuz2Column" prefWidth="192.0" text="Ankreuzen 3" />
+               <TableColumn fx:id="kreuz3Column" prefWidth="192.0" text="Ankreuzen 4" />
+               <TableColumn fx:id="kreuz00Column" prefWidth="192.0" text="1" />
+               <TableColumn fx:id="kreuz01Column" prefWidth="192.0" text="2" />
+               <TableColumn fx:id="kreuz02Column" prefWidth="192.0" text="3" />
+               <TableColumn fx:id="kreuz10Column" prefWidth="192.0" text="4" />
+               <TableColumn fx:id="kreuz11Column" prefWidth="192.0" text="5" />
+               <TableColumn fx:id="kreuz12Column" prefWidth="192.0" text="6" />
+               <TableColumn fx:id="kreuz20Column" prefWidth="192.0" text="7" />
+               <TableColumn fx:id="kreuz21Column" prefWidth="192.0" text="8" />
+               <TableColumn fx:id="kreuz22Column" prefWidth="192.0" text="9" />
            </columns>
          </TableView>
       </content>

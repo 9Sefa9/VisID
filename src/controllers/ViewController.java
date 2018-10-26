@@ -5,20 +5,18 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import model.Model;
 
-import javax.swing.text.View;
-
 
 public class ViewController {
     public Model model;
 
     //die jeweiligen Contorller von den FXMLs
-    @FXML public FormController form;
+    @FXML public FormController formController;
 
-    @FXML public SendController send;
+    @FXML public SendController sendController;
 
-    @FXML public UpdateController update;
+    @FXML public UpdateController updateController;
 
-    @FXML public RecentsController recents;
+    @FXML public RecentsController recentsController;
 
     //Parents : zum öffnen bzw einsetzen von FXMl dokumenten in bestimmten Panes
     public Parent formParent;
@@ -53,7 +51,7 @@ public class ViewController {
 
     @FXML
     public void sendFormAction(){
-        this.model.sendForm(this,this.send,this.form);
+        this.model.sendForm(this,this.sendController,this.formController);
     }
 
     @FXML
