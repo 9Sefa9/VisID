@@ -9,6 +9,8 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
+import javafx.scene.control.OverrunStyle;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
@@ -191,10 +193,13 @@ public class Model {
             i.printStackTrace();
         }
     }
-    public void addFormToRecent(RecentsController recentsController, Form form){
-           //TODO!!! sowohl inhalt als auch parameter!
+    public void addFormToRecent(FormController formController, RecentsController recentsController){
+
+        Form form = getNewForm(formController);
+           //TODO!!! eine weitere zeile wird nicht hinzugefügt. worna kann das liegen ?
         ObservableList<Form> formData = FXCollections.observableArrayList(form);
 
+        recentsController.buttonColumn.setCellValueFactory(new PropertyValueFactory<Form, Button>("button"));
         recentsController.nameColumn.setCellValueFactory(new PropertyValueFactory<Form,String>("name"));
         recentsController.mobilColumn.setCellValueFactory(new PropertyValueFactory<Form,String>("mobil"));
         recentsController.emailColumn.setCellValueFactory(new PropertyValueFactory<Form,String>("email"));
@@ -219,9 +224,39 @@ public class Model {
         recentsController.kreuz21Column.setCellValueFactory(new PropertyValueFactory<Form,String>("kreuz21"));
         recentsController.kreuz22Column.setCellValueFactory(new PropertyValueFactory<Form,String>("kreuz22"));
 
+
         recentsController.recentTableView.setItems(formData);
     }
-    //diese drei Methoden lauschen auf das Formular und setzen es auf "FormController" und
+    public Form getNewForm(FormController formController){
+        Form form = new Form();
+        form.setName(formController.name.getText());
+        form.setMobil(formController.mobil.getText());
+        form.setName(formController.email.getText());
+        form.setName(formController.firma.getText());
+        form.setName(formController.vorgesetzter.getText());
+        form.setName(formController.strasse.getText());
+        form.setName(formController.plzOrt.getText());
+        form.setName(formController.notwendigeArbeitsbereiche.getText());
+        form.setName(formController.vonDatum.getText());
+        form.setName(formController.bisDatum.getText());
+        form.setName(formController.kreuz0.getText());
+        form.setName(formController.kreuz1.getText());
+        form.setName(formController.kreuz2.getText());
+        form.setName(formController.kreuz3.getText());
+        form.setName(formController.name.getText());
+        form.setName(formController.name.getText());
+        form.setName(formController.name.getText());
+        form.setName(formController.name.getText());
+        form.setName(formController.name.getText());
+        form.setName(formController.name.getText());
+        form.setName(formController.name.getText());
+        form.setName(formController.name.getText());
+        form.setName(formController.name.getText());
+        form.setName(formController.name.getText());
+
+        return form;
+    }
+    //diese drei Methoden lauschen auf das Formular und setzen es auf "FormController" und "Form"
     public void choiceBoxListeners(FormController formController, Form form){
 
         formController.kreuz0.selectedProperty().addListener((ob,old,ne) -> {

@@ -5,9 +5,10 @@ import controllers.ViewController;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Button;
 
 public class Form {
-
+        private Button button;
         private SimpleStringProperty name;
         private SimpleStringProperty mobil;
         private SimpleStringProperty email;
@@ -33,6 +34,7 @@ public class Form {
         private SimpleStringProperty kreuz22;
 
         public Form(){
+            this.button = new Button("Formular aufnehmen");
             this.name = new SimpleStringProperty();
             this.mobil = new SimpleStringProperty();
             this.email  = new SimpleStringProperty();
@@ -59,7 +61,12 @@ public class Form {
 
         }
 
-
+    public Button getButton(){
+            return this.button;
+    }
+    public void setButton(Button button){
+            this.button = button;
+    }
     public String getName() {
         return name.get();
     }

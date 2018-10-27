@@ -20,6 +20,9 @@ public class RecentsController {
     public TableView recentTableView;
 
     @FXML
+    public TableColumn buttonColumn;
+
+    @FXML
     public TableColumn nameColumn;
 
     @FXML
