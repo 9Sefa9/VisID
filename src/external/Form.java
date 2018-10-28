@@ -35,29 +35,29 @@ public class Form {
 
         public Form(){
             this.button = new Button("Formular aufnehmen");
-            this.name = new SimpleStringProperty();
-            this.mobil = new SimpleStringProperty();
-            this.email  = new SimpleStringProperty();
-            this.firma  = new SimpleStringProperty();
-            this.vorgesetzter= new SimpleStringProperty();
-            this.strasse= new SimpleStringProperty();
-            this.plzOrt = new SimpleStringProperty();
-            this.notwendigeArbeitsbereiche = new SimpleStringProperty();
-            this.vonDatum = new SimpleStringProperty();
-            this.bisDatum = new SimpleStringProperty();
-            this.kreuz0 = new SimpleStringProperty();
-            this.kreuz1= new SimpleStringProperty();
-            this.kreuz2 = new SimpleStringProperty();
-            this.kreuz3 = new SimpleStringProperty();
-            this.kreuz00 = new SimpleStringProperty();
-            this.kreuz01  = new SimpleStringProperty();
-            this.kreuz02  = new SimpleStringProperty();
-            this.kreuz10 = new SimpleStringProperty();
-            this.kreuz11  = new SimpleStringProperty();
-            this.kreuz12 = new SimpleStringProperty();
-            this.kreuz20  = new SimpleStringProperty();
-            this.kreuz21  = new SimpleStringProperty();
-            this.kreuz22  = new SimpleStringProperty();
+            this.name = new SimpleStringProperty("");
+            this.mobil = new SimpleStringProperty("");
+            this.email  = new SimpleStringProperty("");
+            this.firma  = new SimpleStringProperty("");
+            this.vorgesetzter= new SimpleStringProperty("");
+            this.strasse= new SimpleStringProperty("");
+            this.plzOrt = new SimpleStringProperty("");
+            this.notwendigeArbeitsbereiche = new SimpleStringProperty("");
+            this.vonDatum = new SimpleStringProperty("");
+            this.bisDatum = new SimpleStringProperty("");
+            this.kreuz0 = new SimpleStringProperty("");
+            this.kreuz1= new SimpleStringProperty("");
+            this.kreuz2 = new SimpleStringProperty("");
+            this.kreuz3 = new SimpleStringProperty("");
+            this.kreuz00 = new SimpleStringProperty("");
+            this.kreuz01  = new SimpleStringProperty("");
+            this.kreuz02  = new SimpleStringProperty("");
+            this.kreuz10 = new SimpleStringProperty("");
+            this.kreuz11  = new SimpleStringProperty("");
+            this.kreuz12 = new SimpleStringProperty("");
+            this.kreuz20  = new SimpleStringProperty("");
+            this.kreuz21  = new SimpleStringProperty("");
+            this.kreuz22  = new SimpleStringProperty("");
 
         }
 

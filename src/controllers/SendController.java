@@ -67,7 +67,7 @@ public class SendController{
                         this.sendedText.setStyle("-fx-text-fill: green");
                         this.sendedText.setText(Text.formSendOk);
                         //in die Historie einfügen!
-                        this.model.addFormToRecent(this.viewController.recentsController,this.viewController.formController.form);
+                        this.model.addFormToRecent(this.viewController.formController,this.viewController.recentsController);
                         this.model.clearCompletedForm(this.viewController);
                     }else{
 

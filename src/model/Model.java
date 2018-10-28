@@ -194,9 +194,9 @@ public class Model {
         }
     }
     public void addFormToRecent(FormController formController, RecentsController recentsController){
-
+        //TODO button wird nicht angezeigt!
         Form form = getNewForm(formController);
-           //TODO!!! eine weitere zeile wird nicht hinzugefügt. worna kann das liegen ?
+
         ObservableList<Form> formData = FXCollections.observableArrayList(form);
 
         recentsController.buttonColumn.setCellValueFactory(new PropertyValueFactory<Form, Button>("button"));
@@ -227,135 +227,132 @@ public class Model {
 
         recentsController.recentTableView.setItems(formData);
     }
-    public Form getNewForm(FormController formController){
+    private Form getNewForm(FormController formController){
+
+        //TODO die felder zeigen manchmal NULL oder einfach nur nichts.
         Form form = new Form();
         form.setName(formController.name.getText());
         form.setMobil(formController.mobil.getText());
-        form.setName(formController.email.getText());
-        form.setName(formController.firma.getText());
-        form.setName(formController.vorgesetzter.getText());
-        form.setName(formController.strasse.getText());
-        form.setName(formController.plzOrt.getText());
-        form.setName(formController.notwendigeArbeitsbereiche.getText());
-        form.setName(formController.vonDatum.getText());
-        form.setName(formController.bisDatum.getText());
-        form.setName(formController.kreuz0.getText());
-        form.setName(formController.kreuz1.getText());
-        form.setName(formController.kreuz2.getText());
-        form.setName(formController.kreuz3.getText());
-        form.setName(formController.name.getText());
-        form.setName(formController.name.getText());
-        form.setName(formController.name.getText());
-        form.setName(formController.name.getText());
-        form.setName(formController.name.getText());
-        form.setName(formController.name.getText());
-        form.setName(formController.name.getText());
-        form.setName(formController.name.getText());
-        form.setName(formController.name.getText());
-        form.setName(formController.name.getText());
+        form.setEmail(formController.email.getText());
+        form.setFirma(formController.firma.getText());
+        form.setVorgesetzter(formController.vorgesetzter.getText());
+        form.setStrasse(formController.strasse.getText());
+        form.setPlzOrt(formController.plzOrt.getText());
+        form.setNotwendigeArbeitsbereiche(formController.notwendigeArbeitsbereiche.getText());
+        form.setVonDatum(formController.vonDatum.valueProperty().getValue()+"");
+        form.setBisDatum(formController.bisDatum.valueProperty().getValue()+"");
+        form.setKreuz0(formController.kreuz0.getText());
+        form.setKreuz1(formController.kreuz1.getText());
+        form.setKreuz2(formController.kreuz2.getText());
+        form.setKreuz3(formController.kreuz3.getText());
+        form.setKreuz00(formController.kreuz00.getText());
+        form.setKreuz01(formController.kreuz01.getText());
+        form.setKreuz02(formController.kreuz02.getText());
+        form.setKreuz10(formController.kreuz10.getText());
+        form.setKreuz11(formController.kreuz11.getText());
+        form.setKreuz12(formController.kreuz12.getText());
+        form.setKreuz20(formController.kreuz20.getText());
+        form.setKreuz21(formController.kreuz21.getText());
+        form.setKreuz22(formController.kreuz22.getText());
 
         return form;
     }
     //diese drei Methoden lauschen auf das Formular und setzen es auf "FormController" und "Form"
-    public void choiceBoxListeners(FormController formController, Form form){
+    public void choiceBoxListeners(FormController formController){
 
         formController.kreuz0.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz0.selectedProperty().setValue(ne);
-            form.setKreuz0(ne.toString());
 
         });
         formController.kreuz1.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz1.selectedProperty().setValue(ne);
-            form.setKreuz1(ne.toString());
+
         });
         formController.kreuz2.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz2.selectedProperty().setValue(ne);
-            form.setKreuz2(ne.toString());
+
         });
         formController.kreuz3.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz3.selectedProperty().setValue(ne);
-            form.setKreuz3(ne.toString());
+
         });
         formController.kreuz00.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz00.selectedProperty().setValue(ne);
-            form.setKreuz00(ne.toString());
+
         });
         formController.kreuz01.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz01.selectedProperty().setValue(ne);
-            form.setKreuz01(ne.toString());
+
         });
         formController.kreuz02.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz02.selectedProperty().setValue(ne);
-            form.setKreuz02(ne.toString());
+
         });
         formController.kreuz10.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz10.selectedProperty().setValue(ne);
-            form.setKreuz10(ne.toString());
+
         });
         formController.kreuz11.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz11.selectedProperty().setValue(ne);
-            form.setKreuz11(ne.toString());
+
         });
         formController.kreuz12.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz12.selectedProperty().setValue(ne);
-            form.setKreuz12(ne.toString());
+
         });
         formController.kreuz20.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz20.selectedProperty().setValue(ne);
-            form.setKreuz20(ne.toString());
+
         });
         formController.kreuz21.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz21.selectedProperty().setValue(ne);
-            form.setKreuz21(ne.toString());
+
         });
         formController.kreuz22.selectedProperty().addListener((ob,old,ne) -> {
             formController.kreuz22.selectedProperty().setValue(ne);
-            form.setKreuz22(ne.toString());
+
         });
     }
-    public void datePickerListeners(FormController formController,Form form){
+    public void datePickerListeners(FormController formController){
         formController.vonDatum.valueProperty().addListener((ob,old,ne) -> {
             formController.vonDatum.valueProperty().setValue(ne);
-            form.setVonDatum(ne.toString());
         });
         formController.bisDatum.valueProperty().addListener((ob,old,ne) -> {
             formController.bisDatum.valueProperty().setValue(ne);
-            form.setBisDatum(ne.toString());
         });
     }
-    public void labelListeners(FormController formController,Form form){
+    public void labelListeners(FormController formController){
         formController.name.textProperty().addListener((obs,old,ne) -> {
             formController.name.setText(ne);
-            form.setName(ne.toString());
+
         });
 
         formController.mobil.textProperty().addListener((obs,old,ne) -> {
             formController.mobil.setText(ne);
-            form.setMobil(ne.toString());
+
         });
         formController.email.textProperty().addListener((obs,old,ne) -> {
             formController.email.setText(ne);
-            form.setEmail(ne.toString());
+
         });
         formController.firma.textProperty().addListener((obs,old,ne) -> {
             formController.firma.setText(ne);
-            form.setFirma(ne.toString());
+
         });
         formController.vorgesetzter.textProperty().addListener((obs,old,ne) -> {
             formController.vorgesetzter.setText(ne);
-            form.setVorgesetzter(ne.toString());
+
         });
         formController.strasse.textProperty().addListener((obs,old,ne) -> {
             formController.strasse.setText(ne);
-            form.setStrasse(ne.toString());
+
         });
         formController.plzOrt.textProperty().addListener((obs,old,ne) -> {
             formController.plzOrt.setText(ne);
-            form.setPlzOrt(ne.toString());
+
         });
         formController.notwendigeArbeitsbereiche.textProperty().addListener((obs,old,ne) -> {
             formController.notwendigeArbeitsbereiche.setText(ne);
-            form.setNotwendigeArbeitsbereiche(ne.toString());
         });
 
     }

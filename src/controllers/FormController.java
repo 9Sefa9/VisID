@@ -115,9 +115,9 @@ public class FormController{
         form = new Form();
         //lauscht auf die komponente und updateController es dementsprechend in formList und in formController
 
-        model.labelListeners(this,this.form);
-        model.datePickerListeners(this,this.form);
-        model.choiceBoxListeners(this,this.form);
+        model.labelListeners(this);
+        model.datePickerListeners(this);
+        model.choiceBoxListeners(this);
     }
 
 
