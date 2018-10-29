@@ -32,7 +32,6 @@ public class Model {
                 viewController.formParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
 
             viewController.contentPane.getChildren().setAll(viewController.formParent);
-
         }catch(IOException i){
             i.printStackTrace();
             ExceptionLogger.appendToFile(i);
@@ -194,8 +193,8 @@ public class Model {
         }
     }
     public void addFormToRecent(FormController formController, RecentsController recentsController){
-        //TODO button wird nicht angezeigt!
 
+            // formController.formList.clear();
             Form form = getNewForm(formController);
 
             //funktioniert. doch die listener sind jedesmal aktiv.
@@ -297,10 +296,13 @@ public class Model {
         });
     }
     public void labelListeners(FormController formController){
+       System.out.println("(LISTENER)");
         formController.name.textProperty().addListener((obs,old,ne) -> {
             formController.name.setText(ne);
+            System.out.println("name: "+ne);
 
         });
+
 
         formController.mobil.textProperty().addListener((obs,old,ne) -> {
             formController.mobil.setText(ne);
