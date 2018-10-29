@@ -10,10 +10,8 @@ import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import model.Model;
 
 import java.io.IOException;
@@ -97,7 +95,7 @@ public class FormController{
 
     public ObservableList formList = FXCollections.observableArrayList();
     //Form wichtig für TableView
-    public Form form;
+    public ObservableList<Form> formListTableView;
     public FormController(){
 
     }
@@ -112,13 +110,43 @@ public class FormController{
     }
     private void setModel(Model model){
         this.model = model;
-        form = new Form();
+
+        prepareTableView(this.viewController.recentsController);
         //lauscht auf die komponente und updateController es dementsprechend in formList und in formController
 
         model.labelListeners(this);
         model.datePickerListeners(this);
         model.choiceBoxListeners(this);
     }
+    public void prepareTableView(RecentsController recentsController){
+        this.formListTableView = FXCollections.observableArrayList();
 
+        recentsController.buttonColumn.setCellValueFactory(new PropertyValueFactory<Form, Button>("button"));
+        recentsController.nameColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("name"));
+        recentsController.mobilColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("mobil"));
+        recentsController.emailColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("email"));
+        recentsController.firmaColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("firma"));
+        recentsController.vorgesetzterColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("vorgesetzter"));
+        recentsController.strasseColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("strasse"));
+        recentsController.plzOrtColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("plzOrt"));
+        recentsController.notwendigeArbeitsbereicheColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("notwendigeArbeitsbereiche"));
+        recentsController.vonColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("vonDatum"));
+        recentsController.bisColumn.setCellValueFactory(new PropertyValueFactory<Form, String>("bisDatum"));
+        recentsController.kreuz0Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz0"));
+        recentsController.kreuz1Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz1"));
+        recentsController.kreuz2Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz2"));
+        recentsController.kreuz3Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz3"));
+        recentsController.kreuz00Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz00"));
+        recentsController.kreuz01Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz01"));
+        recentsController.kreuz02Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz02"));
+        recentsController.kreuz10Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz10"));
+        recentsController.kreuz11Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz11"));
+        recentsController.kreuz12Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz12"));
+        recentsController.kreuz20Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz20"));
+        recentsController.kreuz21Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz21"));
+        recentsController.kreuz22Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz22"));
+
+        recentsController.recentTableView.setItems(this.formListTableView);
+    }
 
 }
