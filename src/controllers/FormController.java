@@ -111,9 +111,7 @@ public class FormController{
     }
     private void setModel(Model model){
         this.model = model;
-
         prepareTableView(this.viewController.recentsController);
-        //lauscht auf die komponente und updateController es dementsprechend in formList und in formController
 
     }
     public void prepareTableView(RecentsController recentsController){

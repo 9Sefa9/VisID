@@ -32,18 +32,6 @@ public class Model {
         //Notification Text aktuaisiern
         viewController.notificationText.setText(Text.notificationTextFormular);
 
-        //sorgt dafür, dass daten erhalten bleiben bei fxml scene wechsel
-        //   if(viewController.formParent == null)
-        //     viewController.formParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
-
-        //  FXMLLoader form = new FXMLLoader(getClass().getClassLoader().getResource("fxml/Form.fxml"));
-
-        //  Parent formP = form.load();
-        //  FormController fc = form.getController();
-        //  fc.setViewController(viewController);
-
-        //  viewController.formParent = formP;
-        //  viewController.formController = fc;
         viewController.contentPane.getChildren().setAll(viewController.formParent);
 
 
@@ -274,5 +262,6 @@ public class Model {
 
         return form;
     }
+
 }
 
