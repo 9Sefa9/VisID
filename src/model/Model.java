@@ -42,15 +42,17 @@ public class Model {
         try {
 
 
-            if (viewController.formParent != null) {
-                viewController.formParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Form.fxml"));
-                visitForm(viewController);
+            resetLabel(viewController.formController);
+            resetDatePicker(viewController.formController);
+            resetChoiceBox(viewController.formController);
 
-                //Notification Text am Ende aktualisieren
-                viewController.notificationText.setText(Text.notificationTextResetFormular);
-            }
+            //Notification Text am Ende aktualisieren
+            viewController.notificationText.setText(Text.notificationTextResetFormular);
 
-        } catch (IOException i) {
+            viewController.sendController.filledText.setStyle("-fx-text-fill: red");
+            viewController.sendController.filledText.setText(Text.filledNotOk);
+
+        } catch (Exception i) {
             i.printStackTrace();
             ExceptionLogger.appendToFile(i);
         }
@@ -64,8 +66,8 @@ public class Model {
             viewController.notificationText.setText(Text.notificationTextSendFormular);
 
             //contentpane aktualisieren
-            if (viewController.sendParent == null)
-                viewController.sendParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
+//            if (viewController.sendParent == null)
+//                viewController.sendParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
 
             viewController.contentPane.getChildren().setAll(viewController.sendParent);
 
@@ -81,7 +83,7 @@ public class Model {
 
             connectionTest(viewController, viewController.sendController);
 
-        } catch (IOException i) {
+        } catch (Exception i) {
             i.printStackTrace();
             ExceptionLogger.appendToFile(i);
         }
@@ -233,7 +235,6 @@ public class Model {
 
     private Form getNewForm(FormController formController) {
 
-        //TODO die Listener überschrieben auch das neuere ! das muss gexit werden.
         Form form = new Form();
         System.out.println("method getNewForm NAME : " + formController.name.getText());
         form.setName(formController.name.getText());
@@ -244,8 +245,19 @@ public class Model {
         form.setStrasse(formController.strasse.getText());
         form.setPlzOrt(formController.plzOrt.getText());
         form.setNotwendigeArbeitsbereiche(formController.notwendigeArbeitsbereiche.getText());
-        form.setVonDatum(formController.vonDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy / dd-MMM-yyyy")) + "");
-        form.setBisDatum(formController.bisDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy / dd-MMM-yyyy")) + "");
+
+        try {
+            form.setVonDatum(formController.vonDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "");
+        }catch (NullPointerException e){
+            //für den fall, das kein Datum eingegeben wurde. auf andere weise schmeißt der Exception.
+            form.setVonDatum("");
+        }
+        try{
+            form.setBisDatum(formController.bisDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "");
+        }catch (NullPointerException e) {
+            //für den fall, das kein Datum eingegeben wurde. auf andere weise schmeißt der Exception.
+            form.setBisDatum("");
+        }
         form.setKreuz0(formController.kreuz0.selectedProperty().get()+"");
         form.setKreuz1(formController.kreuz1.selectedProperty().get()+"");
         form.setKreuz2(formController.kreuz2.selectedProperty().get()+"");
