@@ -51,7 +51,7 @@ public class ViewController {
 
     @FXML
     public void sendFormAction(){
-        this.model.sendForm(this,this.sendController,this.formController);
+        this.model.sendForm(this);
     }
 
     @FXML

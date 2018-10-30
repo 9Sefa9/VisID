@@ -57,7 +57,7 @@ public class Model {
     }
 
     //Funktionalität für das "Formular Senden" Button im Main Menu
-    public void sendForm(ViewController viewController, SendController sendController, FormController formController) {
+    public void sendForm(ViewController viewController) {
         try {
 
             //Notification Text aktuaisiern
@@ -70,16 +70,16 @@ public class Model {
             viewController.contentPane.getChildren().setAll(viewController.sendParent);
 
             //überprüfen ob Formular wenigstens etwas aufgefüllt wurde vor dem eigentlichen connection test
-            if (formIsFilled(viewController, formController)) {
-                sendController.filledText.setStyle("-fx-text-fill: green");
-                sendController.filledText.setText(Text.filledOk);
+            if (formIsFilled(viewController, viewController.formController)) {
+                viewController.sendController.filledText.setStyle("-fx-text-fill: green");
+                viewController.sendController.filledText.setText(Text.filledOk);
 
             } else {
-                sendController.filledText.setStyle("-fx-text-fill: red");
-                sendController.filledText.setText(Text.filledNotOk);
+                viewController.sendController.filledText.setStyle("-fx-text-fill: red");
+                viewController.sendController.filledText.setText(Text.filledNotOk);
             }
 
-            connectionTest(viewController, sendController);
+            connectionTest(viewController, viewController.sendController);
 
         } catch (IOException i) {
             i.printStackTrace();
@@ -198,14 +198,14 @@ public class Model {
     }
 
     private void resetLabel(FormController formController) {
-        formController.name.setText("");
-        formController.mobil.setText("");
-        formController.email.setText("");
-        formController.firma.setText("");
-        formController.vorgesetzter.setText("");
-        formController.strasse.setText("");
-        formController.plzOrt.setText("");
-        formController.notwendigeArbeitsbereiche.setText("");
+        formController.name.setText(null);
+        formController.mobil.setText(null);
+        formController.email.setText(null);
+        formController.firma.setText(null);
+        formController.vorgesetzter.setText(null);
+        formController.strasse.setText(null);
+        formController.plzOrt.setText(null);
+        formController.notwendigeArbeitsbereiche.setText(null);
     }
     private void resetDatePicker(FormController formController) {
 
