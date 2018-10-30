@@ -93,6 +93,7 @@ public class FormController{
     @FXML
     public CheckBox kreuz22;
 
+    //formList wichtig für die Transmission, versenden des momentanen Formulars.
     public ObservableList formList = FXCollections.observableArrayList();
     //Form wichtig für TableView
     public ObservableList<Form> formListTableView;
@@ -114,9 +115,6 @@ public class FormController{
         prepareTableView(this.viewController.recentsController);
         //lauscht auf die komponente und updateController es dementsprechend in formList und in formController
 
-        model.labelListeners(this);
-        model.datePickerListeners(this);
-        model.choiceBoxListeners(this);
     }
     public void prepareTableView(RecentsController recentsController){
         this.formListTableView = FXCollections.observableArrayList();

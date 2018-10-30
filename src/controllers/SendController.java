@@ -56,6 +56,7 @@ public class SendController{
         //sende nur , wenn das Formular gefüllt war.
         try {
             if (model.formIsFilled(this.viewController, this.viewController.formController)) {
+               //TODO beide ausrufe zeichen entfernen!
                 if (!model.canConnectToServer) {
 
                     //hier findet die Tatsächliche Datenübertragung statt!
@@ -63,12 +64,16 @@ public class SendController{
                     CompletableFuture<Boolean> solution = CompletableFuture.supplyAsync(transmission);
                     this.formIsSent = solution.get();
                     if(!this.formIsSent){
-                        //Forumlar wurde erfolgreich gesendet!
+                        //Formular wurde erfolgreich gesendet!
                         this.sendedText.setStyle("-fx-text-fill: green");
                         this.sendedText.setText(Text.formSendOk);
                         //in die Historie einfügen!
                         this.model.addFormToRecent(this.viewController.formController,this.viewController.recentsController);
-                        this.model.clearCompletedForm(this.viewController);
+                        this.model.clearCompletedForm(this.viewController.formController);
+
+                        viewController.sendController.filledText.setStyle("-fx-text-fill: red");
+                        viewController.sendController.filledText.setText(Text.filledNotOk);
+
                     }else{
 
                         this.sendedText.setStyle("-fx-text-fill: red");
