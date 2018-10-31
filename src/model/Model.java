@@ -200,14 +200,14 @@ public class Model {
     }
 
     private void resetLabel(FormController formController) {
-        formController.name.setText(null);
-        formController.mobil.setText(null);
-        formController.email.setText(null);
-        formController.firma.setText(null);
-        formController.vorgesetzter.setText(null);
-        formController.strasse.setText(null);
-        formController.plzOrt.setText(null);
-        formController.notwendigeArbeitsbereiche.setText(null);
+        formController.name.setText("");
+        formController.mobil.setText("");
+        formController.email.setText("");
+        formController.firma.setText("");
+        formController.vorgesetzter.setText("");
+        formController.strasse.setText("");
+        formController.plzOrt.setText("");
+        formController.notwendigeArbeitsbereiche.setText("");
     }
     private void resetDatePicker(FormController formController) {
 
