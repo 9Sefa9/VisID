@@ -162,11 +162,7 @@ public class Model {
         // formular gilt as gefüllt, wenn der Name und oder Mobil eingetragen ist.
         if (viewController.formParent != null) {
 
-            if ((!formController.name.getText().trim().isEmpty()) && (!formController.mobil.getText().trim().isEmpty())) {
-                return true;
-            } else {
-                return false;
-            }
+            return (!formController.name.getText().trim().isEmpty()) && (!formController.mobil.getText().trim().isEmpty());
         }
         return false;
     }
@@ -237,7 +233,41 @@ public class Model {
     private Form getNewForm(FormController formController) {
 
         Form form = new Form();
-        System.out.println("method getNewForm NAME : " + formController.name.getText());
+        form.getButton().setOnAction(e->{
+            //erst wird Formular geleert.
+            clearCompletedForm(formController);
+
+            //anschließend werden die werte gesetzt.
+            formController.name.setText(form.getName());
+            formController.mobil.setText(form.getMobil());
+            formController.email.setText(form.getEmail());
+            formController.firma.setText(form.getFirma());
+            formController.vorgesetzter.setText(form.getVorgesetzter());
+            formController.strasse.setText(form.getStrasse());
+            formController.plzOrt.setText(form.getPlzOrt());
+            formController.notwendigeArbeitsbereiche.setText(form.getNotwendigeArbeitsbereiche());
+
+            formController.vonDatum.valueProperty().setValue(form.getVonDatum());
+            formController.bisDatum.valueProperty().set(LocalDate.parse(form.getBisDatum()));
+
+            DateTimeFormatter test =
+            formController.vonDatum.valueProperty().set(LocalDate.parse(form.getVonDatum()));
+
+            formController.kreuz0.selectedProperty().setValue(form.getKreuz0().equals("true"));
+            formController.kreuz1.selectedProperty().setValue(form.getKreuz1().equals("true"));
+            formController.kreuz2.selectedProperty().setValue(form.getKreuz2().equals("true"));
+            formController.kreuz3.selectedProperty().setValue(form.getKreuz3().equals("true"));
+            formController.kreuz00.selectedProperty().setValue(form.getKreuz00().equals("true"));
+            formController.kreuz01.selectedProperty().setValue(form.getKreuz01().equals("true"));
+            formController.kreuz02.selectedProperty().setValue(form.getKreuz02().equals("true"));
+            formController.kreuz10.selectedProperty().setValue(form.getKreuz10().equals("true"));
+            formController.kreuz11.selectedProperty().setValue(form.getKreuz11().equals("true"));
+            formController.kreuz12.selectedProperty().setValue(form.getKreuz12().equals("true"));
+            formController.kreuz20.selectedProperty().setValue(form.getKreuz20().equals("true"));
+            formController.kreuz21.selectedProperty().setValue(form.getKreuz21().equals("true"));
+            formController.kreuz22.selectedProperty().setValue(form.getKreuz22().equals("true"));
+            //visitForm(formController.);
+        });
         form.setName(formController.name.getText());
         form.setMobil(formController.mobil.getText());
         form.setEmail(formController.email.getText());

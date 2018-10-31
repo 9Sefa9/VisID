@@ -94,6 +94,7 @@ public class FormController{
     public CheckBox kreuz22;
 
     //formList wichtig für die Transmission, versenden des momentanen Formulars.
+    //TODO: Eventuell unwichtig.
     public ObservableList formList = FXCollections.observableArrayList();
     //Form wichtig für TableView
     public ObservableList<Form> formListTableView;
