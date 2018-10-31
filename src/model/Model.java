@@ -23,7 +23,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 public class Model {
-    //aussage darüber ob eine verbindung überhaupt aufgebaut werden kann in 10 sec. takt
+    //aussage darüber ob eine verbindung überhaupt aufgebaut werden kann in Text.connectionTestTryAgain sekunden takt
     public boolean canConnectToServer;
 
     //Funktionalität für das "Besucher eintragen" Button im Main Menu
@@ -65,9 +65,6 @@ public class Model {
             //Notification Text aktuaisiern
             viewController.notificationText.setText(Text.notificationTextSendFormular);
 
-            //contentpane aktualisieren
-//            if (viewController.sendParent == null)
-//                viewController.sendParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Send.fxml"));
 
             viewController.contentPane.getChildren().setAll(viewController.sendParent);
 
@@ -89,7 +86,7 @@ public class Model {
         }
     }
 
-    //Diese Methode testet in 10 sekunden abschnitten über die Verfügbarkeit des Servers.
+    //Diese Methode testet in Text.connectionTestTryAgain sekunden abschnitten über die Verfügbarkeit des Servers.
     public synchronized void connectionTest(ViewController viewController, SendController sendController) {
 
         new Thread(new Runnable() {
@@ -108,6 +105,7 @@ public class Model {
                         canConnectToServer = solution.get();
 
                         Platform.runLater(() -> {
+                            //falls verbindung aufgebaut werden konnte : notifye durch OK oder NOT OK
                             if (canConnectToServer) {
                                 sendController.connectedText.setStyle("-fx-text-fill: green");
                                 sendController.connectedText.setText(Text.connectedTOHostOk);
@@ -116,7 +114,7 @@ public class Model {
                                 sendController.connectedText.setText(Text.connectedToHostNotOk);
                             }
                         });
-                        Thread.sleep(10000);
+                        Thread.sleep(Text.connectionTestTryAgain);
                     }
                 } catch (InterruptedException ie) {
                     ie.printStackTrace();
@@ -129,6 +127,7 @@ public class Model {
     }
 
     //Funktionalität für das "Auf Updates überprüfen" Button im Main
+    //TODO wird zuletzt gemacht.
     public void updateProgram(ViewController viewController) {
         try {
             //Notification Text aktuaisiern
@@ -149,16 +148,16 @@ public class Model {
         try {
             viewController.notificationText.setText(Text.notificationTextRecent);
 
-            if (viewController.recentsParent == null)
-                viewController.recentsParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Recents.fxml"));
+            //if (viewController.recentsParent == null)
+            //    viewController.recentsParent = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/Recents.fxml"));
 
             viewController.contentPane.getChildren().setAll(viewController.recentsParent);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             ExceptionLogger.appendToFile(e);
         }
     }
-
+    //gesteuert von SendCOntroller aus. Vor dem eigentlichen senden muss überprüft werden ob Formular gefüllt.
     public boolean formIsFilled(ViewController viewController, FormController formController) {
         // formular gilt as gefüllt, wenn der Name und oder Mobil eingetragen ist.
         if (viewController.formParent != null) {
@@ -171,7 +170,7 @@ public class Model {
         }
         return false;
     }
-
+    //wird hauptsächlich für das Transmitten verwendet. Zu finden unter SendController
     public ObservableList getCompletedForm(FormController formController) {
         try {
             formController.formList.clear();
@@ -185,13 +184,13 @@ public class Model {
         }
         return formController.formList;
     }
-
+    //In dem moment wo was gesendet wurde, setze formular zurück.
     public void clearCompletedForm(FormController formController) {
         resetLabel(formController);
         resetDatePicker(formController);
         resetChoiceBox(formController);
     }
-
+    //Eigentlicher TableView Process. Zu finden in FormController aber aufgerufen wird es in SendController
     public void addFormToRecent(FormController formController, RecentsController recentsController) {
 
         Form form = getNewForm(formController);
@@ -199,6 +198,7 @@ public class Model {
 
     }
 
+    //diese drei Reset Methoden reset einfach nur das Formular für weitere verwendugszwecke.
     private void resetLabel(FormController formController) {
         formController.name.setText("");
         formController.mobil.setText("");
@@ -233,6 +233,7 @@ public class Model {
 
     }
 
+    //Brauchen wir für die TableView Property um an die jeweilige Column speichern zu können
     private Form getNewForm(FormController formController) {
 
         Form form = new Form();
