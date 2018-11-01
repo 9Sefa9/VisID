@@ -16,6 +16,6 @@ public class Text {
     public static short portSend = 3121;
     public static String IpAddressUpdate;
     public static String portUpdate;
-    public static short connectionTestTryAgain;
+    public static short connectionTestTryAgain = 10000;
 
 }

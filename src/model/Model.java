@@ -32,6 +32,8 @@ public class Model {
         //Notification Text aktuaisiern
         viewController.notificationText.setText(Text.notificationTextFormular);
 
+        //das "Formular wurde erfolgreich gesendet! zurück resetten.
+        viewController.sendController.sendedText.setText("");
         viewController.contentPane.getChildren().setAll(viewController.formParent);
 
 
@@ -41,6 +43,8 @@ public class Model {
     public void visitFormReset(ViewController viewController) {
         try {
 
+            //das "Formular wurde erfolgreich gesendet! zurück resetten.
+            viewController.sendController.sendedText.setText("");
 
             resetLabel(viewController.formController);
             resetDatePicker(viewController.formController);
@@ -61,6 +65,8 @@ public class Model {
     //Funktionalität für das "Formular Senden" Button im Main Menu
     public void sendForm(ViewController viewController) {
         try {
+            //das "Formular wurde erfolgreich gesendet! zurück resetten.
+            viewController.sendController.sendedText.setText("");
 
             //Notification Text aktuaisiern
             viewController.notificationText.setText(Text.notificationTextSendFormular);
@@ -130,6 +136,9 @@ public class Model {
     //TODO wird zuletzt gemacht.
     public void updateProgram(ViewController viewController) {
         try {
+            //das "Formular wurde erfolgreich gesendet! zurück resetten.
+            viewController.sendController.sendedText.setText("");
+
             //Notification Text aktuaisiern
             viewController.notificationText.setText(Text.notificationTextUpdate);
 
@@ -146,6 +155,9 @@ public class Model {
     //Funktionalität für das "Historie" Button im Main
     public void visitFormRecents(ViewController viewController) {
         try {
+            //das "Formular wurde erfolgreich gesendet! zurück resetten.
+            viewController.sendController.sendedText.setText("");
+            
             viewController.notificationText.setText(Text.notificationTextRecent);
 
             //if (viewController.recentsParent == null)
@@ -187,9 +199,9 @@ public class Model {
         resetChoiceBox(formController);
     }
     //Eigentlicher TableView Process. Zu finden in FormController aber aufgerufen wird es in SendController
-    public void addFormToRecent(FormController formController, RecentsController recentsController) {
+    public void addFormToRecent(ViewController viewController, RecentsController recentsController) {
 
-        Form form = getNewForm(formController);
+        Form form = getNewForm(viewController);
         recentsController.recentTableView.getItems().add(form);
 
     }
@@ -230,78 +242,89 @@ public class Model {
     }
 
     //Brauchen wir für die TableView Property um an die jeweilige Column speichern zu können
-    private Form getNewForm(FormController formController) {
+    private Form getNewForm(ViewController viewController) {
 
         Form form = new Form();
         form.getButton().setOnAction(e->{
             //erst wird Formular geleert.
-            clearCompletedForm(formController);
+            clearCompletedForm(viewController.formController);
 
-            //anschließend werden die werte gesetzt.
-            formController.name.setText(form.getName());
-            formController.mobil.setText(form.getMobil());
-            formController.email.setText(form.getEmail());
-            formController.firma.setText(form.getFirma());
-            formController.vorgesetzter.setText(form.getVorgesetzter());
-            formController.strasse.setText(form.getStrasse());
-            formController.plzOrt.setText(form.getPlzOrt());
-            formController.notwendigeArbeitsbereiche.setText(form.getNotwendigeArbeitsbereiche());
+            //anschließend werden die werte gesetzt, damit das Formular neu bearbeitet werden kann.
+            viewController.formController.name.setText(form.getName());
+            viewController.formController.mobil.setText(form.getMobil());
+            viewController.formController.email.setText(form.getEmail());
+            viewController.formController.firma.setText(form.getFirma());
+            viewController.formController.vorgesetzter.setText(form.getVorgesetzter());
+            viewController.formController.strasse.setText(form.getStrasse());
+            viewController.formController.plzOrt.setText(form.getPlzOrt());
+            viewController.formController.notwendigeArbeitsbereiche.setText(form.getNotwendigeArbeitsbereiche());
 
-            formController.vonDatum.valueProperty().setValue(form.getVonDatum());
-            formController.bisDatum.valueProperty().set(LocalDate.parse(form.getBisDatum()));
 
-            DateTimeFormatter test =
-            formController.vonDatum.valueProperty().set(LocalDate.parse(form.getVonDatum()));
 
-            formController.kreuz0.selectedProperty().setValue(form.getKreuz0().equals("true"));
-            formController.kreuz1.selectedProperty().setValue(form.getKreuz1().equals("true"));
-            formController.kreuz2.selectedProperty().setValue(form.getKreuz2().equals("true"));
-            formController.kreuz3.selectedProperty().setValue(form.getKreuz3().equals("true"));
-            formController.kreuz00.selectedProperty().setValue(form.getKreuz00().equals("true"));
-            formController.kreuz01.selectedProperty().setValue(form.getKreuz01().equals("true"));
-            formController.kreuz02.selectedProperty().setValue(form.getKreuz02().equals("true"));
-            formController.kreuz10.selectedProperty().setValue(form.getKreuz10().equals("true"));
-            formController.kreuz11.selectedProperty().setValue(form.getKreuz11().equals("true"));
-            formController.kreuz12.selectedProperty().setValue(form.getKreuz12().equals("true"));
-            formController.kreuz20.selectedProperty().setValue(form.getKreuz20().equals("true"));
-            formController.kreuz21.selectedProperty().setValue(form.getKreuz21().equals("true"));
-            formController.kreuz22.selectedProperty().setValue(form.getKreuz22().equals("true"));
-            //visitForm(formController.);
+
+            try {
+                viewController.formController.vonDatum.valueProperty().set(LocalDate.parse(form.getVonDatum(), DateTimeFormatter.ofPattern("dd.MM.yyyy")));
+            }catch(Exception a){
+                System.err.println("getVonDatum Text = \"\" Es wurde kein Datum übernommen!");
+                //a.printStackTrace();
+            }
+            try {
+                viewController.formController.bisDatum.valueProperty().set(LocalDate.parse(form.getBisDatum(), DateTimeFormatter.ofPattern("dd.MM.yyyy")));
+            }catch (Exception f){
+                System.err.println("getBisDatum Text = \"\" Es wurde kein Datum übernommen!");
+            }
+            viewController.formController.kreuz0.selectedProperty().setValue(form.getKreuz0().equals("true"));
+            viewController.formController.kreuz1.selectedProperty().setValue(form.getKreuz1().equals("true"));
+            viewController.formController.kreuz2.selectedProperty().setValue(form.getKreuz2().equals("true"));
+            viewController.formController.kreuz3.selectedProperty().setValue(form.getKreuz3().equals("true"));
+            viewController.formController.kreuz00.selectedProperty().setValue(form.getKreuz00().equals("true"));
+            viewController.formController.kreuz01.selectedProperty().setValue(form.getKreuz01().equals("true"));
+            viewController.formController.kreuz02.selectedProperty().setValue(form.getKreuz02().equals("true"));
+            viewController.formController.kreuz10.selectedProperty().setValue(form.getKreuz10().equals("true"));
+            viewController.formController.kreuz11.selectedProperty().setValue(form.getKreuz11().equals("true"));
+            viewController.formController.kreuz12.selectedProperty().setValue(form.getKreuz12().equals("true"));
+            viewController.formController.kreuz20.selectedProperty().setValue(form.getKreuz20().equals("true"));
+            viewController.formController.kreuz21.selectedProperty().setValue(form.getKreuz21().equals("true"));
+            viewController.formController.kreuz22.selectedProperty().setValue(form.getKreuz22().equals("true"));
+
+            Platform.runLater(()->{viewController.notificationText.setText("Formular wurde übernommen!");});
+
         });
-        form.setName(formController.name.getText());
-        form.setMobil(formController.mobil.getText());
-        form.setEmail(formController.email.getText());
-        form.setFirma(formController.firma.getText());
-        form.setVorgesetzter(formController.vorgesetzter.getText());
-        form.setStrasse(formController.strasse.getText());
-        form.setPlzOrt(formController.plzOrt.getText());
-        form.setNotwendigeArbeitsbereiche(formController.notwendigeArbeitsbereiche.getText());
+        form.setName(viewController.formController.name.getText());
+        form.setMobil(viewController.formController.mobil.getText());
+        form.setEmail(viewController.formController.email.getText());
+        form.setFirma(viewController.formController.firma.getText());
+        form.setVorgesetzter(viewController.formController.vorgesetzter.getText());
+        form.setStrasse(viewController.formController.strasse.getText());
+        form.setPlzOrt(viewController.formController.plzOrt.getText());
+        form.setNotwendigeArbeitsbereiche(viewController.formController.notwendigeArbeitsbereiche.getText());
+
 
         try {
-            form.setVonDatum(formController.vonDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "");
+            form.setVonDatum(viewController.formController.vonDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "");
         }catch (NullPointerException e){
             //für den fall, das kein Datum eingegeben wurde. auf andere weise schmeißt der Exception.
             form.setVonDatum("");
         }
         try{
-            form.setBisDatum(formController.bisDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "");
+            form.setBisDatum(viewController.formController.bisDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "");
         }catch (NullPointerException e) {
             //für den fall, das kein Datum eingegeben wurde. auf andere weise schmeißt der Exception.
             form.setBisDatum("");
         }
-        form.setKreuz0(formController.kreuz0.selectedProperty().get()+"");
-        form.setKreuz1(formController.kreuz1.selectedProperty().get()+"");
-        form.setKreuz2(formController.kreuz2.selectedProperty().get()+"");
-        form.setKreuz3(formController.kreuz3.selectedProperty().get()+"");
-        form.setKreuz00(formController.kreuz00.selectedProperty().get()+"");
-        form.setKreuz01(formController.kreuz01.selectedProperty().get()+"");
-        form.setKreuz02(formController.kreuz02.selectedProperty().get()+"");
-        form.setKreuz10(formController.kreuz10.selectedProperty().get()+"");
-        form.setKreuz11(formController.kreuz11.selectedProperty().get()+"");
-        form.setKreuz12(formController.kreuz12.selectedProperty().get()+"");
-        form.setKreuz20(formController.kreuz20.selectedProperty().get()+"");
-        form.setKreuz21(formController.kreuz21.selectedProperty().get()+"");
-        form.setKreuz22(formController.kreuz22.selectedProperty().get()+"");
+        form.setKreuz0(viewController.formController.kreuz0.selectedProperty().get()+"");
+        form.setKreuz1(viewController.formController.kreuz1.selectedProperty().get()+"");
+        form.setKreuz2(viewController.formController.kreuz2.selectedProperty().get()+"");
+        form.setKreuz3(viewController.formController.kreuz3.selectedProperty().get()+"");
+        form.setKreuz00(viewController.formController.kreuz00.selectedProperty().get()+"");
+        form.setKreuz01(viewController.formController.kreuz01.selectedProperty().get()+"");
+        form.setKreuz02(viewController.formController.kreuz02.selectedProperty().get()+"");
+        form.setKreuz10(viewController.formController.kreuz10.selectedProperty().get()+"");
+        form.setKreuz11(viewController.formController.kreuz11.selectedProperty().get()+"");
+        form.setKreuz12(viewController.formController.kreuz12.selectedProperty().get()+"");
+        form.setKreuz20(viewController.formController.kreuz20.selectedProperty().get()+"");
+        form.setKreuz21(viewController.formController.kreuz21.selectedProperty().get()+"");
+        form.setKreuz22(viewController.formController.kreuz22.selectedProperty().get()+"");
 
         return form;
     }

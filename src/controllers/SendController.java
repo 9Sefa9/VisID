@@ -21,7 +21,7 @@ public class SendController{
     private Model model;
 
     @FXML
-    private Label sendedText;
+    public Label sendedText;
 
     @FXML
     public Label connectedText;
@@ -68,7 +68,7 @@ public class SendController{
                         this.sendedText.setStyle("-fx-text-fill: green");
                         this.sendedText.setText(Text.formSendOk);
                         //in die Historie einfügen!
-                        this.model.addFormToRecent(this.viewController.formController,this.viewController.recentsController);
+                        this.model.addFormToRecent(this.viewController,this.viewController.recentsController);
                         this.model.clearCompletedForm(this.viewController.formController);
 
                         viewController.sendController.filledText.setStyle("-fx-text-fill: red");

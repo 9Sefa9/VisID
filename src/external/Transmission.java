@@ -30,9 +30,9 @@ public class Transmission implements Supplier<Boolean> {
             oos.close();
             return true;
         }catch (SocketException s){
-            s.printStackTrace();
+            System.err.println("SocketException isFormSended() :: "+this.getClass());
         }catch (IOException uhe){
-            uhe.printStackTrace();
+            System.err.println("IOException isFormSended() :: "+this.getClass());
         }
         return false;
     }
