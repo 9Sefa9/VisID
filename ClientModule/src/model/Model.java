@@ -6,15 +6,8 @@ import external.ExceptionLogger;
 import external.Form;
 import external.Text;
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.OverrunStyle;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -26,7 +19,7 @@ public class Model {
     //aussage darüber ob eine verbindung überhaupt aufgebaut werden kann in Text.connectionTestTryAgain sekunden takt
     public boolean canConnectToServer;
 
-    //Funktionalität für das "Besucher eintragen" Button im Main Menu
+    //Funktionalität für das "Besucher eintragen" Button im MainClient Menu
     public void visitForm(ViewController viewController) {
 
         //Notification Text aktuaisiern
@@ -39,7 +32,7 @@ public class Model {
 
     }
 
-    //Funktionalität für das "Formular zurücksetzen" Button im Main Menu
+    //Funktionalität für das "Formular zurücksetzen" Button im MainClient Menu
     public void visitFormReset(ViewController viewController) {
         try {
 
@@ -62,7 +55,7 @@ public class Model {
         }
     }
 
-    //Funktionalität für das "Formular Senden" Button im Main Menu
+    //Funktionalität für das "Formular Senden" Button im MainClient Menu
     public void sendForm(ViewController viewController) {
         try {
             //das "Formular wurde erfolgreich gesendet! zurück resetten.
@@ -132,7 +125,7 @@ public class Model {
         }).start();
     }
 
-    //Funktionalität für das "Auf Updates überprüfen" Button im Main
+    //Funktionalität für das "Auf Updates überprüfen" Button im MainClient
     //TODO wird zuletzt gemacht.
     public void updateProgram(ViewController viewController) {
         try {
@@ -152,7 +145,7 @@ public class Model {
         }
     }
 
-    //Funktionalität für das "Historie" Button im Main
+    //Funktionalität für das "Historie" Button im MainClient
     public void visitFormRecents(ViewController viewController) {
         try {
             //das "Formular wurde erfolgreich gesendet! zurück resetten.
