@@ -11,18 +11,18 @@ public class MainServer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader main = new FXMLLoader(getClass().getResource("/fxml/Main.fxml"));
-        FXMLLoader form = new FXMLLoader(getClass().getResource("fxml/Form.fxml"));
+        FXMLLoader main = new FXMLLoader(getClass().getResource("/fxmlS/Main.fxml"));
+        FXMLLoader form = new FXMLLoader(getClass().getResource("fxmlS/Recents.fxml"));
 
         Parent root = main.load();
 
         controllersS.ViewController vc = (controllersS.ViewController)main.getController();
 
-        vc.formParent = form.load();
+        vc.recentsParent = form.load();
 
-        controllersS.FormController f = form.getController();
+        controllersS.RecentsController f = form.getController();
 
-        vc.formController = form.getController();
+        vc.recentsController = form.getController();
 
         f.setViewController(vc);
 
