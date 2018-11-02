@@ -12,11 +12,10 @@ public class MainServer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader main = new FXMLLoader(getClass().getResource("fxml/Main.fxml"));
+        FXMLLoader main = new FXMLLoader(getClass().getResource("/fxml/Main.fxml"));
 
         Parent root = main.load();
 
-        ViewController vc = main.getController();
 
         primaryStage.setTitle("VisID");
 
