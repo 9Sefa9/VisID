@@ -4,7 +4,7 @@ import controllers.ViewController;
 import javafx.fxml.FXML;
 import model.Model;
 
-public class FormController {
+public class PreferencesController {
     private controllersS.ViewController viewController;
     private modelS.Model model;
 

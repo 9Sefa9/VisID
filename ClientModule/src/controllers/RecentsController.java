@@ -107,7 +107,9 @@ public class RecentsController {
         setModel(this.viewController.model);
     }
     private void setModel(Model model){
+
         this.model = model;
+        this.model.prepareTableView(this.viewController,this);
     }
 }
 
