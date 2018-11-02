@@ -1,6 +1,7 @@
 package controllersS;
 
 import external.Form;
+import externalS.Transmission;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,7 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class RecentsController {
+public class ReceivedController {
 
     @FXML
     public TableView recentTableView;
@@ -87,12 +88,15 @@ public class RecentsController {
     public TableColumn kreuz22Column;
 
     public controllersS.ViewController viewController;
+
     public modelS.Model model;
+
     public ObservableList<Object> formListTableView;
 
     @FXML
     public void initialize(){
         System.out.println("INITIALIZE :: "+this.getClass());
+
     }
 
     public void setViewController(controllersS.ViewController viewController) {

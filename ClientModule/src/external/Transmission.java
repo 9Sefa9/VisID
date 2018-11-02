@@ -16,7 +16,7 @@ public class Transmission implements Supplier<Boolean> {
     }
 
     private boolean isFormSended() {
-        ObjectOutputStream oos;
+        ObjectOutputStream oos=null;
         try{
             String ip = Inet4Address.getByName(Text.IpAddressSend).getCanonicalHostName();
             InetSocketAddress isa = new InetSocketAddress(ip,Text.portSend);
@@ -33,6 +33,13 @@ public class Transmission implements Supplier<Boolean> {
             System.err.println("SocketException isFormSended() :: "+this.getClass());
         }catch (IOException uhe){
             System.err.println("IOException isFormSended() :: "+this.getClass());
+        }finally{
+            try {
+                if (oos != null)
+                    oos.close();
+            }catch (IOException i){
+                i.printStackTrace();
+            }
         }
         return false;
     }

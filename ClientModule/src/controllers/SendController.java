@@ -57,13 +57,13 @@ public class SendController{
         try {
             if (model.formIsFilled(this.viewController, this.viewController.formController)) {
                //TODO beide ausrufe zeichen entfernen!
-                if (!model.canConnectToServer) {
+                if (model.canConnectToServer) {
 
                     //hier findet die Tatsächliche Datenübertragung statt!
                     Transmission transmission = new Transmission(this.model.getCompletedForm(this.viewController.formController));
                     CompletableFuture<Boolean> solution = CompletableFuture.supplyAsync(transmission);
                     this.formIsSent = solution.get();
-                    if(!this.formIsSent){
+                    if(this.formIsSent){
                         //Formular wurde erfolgreich gesendet!
                         this.sendedText.setStyle("-fx-text-fill: green");
                         this.sendedText.setText(Text.formSendOk);

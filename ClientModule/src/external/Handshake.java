@@ -3,10 +3,12 @@ package external;
 import java.io.IOException;
 import java.net.*;
 import java.util.function.Supplier;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class CheckConnection implements Supplier<Boolean> {
+public class Handshake implements Supplier<Boolean> {
 
-
+    private Logger log = Logger.getLogger(this.getClass().getName());
     @Override
     public Boolean get() {
         return checkConnection();
@@ -22,9 +24,10 @@ public class CheckConnection implements Supplier<Boolean> {
             client.connect(isa);
             return true;
         }catch (SocketException e){
-            System.err.println("SocketException checkConnection() :: "+this.getClass());
+            log.log(Level.INFO,"SocketException checkConnection()");
+            e.printStackTrace();
         }catch (IOException i){
-            System.err.println("IOException checkConnection() :: "+this.getClass());
+            log.log(Level.INFO,"IOException checkConnection()");
             i.printStackTrace();
         }
         return false;

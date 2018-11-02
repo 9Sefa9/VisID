@@ -1,7 +1,7 @@
 package model;
 
 import controllers.*;
-import external.CheckConnection;
+import external.Handshake;
 import external.ExceptionLogger;
 import external.Form;
 import external.Text;
@@ -95,12 +95,12 @@ public class Model {
             @Override
 
             public synchronized void run() {
-                CheckConnection cc;
+                Handshake cc;
                 CompletableFuture<Boolean> solution;
 
                 try {
                     while (true) {
-                        cc = new CheckConnection();
+                        cc = new Handshake();
                         solution = CompletableFuture.supplyAsync(cc);
 
                         //Ergebnis in Model abspeichern für weitere Verwendungszwecke

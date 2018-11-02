@@ -1,6 +1,8 @@
 package controllersS;
 
-import externalS.Text;
+
+import externalS.Handshake;
+import externalS.Transmission;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
@@ -10,30 +12,38 @@ import modelS.Model;
 public class ViewController {
 
     public Parent recentsParent;
-    public controllersS.RecentsController recentsController;
+    public ReceivedController receivedController;
     public Model model;
 
-    @FXML private Label notificationText;
+    @FXML public Label notificationText;
 
-    @FXML private AnchorPane contentPane;
+    @FXML public AnchorPane contentPane;
 
+    @FXML
+    public void initialize(){
+        //Thread starten zum empfangen von Formularen im Hintergrund
+        Thread transmission = new Thread(new Transmission());
+        transmission.start();
+
+        //Thread , welches die Verfügbarkeit des Servers an die Clients sendet
+        Thread handshake = new Thread(new Handshake());
+        handshake.start();
+    }
     public ViewController(){
         System.out.println("INITIALIZE :: "+this.getClass());
         this.model = new modelS.Model();
     }
     @FXML
-    public void settings(){
-            this.notificationText.setText(Text.preferencesText);
-    }
-
-    @FXML
     public void receiveForm(){
-             this.notificationText.setText(Text.receivedFormularsText);
+        this.model.receiveFormAction(this);
 
-             this.contentPane.getChildren().setAll(this.recentsParent);
     }
     @FXML
     public void updateProgram(){
-        this.notificationText.setText(Text.notificationTextUpdate);
+        this.model.updateProgramAction(this);
+    }
+    @FXML
+    public void settings(){
+        this.model.settingsAction(this);
     }
 }

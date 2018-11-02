@@ -1,3 +1,4 @@
+import controllersS.ReceivedController;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +13,7 @@ public class MainServer extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader main = new FXMLLoader(getClass().getResource("/fxmlS/Main.fxml"));
-        FXMLLoader form = new FXMLLoader(getClass().getResource("fxmlS/Recents.fxml"));
+        FXMLLoader form = new FXMLLoader(getClass().getResource("fxmlS/Received.fxml"));
 
         Parent root = main.load();
 
@@ -20,9 +21,9 @@ public class MainServer extends Application {
 
         vc.recentsParent = form.load();
 
-        controllersS.RecentsController f = form.getController();
+        ReceivedController f = form.getController();
 
-        vc.recentsController = form.getController();
+        vc.receivedController = form.getController();
 
         f.setViewController(vc);
 
