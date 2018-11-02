@@ -1,0 +1,17 @@
+.button{
+    -fx-background-color:
+            rgba(0,0,0,0.08),
+            linear-gradient(#5a61af, #51536d),
+            linear-gradient(#e4fbff 0%, #d2fbe2 10%, #b0fbd1 50%, #adfbc9 51%, #d5faff 100%);
+    -fx-background-insets: 0 0 -1 0,0,1;
+    -fx-background-radius: 5,5,4;
+    -fx-padding: 2 20 2 20;
+    -fx-text-fill: #242d35;
+    -fx-font-size: 18px;
+}
+.button:hover{
+    -fx-background-color:
+            rgba(0,0,0,0.08),
+            linear-gradient(#5a61af, #51536d),
+            linear-gradient(#9ab0b4 0%, #9bb4a2 10%, #80b495 50%, #7bb491 51%, #d5faff 100%);
+}
