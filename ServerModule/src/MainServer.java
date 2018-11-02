@@ -1,4 +1,3 @@
-import controllers.*;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +12,19 @@ public class MainServer extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader main = new FXMLLoader(getClass().getResource("/fxml/Main.fxml"));
+        FXMLLoader form = new FXMLLoader(getClass().getResource("fxml/Form.fxml"));
 
         Parent root = main.load();
 
+        controllersS.ViewController vc = (controllersS.ViewController)main.getController();
+
+        vc.formParent = form.load();
+
+        controllersS.FormController f = form.getController();
+
+        vc.formController = form.getController();
+
+        f.setViewController(vc);
 
         primaryStage.setTitle("VisID");
 

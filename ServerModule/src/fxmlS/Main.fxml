@@ -17,7 +17,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1109.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersS.ViewController">
 
    <children>
-      <BorderPane id="main-pane" prefHeight="720.0" prefWidth="1151.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane id="main-pane" prefHeight="720.0" prefWidth="1151.0" stylesheets="@../cssS/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane prefHeight="92.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
                <children>
@@ -57,7 +57,7 @@
          </top>
          <center>
             <AnchorPane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="815.0">
-            <Pane id="mid-main-pane" layoutY="14.0" prefHeight="536.0" prefWidth="815.0" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane id="mid-main-pane" layoutY="14.0" prefHeight="536.0" prefWidth="815.0" stylesheets="@../cssS/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                <BorderPane.margin>
                   <Insets bottom="30.0" />
                </BorderPane.margin>
@@ -78,9 +78,9 @@
                <children>
                   <VBox layoutY="-1.0" prefHeight="550.0" prefWidth="275.0">
                      <children>
-                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#receiveForm" prefHeight="61.0" prefWidth="314.0" stylesheets="@../css/Button.css" text="Empfangene Formulare" textAlignment="CENTER" />
-                        <Button contentDisplay="CENTER" layoutX="20.0" layoutY="132.0" mnemonicParsing="false" onAction="#updateProgram" prefHeight="61.0" prefWidth="421.0" stylesheets="@../css/Button.css" text="Programm aktualisieren" textAlignment="CENTER" />
-                        <Button contentDisplay="CENTER" layoutX="20.0" layoutY="71.0" mnemonicParsing="false" onAction="#settings" prefHeight="61.0" prefWidth="421.0" stylesheets="@../css/Button.css" text="Einstellungen" textAlignment="CENTER" />
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#receiveForm" prefHeight="61.0" prefWidth="314.0" stylesheets="@../cssS/Button.css" text="Empfangene Formulare" textAlignment="CENTER" />
+                        <Button contentDisplay="CENTER" layoutX="20.0" layoutY="132.0" mnemonicParsing="false" onAction="#updateProgram" prefHeight="61.0" prefWidth="421.0" stylesheets="@../cssS/Button.css" text="Programm aktualisieren" textAlignment="CENTER" />
+                        <Button contentDisplay="CENTER" layoutX="20.0" layoutY="71.0" mnemonicParsing="false" onAction="#settings" prefHeight="61.0" prefWidth="421.0" stylesheets="@../cssS/Button.css" text="Einstellungen" textAlignment="CENTER" />
                      </children>
                      <padding>
                         <Insets left="10.0" right="10.0" />
