@@ -7,8 +7,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 
-public class Form {
-        private Button button;
+import java.io.*;
+
+public class Form implements Externalizable {
+        private transient Button button;
         private SimpleStringProperty name;
         private SimpleStringProperty mobil;
         private SimpleStringProperty email;
@@ -32,6 +34,7 @@ public class Form {
         private SimpleStringProperty kreuz20;
         private SimpleStringProperty kreuz21;
         private SimpleStringProperty kreuz22;
+
 
         public Form(){
             this.button = new Button("Formular aufnehmen");
@@ -249,5 +252,59 @@ public class Form {
 
     public void setKreuz22(String kreuz22) {
         this.kreuz22.set(kreuz22);
+    }
+
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException {
+            out.writeObject(getName());
+            out.writeObject(getMobil());
+            out.writeObject(getEmail());
+            out.writeObject(getFirma());
+            out.writeObject(getVorgesetzter());
+            out.writeObject(getStrasse());
+            out.writeObject(getPlzOrt());
+            out.writeObject(getNotwendigeArbeitsbereiche());
+            out.writeObject(getVonDatum());
+            out.writeObject(getKreuz0());
+            out.writeObject(getKreuz0());
+            out.writeObject(getKreuz1());
+            out.writeObject(getKreuz2());
+            out.writeObject(getKreuz3());
+            out.writeObject(getKreuz00());
+            out.writeObject(getKreuz01());
+            out.writeObject(getKreuz02());
+            out.writeObject(getKreuz10());
+            out.writeObject(getKreuz11());
+            out.writeObject(getKreuz12());
+            out.writeObject(getKreuz20());
+            out.writeObject(getKreuz21());
+            out.writeObject(getKreuz22());
+    }
+
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+        this.name = new SimpleStringProperty((String) in.readObject());
+        this.mobil = new SimpleStringProperty((String) in.readObject());
+        this.email  = new SimpleStringProperty((String) in.readObject());
+        this.firma  = new SimpleStringProperty((String) in.readObject());
+        this.vorgesetzter= new SimpleStringProperty((String) in.readObject());
+        this.strasse= new SimpleStringProperty((String) in.readObject());
+        this.plzOrt = new SimpleStringProperty((String) in.readObject());
+        this.notwendigeArbeitsbereiche = new SimpleStringProperty((String) in.readObject());
+        this.vonDatum = new SimpleStringProperty((String) in.readObject());
+        this.bisDatum = new SimpleStringProperty((String) in.readObject());
+        this.kreuz0 = new SimpleStringProperty((String) in.readObject());
+        this.kreuz1= new SimpleStringProperty((String) in.readObject());
+        this.kreuz2 = new SimpleStringProperty((String) in.readObject());
+        this.kreuz3 = new SimpleStringProperty((String) in.readObject());
+        this.kreuz00 = new SimpleStringProperty((String) in.readObject());
+        this.kreuz01  = new SimpleStringProperty((String) in.readObject());
+        this.kreuz02  = new SimpleStringProperty((String) in.readObject());
+        this.kreuz10 = new SimpleStringProperty((String) in.readObject());
+        this.kreuz11  = new SimpleStringProperty((String) in.readObject());
+        this.kreuz12 = new SimpleStringProperty((String) in.readObject());
+        this.kreuz20  = new SimpleStringProperty((String) in.readObject());
+        this.kreuz21  = new SimpleStringProperty((String) in.readObject());
+        this.kreuz22  = new SimpleStringProperty((String) in.readObject());
     }
 }

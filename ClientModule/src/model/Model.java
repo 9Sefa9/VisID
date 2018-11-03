@@ -175,19 +175,49 @@ public class Model {
         return false;
     }
     //wird hauptsächlich für das Transmitten verwendet. Zu finden unter SendController
-    public ObservableList getCompletedForm(FormController formController) {
-        try {
-            formController.formList.clear();
-            formController.formList.addAll(formController.name.getText(), formController.mobil.getText(), formController.email.getText(), formController.firma.getText(), formController.vorgesetzter.getText(),
-                    formController.strasse.getText(), formController.plzOrt.getText(), formController.notwendigeArbeitsbereiche.getText(),
-                    formController.vonDatum.getValue(), formController.bisDatum.getValue(), formController.kreuz0.isSelected(), formController.kreuz1.isSelected(), formController.kreuz2.isSelected(), formController.kreuz3.isSelected(),
-                    formController.kreuz00.isSelected(), formController.kreuz01.isSelected(), formController.kreuz02.isSelected(), formController.kreuz10.isSelected(), formController.kreuz11.isSelected(),
-                    formController.kreuz12.isSelected(), formController.kreuz20.isSelected(), formController.kreuz21.isSelected(), formController.kreuz22.isSelected());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return formController.formList;
+    public Form getCompletedForm(ViewController viewController) {
+            Form form = new Form();
+
+            form.setName(viewController.formController.name.getText());
+            form.setMobil(viewController.formController.mobil.getText());
+            form.setEmail(viewController.formController.email.getText());
+            form.setFirma(viewController.formController.firma.getText());
+            form.setVorgesetzter(viewController.formController.vorgesetzter.getText());
+            form.setStrasse(viewController.formController.strasse.getText());
+            form.setPlzOrt(viewController.formController.plzOrt.getText());
+            form.setNotwendigeArbeitsbereiche(viewController.formController.notwendigeArbeitsbereiche.getText());
+
+
+            try {
+                form.setVonDatum(viewController.formController.vonDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "");
+            }catch (NullPointerException e){
+                //für den fall, das kein Datum eingegeben wurde. auf andere weise schmeißt der Exception.
+                form.setVonDatum("");
+            }
+            try{
+                form.setBisDatum(viewController.formController.bisDatum.valueProperty().getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + "");
+            }catch (NullPointerException e) {
+                //für den fall, das kein Datum eingegeben wurde. auf andere weise schmeißt der Exception.
+                form.setBisDatum("");
+            }
+            form.setKreuz0(viewController.formController.kreuz0.selectedProperty().get()+"");
+            form.setKreuz1(viewController.formController.kreuz1.selectedProperty().get()+"");
+            form.setKreuz2(viewController.formController.kreuz2.selectedProperty().get()+"");
+            form.setKreuz3(viewController.formController.kreuz3.selectedProperty().get()+"");
+            form.setKreuz00(viewController.formController.kreuz00.selectedProperty().get()+"");
+            form.setKreuz01(viewController.formController.kreuz01.selectedProperty().get()+"");
+            form.setKreuz02(viewController.formController.kreuz02.selectedProperty().get()+"");
+            form.setKreuz10(viewController.formController.kreuz10.selectedProperty().get()+"");
+            form.setKreuz11(viewController.formController.kreuz11.selectedProperty().get()+"");
+            form.setKreuz12(viewController.formController.kreuz12.selectedProperty().get()+"");
+            form.setKreuz20(viewController.formController.kreuz20.selectedProperty().get()+"");
+            form.setKreuz21(viewController.formController.kreuz21.selectedProperty().get()+"");
+            form.setKreuz22(viewController.formController.kreuz22.selectedProperty().get()+"");
+
+            return form;
+
     }
+
     //In dem moment wo was gesendet wurde, setze formular zurück.
     public void clearCompletedForm(FormController formController) {
         resetLabel(formController);

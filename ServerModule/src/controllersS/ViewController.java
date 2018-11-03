@@ -22,7 +22,7 @@ public class ViewController {
     @FXML
     public void initialize(){
         //Thread starten zum empfangen von Formularen im Hintergrund
-        Thread transmission = new Thread(new Transmission());
+        Thread transmission = new Thread(new Transmission(this));
         transmission.start();
 
         //Thread , welches die Verfügbarkeit des Servers an die Clients sendet

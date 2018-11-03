@@ -6,6 +6,7 @@ import external.Form;
 import externalS.Text;
 import javafx.collections.FXCollections;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Model {
@@ -38,7 +39,7 @@ public class Model {
         receivedController.kreuz21Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz21"));
         receivedController.kreuz22Column.setCellValueFactory(new PropertyValueFactory<Form, String>("kreuz22"));
 
-        receivedController.recentTableView.setItems(receivedController.formListTableView);
+        receivedController.receivedTableView.setItems(receivedController.formListTableView);
     }
 
     public void receiveFormAction(ViewController viewController) {
@@ -55,5 +56,12 @@ public class Model {
 
     public void updateProgramAction(ViewController viewController) {
         viewController.notificationText.setText(Text.notificationTextUpdate);
+    }
+
+    public void addToReceived(TableView receivedTableView, externalS.Form form) {
+        synchronized (receivedTableView.getItems()){
+            receivedTableView.getItems().add(form);
+        }
+
     }
 }

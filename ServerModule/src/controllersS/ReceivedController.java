@@ -13,7 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class ReceivedController {
 
     @FXML
-    public TableView recentTableView;
+    public TableView receivedTableView;
 
     @FXML
     public TableColumn buttonColumn;
