@@ -60,7 +60,7 @@ public class SendController{
                 if (model.canConnectToServer) {
 
                     //hier findet die Tatsächliche Datenübertragung statt!
-                    Transmission transmission = new Transmission(this.model.getCompletedForm(this.viewController));
+                    Transmission transmission = new Transmission(this.model.getCompletedForm(this.viewController.formController));
                     CompletableFuture<Boolean> solution = CompletableFuture.supplyAsync(transmission);
                     this.formIsSent = solution.get();
                     if(this.formIsSent){

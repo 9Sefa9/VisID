@@ -12,11 +12,11 @@ import java.util.logging.Level;
 
 public class Transmission implements Supplier<Boolean> {
     private Socket client;
-    private Form form;
+    private ObservableList<Object> formList;
     private Logger logger = Logger.getLogger(this.getClass());
 
-    public Transmission(Form form){
-        this.form = form;
+    public Transmission(ObservableList<Object> formList){
+        this.formList = formList;
     }
 
     private boolean isFormSended() {
@@ -30,7 +30,10 @@ public class Transmission implements Supplier<Boolean> {
 
             //Datenübertragungfor
             oos = new ObjectOutputStream(this.client.getOutputStream());
-            oos.writeObject(this.form);
+
+            ArrayList<Object> transformList = new ArrayList<>(this.formList);
+
+            oos.writeObject(transformList);
             oos.flush();
 
             return true;

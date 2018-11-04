@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.logging.Level;
 
 public class Transmission implements Runnable{
@@ -45,11 +46,9 @@ public class Transmission implements Runnable{
             ObjectInputStream ois;
             try {
                 ois = new ObjectInputStream(this.client.getInputStream());
-                Object obj =  ois.readObject();
-
-                externalS.Form form = (externalS.Form)obj;
-
-                this.viewController.model.addToReceived(this.viewController.receivedController.receivedTableView,form);
+               ArrayList<Object> transmittedList=  (ArrayList<Object>)ois.readObject();
+                logger.log(Level.FINE,":: "+client.getLocalSocketAddress()+" :: transmitted a list!");
+               this.viewController.model.addToReceived(this.viewController.receivedController.receivedTableView,transmittedList);
             }catch (Exception e){
                 e.printStackTrace();
             }
