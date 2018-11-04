@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ClientModule:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BookmarkManager">
-    <bookmark url="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/CheckBox.java" description="/**" line="83" />
+    <bookmark url="file://$PROJECT_DIR$/ServerModule/src/externalS/Transmission.java" line="46" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e9b867e-0dae-4536-aaeb-c647cd44f248" name="Default Changelist" comment="Default Changelist">
-      <change beforePath="$PROJECT_DIR$/.idea/VisIDMaster.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VisIDMaster.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/MainClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/FormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/controllers/FormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/RecentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/controllers/RecentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/SendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/controllers/SendController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/controllers/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/controllers/ViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/css/Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/Pane.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/css/Pane.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/ProgressBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/css/ProgressBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/external/CheckConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/external/CheckConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/external/ExceptionLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/external/ExceptionLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/external/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/external/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/external/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/external/Text.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/external/Transmission.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/external/Transmission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/fxml/Form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/fxml/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Recents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/fxml/Recents.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Send.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/fxml/Send.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Update.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/fxml/Update.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/Logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/image/Logo1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/image/Logo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/image/Logo2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exceptions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/fxmlS/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/fxmlS/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/fxmlS/Received.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/fxmlS/Received.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ClientModule/css/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientModule/css/Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ClientModule/fxml/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientModule/fxml/Main.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,42 +42,48 @@
     <session id="-662674947">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.119" value="1" />
           <entry key="project.open.time.121" value="1" />
           <entry key="project.open.time.131" value="1" />
           <entry key="project.open.time.155" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.79" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.94" value="1" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="2" />
-          <entry key="fxml" value="9" />
-          <entry key="java" value="6" />
+          <entry key="css" value="6" />
+          <entry key="fxml" value="27" />
+          <entry key="java" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="JAVA" value="6" />
-          <entry key="XML" value="9" />
+          <entry key="CSS" value="6" />
+          <entry key="JAVA" value="43" />
+          <entry key="XML" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="62" />
-          <entry key="fxml" value="64" />
-          <entry key="java" value="2456" />
-          <entry key="txt" value="262" />
+          <entry key="css" value="86" />
+          <entry key="dummy" value="17" />
+          <entry key="fxml" value="72" />
+          <entry key="java" value="7566" />
+          <entry key="txt" value="517" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="62" />
-          <entry key="JAVA" value="2456" />
-          <entry key="PLAIN_TEXT" value="262" />
-          <entry key="XML" value="64" />
+          <entry key="CSS" value="86" />
+          <entry key="JAVA" value="7566" />
+          <entry key="PLAIN_TEXT" value="534" />
+          <entry key="XML" value="72" />
         </counts>
       </usages-collector>
     </session>
@@ -143,7 +135,46 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerModule/src/cssS/Pane.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerModule/src/fxmlS/Main.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ServerModule/src/fxmlS/Received.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerModule/src/cssS/Button.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -161,8 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/css/Button.css" />
-        <option value="$PROJECT_DIR$/src/css/MainPane.css" />
         <option value="$PROJECT_DIR$/src/css/Pane.css" />
         <option value="$PROJECT_DIR$/src/fxml/Menu.fxml" />
         <option value="$PROJECT_DIR$/src/fxml/Test.fxml" />
@@ -193,7 +222,27 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/Client/MainClient.java" />
         <option value="$PROJECT_DIR$/Server/MainServer.java" />
+        <option value="$PROJECT_DIR$/ServerModule/src/fxmlS/Form.fxml" />
+        <option value="$PROJECT_DIR$/ServerModule/src/fxmlS/Recents.fxml" />
+        <option value="$PROJECT_DIR$/ServerModule/src/controllersS/RecentsController.java" />
         <option value="$PROJECT_DIR$/ServerModule/src/MainServer.java" />
+        <option value="$PROJECT_DIR$/ServerModule/src/externalS/Handshake.java" />
+        <option value="$PROJECT_DIR$/ClientModule/src/external/Handshake.java" />
+        <option value="$PROJECT_DIR$/ServerModule/src/externalS/Text.java" />
+        <option value="$PROJECT_DIR$/ServerModule/src/controllersS/ViewController.java" />
+        <option value="$PROJECT_DIR$/ServerModule/src/controllersS/ReceivedController.java" />
+        <option value="$PROJECT_DIR$/ClientModule/src/external/Form.java" />
+        <option value="$PROJECT_DIR$/ServerModule/src/externalS/Form.java" />
+        <option value="$PROJECT_DIR$/ClientModule/src/controllers/SendController.java" />
+        <option value="$PROJECT_DIR$/ClientModule/src/external/Transmission.java" />
+        <option value="$PROJECT_DIR$/ServerModule/src/externalS/Transmission.java" />
+        <option value="$PROJECT_DIR$/ClientModule/src/model/Model.java" />
+        <option value="$PROJECT_DIR$/ServerModule/src/modelS/Model.java" />
+        <option value="$PROJECT_DIR$/ClientModule/src/css/Button.css" />
+        <option value="$PROJECT_DIR$/ServerModule/src/cssS/Button.css" />
+        <option value="$PROJECT_DIR$/ServerModule/src/cssS/Pane.css" />
+        <option value="$PROJECT_DIR$/ServerModule/src/fxmlS/Main.fxml" />
+        <option value="$PROJECT_DIR$/ServerModule/src/fxmlS/Received.fxml" />
       </list>
     </option>
   </component>
@@ -204,8 +253,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="267" />
+    <option name="x" value="314" />
     <option name="width" value="1614" />
     <option name="height" value="876" />
   </component>
@@ -214,59 +262,132 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="VisID" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VisID" type="462c0819:PsiDirectoryNode" />
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VisID" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VisID" type="462c0819:PsiDirectoryNode" />
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
               <item name="ClientModule" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VisID" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VisID" type="462c0819:PsiDirectoryNode" />
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
               <item name="ClientModule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VisID" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VisID" type="462c0819:PsiDirectoryNode" />
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="external" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
               <item name="ServerModule" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controllersS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cssS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="externalS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fxmlS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VisIDD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisIDD" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerModule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="modelS" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541076168222" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541375523644" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../VisID-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15592681" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sefa\Desktop\GitRepositories\VisID\src" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Users\Progamer\Desktop\GitRepositories\VisIDD\ServerModule\src\fxmlS" />
+      <recent name="C:\Users\Sefa\Desktop\GitRepositories\VisID\src\fxml" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="externalS" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="external" />
       <recent name="controllers" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Sefa\Desktop\GitRepositories\VisID\src\fxml" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -296,14 +417,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.Main" />
-      <module name="VisIDMaster" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainClient" />
       <module name="ClientModule" />
@@ -315,6 +428,14 @@
     <configuration name="MainServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainServer" />
       <module name="ServerModule" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.Main" />
+      <module name="VisIDMaster" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -361,7 +482,6 @@
         <item itemvalue="Application.MainServer" />
         <item itemvalue="Application.MainClient" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -404,6 +524,11 @@
       <workItem from="1540975729952" duration="1810000" />
       <workItem from="1540986039914" duration="1876000" />
       <workItem from="1541071889623" duration="4254000" />
+      <workItem from="1541171179506" duration="3810000" />
+      <workItem from="1541177733850" duration="135000" />
+      <workItem from="1541184658636" duration="5377000" />
+      <workItem from="1541278983978" duration="11911000" />
+      <workItem from="1541367791000" duration="7700000" />
     </task>
     <task id="LOCAL-00001" summary="Form done!">
       <created>1539556290487</created>
@@ -643,11 +768,46 @@
       <option name="project" value="LOCAL" />
       <updated>1541074584881</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="TreeView implementiert.">
+      <created>1541174750076</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1541174750076</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Bearbeite jetzt den Transmission beim Server !">
+      <created>1541190352842</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1541190352842</updated>
+    </task>
+    <task id="LOCAL-00037" summary="class Cast nervt !">
+      <created>1541285849884</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1541285849884</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Die Verbindung steht ! alles funktioniert so wie gewollt ! next step : fehler ausfindig machen. Dann eventuell das ganze umformen.">
+      <created>1541290848237</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1541290848237</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Changing the Style a bit.">
+      <created>1541374666244</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1541374666244</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72179000" />
+    <option name="totallyTimeSpent" value="101112000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -659,9 +819,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.216971" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09421842" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -669,8 +830,39 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32831" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946466" weight="0.393972" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32739422" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946466" weight="0.24053451" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37890205" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32938644" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005353" side_tool="true" weight="0.32962137" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32831" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32739422" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32975295" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1375803" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32739422" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946466" visible="true" weight="0.24053451" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37890205" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -690,7 +882,7 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32975295" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -699,11 +891,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="image upload" />
-    <MESSAGE value="viele konfuse sachen gemacht lol" />
-    <MESSAGE value="GEFIXXT! AnchorPane als contentPane verwendet!" />
-    <MESSAGE value="-" />
-    <MESSAGE value="gefällt mir" />
     <MESSAGE value="first good formula" />
     <MESSAGE value="first alpha version" />
     <MESSAGE value="MVC Pattern implementiert. GEIL" />
@@ -724,227 +911,31 @@
     <MESSAGE value="Default Changelist" />
     <MESSAGE value="beim datum läuft was schief." />
     <MESSAGE value="viele tolle features. Die auch alle funktionieren !" />
-    <option name="LAST_COMMIT_MESSAGE" value="viele tolle features. Die auch alle funktionieren !" />
+    <MESSAGE value="TreeView implementiert." />
+    <MESSAGE value="Bearbeite jetzt den Transmission beim Server !" />
+    <MESSAGE value="class Cast nervt !" />
+    <MESSAGE value="Die Verbindung steht ! alles funktioniert so wie gewollt ! next step : fehler ausfindig machen. Dann eventuell das ganze umformen." />
+    <MESSAGE value="Changing the Style a bit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing the Style a bit." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/MainPane.css" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="file://$PROJECT_DIR$/src/fxml/Test.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/view/View.java" />
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/css/Button.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/css/Pane.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="26" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/fxml/Update.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/viewController/ViewController.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/property/StringPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/property/StringProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/event/EventType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/fxml/Send.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/external/IExternal.java" />
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/external/CheckConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/external/ExceptionLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/controllers/UpdateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/cell/PropertyValueFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/TableColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="429" selection-start-line="429" selection-end-line="429" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/CheckBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/property/SimpleStringProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/ComboBoxBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="146" column="46" selection-start-line="146" selection-start-column="46" selection-end-line="146" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/binding/ObjectExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/TableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="843" column="47" selection-start-line="843" selection-start-column="47" selection-end-line="843" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="633" selection-start-line="633" selection-end-line="633" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/Labeled.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="144" column="45" selection-start-line="144" selection-start-column="45" selection-end-line="144" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="1657" selection-start-line="1657" selection-end-line="1657" />
-          <folding>
-            <element signature="e#66933#66934#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="8411" selection-start-line="8411" selection-end-line="8411" />
-          <folding>
-            <element signature="e#45776#45777#0" expanded="true" />
-            <element signature="e#45818#45819#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="186" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="1315" selection-start-line="1315" selection-end-line="1315" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/controllers/FormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/cell/PropertyValueFactory.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/TableColumn.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/CheckBox.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/ButtonBase.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/property/SimpleStringProperty.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/ComboBoxBase.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/beans/binding/ObjectExpression.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/TableView.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/collections/ModifiableObservableListBase.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/Throwable.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/Labeled.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/event/Event.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/Node.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/Button.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/javafx-src.zip!/javafx/scene/control/TextInputControl.java" />
     <entry file="file://$PROJECT_DIR$/ClientModule/src/controllers/RecentsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -952,88 +943,171 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/external/Form.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#4320#4321#0" expanded="true" />
-            <element signature="e#4357#4358#0" expanded="true" />
-            <element signature="e#4405#4406#0" expanded="true" />
-            <element signature="e#4448#4449#0" expanded="true" />
-            <element signature="e#4483#4484#0" expanded="true" />
-            <element signature="e#4520#4521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ClientModule/src/controllers/ViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding>
-            <element signature="e#1255#1256#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/external/Text.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/controllers/SendController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/model/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-577">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-          <folding>
-            <element signature="method#resetLabel#0;class#Model#0" />
-            <element signature="method#resetDatePicker#0;class#Model#0" />
-            <element signature="method#resetChoiceBox#0;class#Model#0" />
-            <element signature="method#getNewForm#0;class#Model#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/external/Transmission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#1126#1127#0" expanded="true" />
-            <element signature="e#1163#1164#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientModule/src/fxml/Form.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5082">
           <caret line="14" column="131" selection-start-line="14" selection-start-column="131" selection-end-line="14" selection-end-column="131" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientModule/src/fxml/Recents.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-581" />
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientModule/src/MainClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="329">
+          <caret line="60" column="11" selection-start-line="16" selection-end-line="60" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/fxmlS/Form.fxml" />
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/controllersS/FormController.java" />
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/MainServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/controllersS/PreferencesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/externalS/Handshake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/externalS/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/TableView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="843" column="35" selection-start-line="843" selection-start-column="35" selection-end-line="843" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientModule/src/external/Handshake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientModule/src/external/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/controllersS/ViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientModule/src/controllers/SendController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="62" column="81" lean-forward="true" selection-start-line="62" selection-start-column="81" selection-end-line="62" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/beans/value/ObservableObjectValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/ComboBoxBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="150" column="56" selection-start-line="150" selection-start-column="56" selection-end-line="150" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/CheckBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="158" column="25" selection-start-line="158" selection-start-column="25" selection-end-line="158" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/externalS/Form.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-590">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientModule/src/external/Transmission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/controllersS/ReceivedController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/time/LocalDateTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="491" selection-start-line="491" selection-end-line="491" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientModule/src/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5355">
+          <caret line="330" column="148" selection-start-line="330" selection-start-column="148" selection-end-line="330" selection-end-column="148" />
+          <folding>
+            <element signature="method#prepareTableView#0;class#Model#0" />
+            <element signature="method#resetLabel#0;class#Model#0" />
+            <element signature="method#resetDatePicker#0;class#Model#0" />
+            <element signature="method#resetChoiceBox#0;class#Model#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/externalS/Transmission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1042,40 +1116,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientModule/src/controllers/FormController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="756">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClientModule/src/MainClient.java">
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/modelS/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="60" column="11" selection-start-line="16" selection-end-line="60" selection-end-column="11" />
+        <state relative-caret-position="882">
+          <caret line="88" column="63" selection-start-line="88" selection-start-column="63" selection-end-line="88" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#prepareTableView#0;class#Model#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClientModule/src/css/Button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ClientModule/src/fxml/Main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="84" column="194" selection-start-line="84" selection-start-column="194" selection-end-line="84" selection-end-column="194" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServerModule/src/MainServer.java">
+    <entry file="file://$PROJECT_DIR$/ClientModule/src/external/Form.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2047#2048#0" expanded="true" />
-            <element signature="e#2075#2076#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/cssS/Button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/cssS/Pane.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/fxmlS/Main.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerModule/src/fxmlS/Received.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -1083,10 +1189,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>ClientModule:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1134,7 +1242,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

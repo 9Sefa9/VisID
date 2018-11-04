@@ -39,7 +39,7 @@
                               <Image url="@../image/Logo2.png" />
                            </image>
                         </ImageView>
-                        <Label prefHeight="79.0" prefWidth="196.0" text="v1.0.alpha0" textAlignment="CENTER" GridPane.columnIndex="3">
+                        <Label fx:id="versionNumber" prefHeight="79.0" prefWidth="196.0" text="v1.0.alpha0" textAlignment="CENTER" GridPane.columnIndex="3">
                            <font>
                               <Font size="13.0" />
                            </font>
