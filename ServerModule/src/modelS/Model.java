@@ -5,6 +5,8 @@ import controllersS.ViewController;
 import external.Form;
 import externalS.Text;
 import javafx.collections.FXCollections;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
@@ -140,4 +142,29 @@ public class Model {
         from.setLeftAnchor(to, .0);
         from.setBottomAnchor(to, .0);
     }
+
+    public void prepareSearchField(ReceivedController receivedController) {
+
+        //TODO FIlter system funktioniert noch nich richtig.
+        FilteredList<Object> filteredData = new FilteredList<>(receivedController.formListTableView, p -> true);
+        receivedController.searchField.textProperty().addListener((obs, old, ne) -> {
+            filteredData.setPredicate(Form -> {
+                if (ne == null | ne.isEmpty())
+                    return true;
+
+               for(Object obj : receivedController.formListTableView){
+                   if(obj.equals(ne)){
+                       return true;
+                   }
+               }
+
+                   return false;
+            });
+            SortedList<Object> sortedData = new SortedList<>(filteredData);
+            sortedData.comparatorProperty().bind(receivedController.receivedTableView.comparatorProperty());
+            receivedController.receivedTableView.setItems(sortedData);
+
+        });
+    }
+
 }
