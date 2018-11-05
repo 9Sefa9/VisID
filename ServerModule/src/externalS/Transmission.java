@@ -49,6 +49,7 @@ public class Transmission implements Runnable{
                ArrayList<Object> transmittedList=  (ArrayList<Object>)ois.readObject();
                 logger.log(Level.FINE,":: "+client.getLocalSocketAddress()+" :: transmitted a list!");
                this.viewController.model.addToReceived(this.viewController.receivedController.receivedTableView,transmittedList);
+               this.viewController.model.prepareSearchField(this.viewController.receivedController);
             }catch (Exception e){
                 e.printStackTrace();
             }

@@ -23,6 +23,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
+import java.util.function.Predicate;
 
 public class Model {
 
@@ -144,27 +145,21 @@ public class Model {
     }
 
     public void prepareSearchField(ReceivedController receivedController) {
+ //TODO FIlter system funktioniert noch nich richtig.
 
-        //TODO FIlter system funktioniert noch nich richtig.
-        FilteredList<Object> filteredData = new FilteredList<>(receivedController.formListTableView, p -> true);
+        FilteredList<Object> filteredData = new FilteredList<>(receivedController.formListTableView.filtered(p ->true), p -> true);
         receivedController.searchField.textProperty().addListener((obs, old, ne) -> {
-            filteredData.setPredicate(Form -> {
-                if (ne == null | ne.isEmpty())
-                    return true;
-
-               for(Object obj : receivedController.formListTableView){
-                   if(obj.equals(ne)){
-                       return true;
-                   }
-               }
-
-                   return false;
-            });
+            filteredData.setPredicate(Form-> {
+                System.out.println(filteredData.get(0)+"");
+                        return false; // or true
+                    }
+            );
             SortedList<Object> sortedData = new SortedList<>(filteredData);
             sortedData.comparatorProperty().bind(receivedController.receivedTableView.comparatorProperty());
             receivedController.receivedTableView.setItems(sortedData);
 
         });
+
     }
 
 }

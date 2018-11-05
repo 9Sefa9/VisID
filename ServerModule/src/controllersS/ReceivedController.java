@@ -108,6 +108,5 @@ public class ReceivedController {
     private void setModel(modelS.Model model){
         this.model = model;
         model.prepareTableView(this);
-        model.prepareSearchField(this);
     }
 }
