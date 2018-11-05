@@ -5,10 +5,13 @@ import controllersS.ViewController;
 import external.Form;
 import externalS.Text;
 import javafx.collections.FXCollections;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -54,6 +57,8 @@ public class Model {
 
     public void receiveFormAction(ViewController viewController) {
 
+        fitSizeFromTo(viewController.contentPane,viewController.recentsParent);
+
         viewController.notificationText.setText(Text.receivedFormularsText);
 
         viewController.contentPane.getChildren().setAll(viewController.recentsParent);
@@ -61,10 +66,14 @@ public class Model {
     }
 
     public void settingsAction(ViewController viewController) {
+        //fitSizeFromTo(viewController.contentPane,viewController.recentsParent);
+
         viewController.notificationText.setText(Text.preferencesText);
     }
 
     public void updateProgramAction(ViewController viewController) {
+      //  fitSizeFromTo(viewController.contentPane,viewController.recentsParent);
+
         viewController.notificationText.setText(Text.notificationTextUpdate);
     }
 
@@ -124,5 +133,11 @@ public class Model {
             receivedTableView.getItems().add(form);
         }
 
+    }
+    public void fitSizeFromTo(AnchorPane from, Parent to){
+        from.setRightAnchor(to, .0);
+        from.setTopAnchor(to, .0);
+        from.setLeftAnchor(to, .0);
+        from.setBottomAnchor(to, .0);
     }
 }
