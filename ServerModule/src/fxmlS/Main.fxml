@@ -16,24 +16,24 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1109.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersS.ViewController">
 
    <children>
-      <BorderPane id="main-pane" prefHeight="720.0" prefWidth="1151.0" stylesheets="@../cssS/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane id="main-pane" stylesheets="@../cssS/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane prefHeight="109.0" prefWidth="1172.0" BorderPane.alignment="CENTER">
                <children>
                   <GridPane prefHeight="109.0" prefWidth="1165.0" style="-fx-background-color: rgb(20, 47, 89);" AnchorPane.leftAnchor="0.0">
                      <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="16.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="443.0" minWidth="10.0" prefWidth="231.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="152.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="545.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="443.0" minWidth="10.0" prefWidth="245.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="139.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="439.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="207.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ImageView fitHeight="77.0" fitWidth="243.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                        <ImageView fitHeight="77.0" fitWidth="244.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                            <image>
                               <Image url="@../imageS/Logo2.png" />
                            </image>
@@ -46,7 +46,7 @@
                               <Insets top="60.0" />
                            </padding>
                         </Label>
-                        <Label fx:id="notificationText" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="545.0" text="Willkommen !" textAlignment="CENTER" textFill="#e9eeb8" GridPane.columnIndex="3">
+                        <Label fx:id="notificationText" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="559.0" text="Willkommen !" textAlignment="CENTER" textFill="#e9eeb8" underline="true" GridPane.columnIndex="3">
                            <font>
                               <Font size="25.0" />
                            </font>

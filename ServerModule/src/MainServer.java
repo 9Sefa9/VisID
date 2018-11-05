@@ -28,10 +28,9 @@ public class MainServer extends Application {
         f.setViewController(vc);
 
         primaryStage.setTitle("VisID");
-
+        primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root, 1150, 720));
         primaryStage.getIcons().add(new Image("image/Logo1.png"));
-        primaryStage.setResizable(false);
         primaryStage.show();
 
 
