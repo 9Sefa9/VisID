@@ -1,6 +1,6 @@
 package controllersS;
 
-import external.Form;
+import externalS.Form;
 import externalS.Transmission;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -93,7 +93,7 @@ public class ReceivedController {
 
     public modelS.Model model;
 
-    public ObservableList<Object> formListTableView;
+    public ObservableList<Form> formListTableView;
 
     @FXML
     public void initialize(){
@@ -108,5 +108,6 @@ public class ReceivedController {
     private void setModel(modelS.Model model){
         this.model = model;
         model.prepareTableView(this);
+        model.prepareSearchField(this);
     }
 }

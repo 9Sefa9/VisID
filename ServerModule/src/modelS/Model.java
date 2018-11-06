@@ -80,8 +80,7 @@ public class Model {
         viewController.notificationText.setText(Text.notificationTextUpdate);
     }
 
-    public void addToReceived(TableView receivedTableView, ArrayList<Object> transmittedList) {
-        synchronized (receivedTableView.getItems()){
+    public synchronized void addToReceived(TableView receivedTableView, ArrayList<Object> transmittedList) {
 
             externalS.Form form = new externalS.Form();
             form.setName((String)transmittedList.get(0));
@@ -134,7 +133,7 @@ public class Model {
             form.setKreuz22((String)transmittedList.get(22));
 
             receivedTableView.getItems().add(form);
-        }
+
 
     }
     public void fitSizeFromTo(AnchorPane from, Parent to){
@@ -147,12 +146,24 @@ public class Model {
     public void prepareSearchField(ReceivedController receivedController) {
  //TODO FIlter system funktioniert noch nich richtig.
 
-        FilteredList<Object> filteredData = new FilteredList<>(receivedController.formListTableView.filtered(p ->true), p -> true);
-        receivedController.searchField.textProperty().addListener((obs, old, ne) -> {
-            filteredData.setPredicate(Form-> {
-                System.out.println(filteredData.get(0)+"");
-                        return false; // or true
-                    }
+        FilteredList<externalS.Form> filteredData = new FilteredList<>(receivedController.formListTableView, p -> true);
+        receivedController.searchField.textProperty().addListener((obs, oldValue, newValue) -> {
+            filteredData.setPredicate(form-> {
+                System.out.println(form.getName());
+
+                if(newValue .equals("")|| newValue == null)
+                    return true;
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (form.getName().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                }
+                if (form.getMobil().toLowerCase().contains(lowerCaseFilter)) {
+                    return true;
+                }
+                return false;
+            }
             );
             SortedList<Object> sortedData = new SortedList<>(filteredData);
             sortedData.comparatorProperty().bind(receivedController.receivedTableView.comparatorProperty());

@@ -43,15 +43,22 @@ public class Transmission implements Runnable{
         }
         @Override
         public void run() {
-            ObjectInputStream ois;
+            ObjectInputStream ois=null;
             try {
                 ois = new ObjectInputStream(this.client.getInputStream());
                ArrayList<Object> transmittedList=  (ArrayList<Object>)ois.readObject();
                 logger.log(Level.FINE,":: "+client.getLocalSocketAddress()+" :: transmitted a list!");
                this.viewController.model.addToReceived(this.viewController.receivedController.receivedTableView,transmittedList);
-               this.viewController.model.prepareSearchField(this.viewController.receivedController);
+
             }catch (Exception e){
                 e.printStackTrace();
+            }finally {
+                try {
+                    if(ois != null)
+                        ois.close();
+                }catch (IOException i){
+                    i.printStackTrace();
+                }
             }
         }
     }

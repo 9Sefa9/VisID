@@ -42,6 +42,13 @@ public class Transmission implements Supplier<Boolean> {
 
         }catch (IOException uhe){
             logger.log(Level.FINE,"IOException isFormSended() :: "+this.getClass());
+        }finally {
+            try {
+                if(oos != null)
+                    oos.close();
+            }catch (IOException i){
+                i.printStackTrace();
+            }
         }
         return false;
     }
