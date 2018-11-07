@@ -3,39 +3,37 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="550.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RecentsController">
-   <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <content>
-         <TableView fx:id="recentTableView" maxWidth="-Infinity" prefHeight="550.0">
-           <columns>
-             <TableColumn fx:id="buttonColumn" prefWidth="181.0" />
-             <TableColumn fx:id="nameColumn" prefWidth="350.0" text="Name" />
-               <TableColumn fx:id="mobilColumn" prefWidth="350.0" text="Mobil" />
-               <TableColumn fx:id="emailColumn" prefWidth="350.0" text="E-Mail" />
-               <TableColumn fx:id="firmaColumn" prefWidth="350.0" text="Firma" />
-               <TableColumn fx:id="vorgesetzterColumn" prefWidth="350.0" text="Vorgesetzter" />
-               <TableColumn fx:id="strasseColumn" prefWidth="350.0" text="Strasse" />
-               <TableColumn fx:id="plzOrtColumn" prefWidth="350.0" text="PLZ/Ort" />
-               <TableColumn fx:id="notwendigeArbeitsbereicheColumn" minWidth="4.0" prefWidth="350.0" text="Notwendige Arbeitsbereiche" />
-               <TableColumn fx:id="vonColumn" prefWidth="200.0" text="Von" />
-               <TableColumn fx:id="bisColumn" prefWidth="200.0" text="Bis" />
-               <TableColumn fx:id="kreuz0Column" prefWidth="150.0" text="Ankreuzen 1" />
-               <TableColumn fx:id="kreuz1Column" prefWidth="150.0" text="Ankreuzen 2" />
-               <TableColumn fx:id="kreuz2Column" prefWidth="150.0" text="Ankreuzen 3" />
-               <TableColumn fx:id="kreuz3Column" prefWidth="150.0" text="Ankreuzen 4" />
-               <TableColumn fx:id="kreuz00Column" prefWidth="120.0" text="1" />
-               <TableColumn fx:id="kreuz01Column" prefWidth="120.0" text="2" />
-               <TableColumn fx:id="kreuz02Column" prefWidth="120.0" text="3" />
-               <TableColumn fx:id="kreuz10Column" prefWidth="120.0" text="4" />
-               <TableColumn fx:id="kreuz11Column" prefWidth="120.0" text="5" />
-               <TableColumn fx:id="kreuz12Column" prefWidth="120.0" text="6" />
-               <TableColumn fx:id="kreuz20Column" prefWidth="120.0" text="7" />
-               <TableColumn fx:id="kreuz21Column" prefWidth="120.0" text="8" />
-               <TableColumn fx:id="kreuz22Column" prefWidth="120.0" text="9" />
-           </columns>
-         </TableView>
-      </content>
-   </ScrollPane>
-</AnchorPane>
+
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RecentsController">
+   <content>
+      <TableView fx:id="recentTableView" maxWidth="-Infinity" prefHeight="550.0">
+        <columns>
+          <TableColumn fx:id="buttonColumn" prefWidth="181.0" />
+          <TableColumn fx:id="nameColumn" prefWidth="350.0" text="Name" />
+            <TableColumn fx:id="mobilColumn" prefWidth="350.0" text="Mobil" />
+            <TableColumn fx:id="emailColumn" prefWidth="350.0" text="E-Mail" />
+            <TableColumn fx:id="firmaColumn" prefWidth="350.0" text="Firma" />
+            <TableColumn fx:id="vorgesetzterColumn" prefWidth="350.0" text="Vorgesetzter" />
+            <TableColumn fx:id="strasseColumn" prefWidth="350.0" text="Strasse" />
+            <TableColumn fx:id="plzOrtColumn" prefWidth="350.0" text="PLZ/Ort" />
+            <TableColumn fx:id="notwendigeArbeitsbereicheColumn" minWidth="4.0" prefWidth="350.0" text="Notwendige Arbeitsbereiche" />
+            <TableColumn fx:id="vonColumn" prefWidth="200.0" text="Von" />
+            <TableColumn fx:id="bisColumn" prefWidth="200.0" text="Bis" />
+            <TableColumn fx:id="kreuz0Column" prefWidth="150.0" text="Ankreuzen 1" />
+            <TableColumn fx:id="kreuz1Column" prefWidth="150.0" text="Ankreuzen 2" />
+            <TableColumn fx:id="kreuz2Column" prefWidth="150.0" text="Ankreuzen 3" />
+            <TableColumn fx:id="kreuz3Column" prefWidth="150.0" text="Ankreuzen 4" />
+            <TableColumn fx:id="kreuz00Column" prefWidth="120.0" text="1" />
+            <TableColumn fx:id="kreuz01Column" prefWidth="120.0" text="2" />
+            <TableColumn fx:id="kreuz02Column" prefWidth="120.0" text="3" />
+            <TableColumn fx:id="kreuz10Column" prefWidth="120.0" text="4" />
+            <TableColumn fx:id="kreuz11Column" prefWidth="120.0" text="5" />
+            <TableColumn fx:id="kreuz12Column" prefWidth="120.0" text="6" />
+            <TableColumn fx:id="kreuz20Column" prefWidth="120.0" text="7" />
+            <TableColumn fx:id="kreuz21Column" prefWidth="120.0" text="8" />
+            <TableColumn fx:id="kreuz22Column" prefWidth="120.0" text="9" />
+        </columns>
+      </TableView>
+   </content>
+</ScrollPane>

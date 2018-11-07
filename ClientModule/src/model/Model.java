@@ -9,8 +9,10 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -24,6 +26,7 @@ public class Model {
 
     //Funktionalität für das "Besucher eintragen" Button im MainClient Menu
     public void visitForm(ViewController viewController) {
+        fitSizeFromTo(viewController.contentPane,viewController.formParent);
 
         //Notification Text aktuaisiern
         viewController.notificationText.setText(Text.notificationTextFormular);
@@ -61,6 +64,9 @@ public class Model {
     //Funktionalität für das "Formular Senden" Button im MainClient Menu
     public void sendForm(ViewController viewController) {
         try {
+            fitSizeFromTo(viewController.contentPane,viewController.sendParent);
+
+
             //das "Formular wurde erfolgreich gesendet! zurück resetten.
             viewController.sendController.sendedText.setText("");
 
@@ -132,6 +138,10 @@ public class Model {
     //TODO wird zuletzt gemacht.
     public void updateProgram(ViewController viewController) {
         try {
+
+            fitSizeFromTo(viewController.contentPane,viewController.updateParent);
+
+
             //das "Formular wurde erfolgreich gesendet! zurück resetten.
             viewController.sendController.sendedText.setText("");
 
@@ -151,6 +161,8 @@ public class Model {
     //Funktionalität für das "Historie" Button im MainClient
     public void visitFormRecents(ViewController viewController) {
         try {
+            fitSizeFromTo(viewController.contentPane,viewController.recentsParent);
+
             //das "Formular wurde erfolgreich gesendet! zurück resetten.
             viewController.sendController.sendedText.setText("");
             
@@ -355,7 +367,12 @@ public class Model {
 
         return form;
     }
-
+    public void fitSizeFromTo(AnchorPane from, Parent to){
+        from.setRightAnchor(to, .0);
+        from.setTopAnchor(to, .0);
+        from.setLeftAnchor(to, .0);
+        from.setBottomAnchor(to, .0);
+    }
 
 }
 
