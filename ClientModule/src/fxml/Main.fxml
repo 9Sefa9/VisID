@@ -16,9 +16,9 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1109.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewController">
 
    <children>
-      <BorderPane id="main-pane" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane id="main-anchor-pane" stylesheets="@../css/Pane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <AnchorPane prefHeight="82.0" prefWidth="1165.0" BorderPane.alignment="CENTER">
+            <AnchorPane id="top-anchor-pane" prefHeight="82.0" prefWidth="1165.0" BorderPane.alignment="CENTER">
                <children>
                   <GridPane prefHeight="110.0" prefWidth="1165.0" style="-fx-background-color: rgb(20, 47, 89);" AnchorPane.leftAnchor="0.0">
                      <columnConstraints>
@@ -60,17 +60,24 @@
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane fx:id="contentPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="889.0" BorderPane.alignment="CENTER">
+            <AnchorPane id="center-anchor-pane" fx:id="contentPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="889.0" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets />
                </BorderPane.margin>
+               <children>
+                  <ImageView fitHeight="615.0" fitWidth="893.0" layoutX="41.0" layoutY="4.0" nodeOrientation="INHERIT" opacity="0.13" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="40.91339111328125" AnchorPane.topAnchor="4.0">
+                     <image>
+                        <Image url="@../image/BayerLeverkusen.png" />
+                     </image>
+                  </ImageView>
+               </children>
             </AnchorPane>
          </center>
          <right>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="0.0" BorderPane.alignment="CENTER_LEFT" />
+            <AnchorPane id="right-anchor-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="0.0" BorderPane.alignment="CENTER_LEFT" />
          </right>
          <left>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="276.0" style="-fx-background-color: rgb(74, 116, 181);" BorderPane.alignment="CENTER">
+            <AnchorPane id="left-anchor-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="276.0" stylesheets="@../css/Pane.css" BorderPane.alignment="CENTER">
                <children>
                   <VBox layoutY="1.0" prefHeight="619.0" prefWidth="275.0" AnchorPane.leftAnchor="0.0">
                      <children>
@@ -85,7 +92,7 @@
             </AnchorPane>
          </left>
          <bottom>
-            <AnchorPane prefHeight="0.0" prefWidth="1165.0" />
+            <AnchorPane id="bottom-anchor-pane" prefHeight="0.0" prefWidth="1165.0" />
          </bottom>
       </BorderPane>
    </children>

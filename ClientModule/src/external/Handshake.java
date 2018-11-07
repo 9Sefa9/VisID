@@ -25,7 +25,7 @@ public class Handshake implements Supplier<Boolean> {
             return true;
         }catch (SocketException e){
             log.log(Level.INFO,"SocketException checkConnection()");
-            e.printStackTrace();
+            //e.printStackTrace();
         }catch (IOException i){
             log.log(Level.INFO,"IOException checkConnection()");
             i.printStackTrace();
