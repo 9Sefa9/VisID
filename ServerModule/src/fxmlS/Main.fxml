@@ -60,7 +60,7 @@
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane fx:id="contentPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="889.0" BorderPane.alignment="CENTER">
+            <AnchorPane fx:id="contentPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="879.0" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets />
                </BorderPane.margin>

@@ -13,3 +13,42 @@
 #left-anchor-pane{
     -fx-background-color: rgb(74, 116, 181);
 }
+
+/*Der Scroll pane bei Form.fxml*/
+#form-scroll-pane .scroll-bar:vertical .increment-button,
+#form-scroll-pane .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-padding:0 10 0 0;
+}
+#form-scroll-pane .scroll-bar:horizontal .increment-button,
+#form-scroll-pane .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-padding:10 0 0 0;
+}
+#form-scroll-pane .scroll-bar .increment-arrow,
+#form-scroll-pane .scroll-bar .decrement-arrow
+{
+    -fx-shape: " ";
+}
+#form-scroll-pane{
+    -fx-background-color: transparent;
+}
+/*Der besucher Verlauf,scroll pane , bei Recents.fxml*/
+#recents-scroll-pane .scroll-bar:vertical .increment-button,
+#recents-scroll-pane .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-padding:0 10 0 0;
+}
+#recents-scroll-pane .scroll-bar:horizontal .increment-button,
+#recents-scroll-pane .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-padding:10 0 0 0;
+}
+#recents-scroll-pane .scroll-bar .increment-arrow,
+#recents-scroll-pane .scroll-bar .decrement-arrow
+{
+    -fx-shape: " ";
+}
+#recents-scroll-pane{
+    -fx-background-color: transparent;
+}

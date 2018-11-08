@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllersS.ReceivedController">
    <children>
       <TextField fx:id="searchField" promptText="Eintrag suchen...">
@@ -15,9 +14,9 @@
             <Font name="Ebrima" size="18.0" />
          </font>
       </TextField>
-      <ScrollPane>
+      <ScrollPane id="form-scroll-pane" focusTraversable="false" stylesheets="@../cssS/Pane.css">
          <content>
-            <TableView fx:id="receivedTableView" maxWidth="-Infinity" prefHeight="604.0" prefWidth="5071.0" stylesheets="@../cssS/TreeView.css">
+            <TableView fx:id="receivedTableView" prefHeight="604.0" prefWidth="5071.0" stylesheets="@../cssS/TreeView.css">
               <columns>
                 <TableColumn fx:id="buttonColumn" prefWidth="181.0" />
                 <TableColumn fx:id="nameColumn" prefWidth="350.0" text="Name" />

@@ -12,3 +12,24 @@
     -fx-border-color: rgb(134, 165, 190);
     -fx-border-width: 5px;
 }
+#form-scroll-pane .scroll-bar:vertical .increment-button,
+#form-scroll-pane .scroll-bar:vertical .decrement-button{
+    -fx-background-color:transparent;
+    -fx-padding:0 10 0 0;
+}
+#form-scroll-pane .scroll-bar:horizontal .increment-button,
+#form-scroll-pane .scroll-bar:horizontal .decrement-button{
+    -fx-background-color:transparent;
+    -fx-padding:10 0 0 0;
+}
+#form-scroll-pane .scroll-bar .increment-arrow,
+#form-scroll-pane .scroll-bar .decrement-arrow
+{
+    -fx-shape: " ";
+}
+#form-scroll-pane{
+    -fx-background-color: transparent;
+}
+
+
+

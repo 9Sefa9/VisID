@@ -20,11 +20,11 @@
          <top>
             <AnchorPane id="top-anchor-pane" prefHeight="82.0" prefWidth="1165.0" BorderPane.alignment="CENTER">
                <children>
-                  <GridPane prefHeight="110.0" prefWidth="1165.0" style="-fx-background-color: rgb(20, 47, 89);" AnchorPane.leftAnchor="0.0">
+                  <GridPane id="upperAnchorPane" prefHeight="110.0" prefWidth="1165.0" style="-fx-background-color: rgb(20, 47, 89);" AnchorPane.leftAnchor="0.0">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="29.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="443.0" minWidth="10.0" prefWidth="245.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="139.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="443.0" minWidth="10.0" prefWidth="228.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="158.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="439.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="207.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -33,12 +33,12 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <ImageView fitHeight="77.0" fitWidth="244.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                        <ImageView fitHeight="77.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                            <image>
                               <Image url="@../image/Logo2.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="versionNumber" prefHeight="79.0" prefWidth="196.0" text="v1.0.alpha0" textAlignment="CENTER" textFill="#e9eeb8" GridPane.columnIndex="2">
+                        <Label fx:id="versionNumber" prefHeight="93.0" prefWidth="159.0" text="v1.0.alpha0" textAlignment="CENTER" textFill="#e9eeb8" GridPane.columnIndex="2">
                            <font>
                               <Font name="Ebrima" size="13.0" />
                            </font>
@@ -46,9 +46,9 @@
                               <Insets top="60.0" />
                            </padding>
                         </Label>
-                        <Label fx:id="notificationText" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="559.0" text="Willkommen !" textAlignment="CENTER" textFill="#e9eeb8" underline="true" GridPane.columnIndex="3">
+                        <Label fx:id="notificationText" alignment="CENTER" contentDisplay="CENTER" prefHeight="79.0" prefWidth="493.0" text="Willkommen !" textAlignment="CENTER" textFill="#e9eeb8" underline="true" GridPane.columnIndex="3">
                            <font>
-                              <Font size="25.0" />
+                              <Font name="Segoe UI Semibold" size="25.0" />
                            </font>
                         </Label>
                      </children>
@@ -60,7 +60,7 @@
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane id="center-anchor-pane" fx:id="contentPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="889.0" BorderPane.alignment="CENTER">
+            <AnchorPane id="center-anchor-pane" fx:id="contentPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="882.0" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets />
                </BorderPane.margin>
@@ -79,10 +79,16 @@
          <left>
             <AnchorPane id="left-anchor-pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="276.0" stylesheets="@../css/Pane.css" BorderPane.alignment="CENTER">
                <children>
-                  <VBox layoutY="1.0" prefHeight="619.0" prefWidth="275.0" AnchorPane.leftAnchor="0.0">
+                  <VBox layoutY="1.0" prefHeight="619.0" prefWidth="275.0" style="-fx-background-color: rgb(74, 116, 181);;" AnchorPane.leftAnchor="0.0">
                      <children>
-                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#visitFormAction" prefHeight="61.0" prefWidth="314.0" stylesheets="@../css/Button.css" text="Besucher eintragen" textAlignment="CENTER" textFill="#e9eeb8" />
-                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#sendFormAction" prefHeight="61.0" prefWidth="421.0" stylesheets="@../css/Button.css" text="Formular senden" textAlignment="CENTER" textFill="#e9eeb8" />
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#visitFormAction" prefHeight="61.0" prefWidth="314.0" stylesheets="@../css/Button.css" text="Besucher eintragen" textAlignment="CENTER" textFill="#e9eeb8">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="18.0" />
+                           </font></Button>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#sendFormAction" prefHeight="61.0" prefWidth="421.0" stylesheets="@../css/Button.css" text="Formular senden" textAlignment="CENTER" textFill="#e9eeb8">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="18.0" />
+                           </font></Button>
                         <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#visitFormRecentsAction" prefHeight="61.0" prefWidth="315.0" stylesheets="@../css/Button.css" text="Besucher Verlauf" textAlignment="CENTER" textFill="#e9eeb8" />
                         <Button contentDisplay="CENTER" layoutX="20.0" layoutY="132.0" mnemonicParsing="false" onAction="#updateAction" prefHeight="61.0" prefWidth="421.0" stylesheets="@../css/Button.css" text="Programm aktualisieren" textAlignment="CENTER" textFill="#e9eeb8" />
                         <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#visitFormResetAction" prefHeight="61.0" prefWidth="315.0" stylesheets="@../css/Button.css" text="Formular zurücksetzen" textAlignment="CENTER" textFill="#e9eeb8" />

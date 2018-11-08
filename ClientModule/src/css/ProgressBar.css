@@ -1,7 +1,0 @@
-.progress-bar .bar {
-
-    -fx-text-box-border: white;
-    -fx-background-color: orange,
-linear-gradient(#5a61af, #51536d),
-linear-gradient(#ff9189 0%, #ff7363 100%, #ff7873 50%, #ff262a 51%, #d5faff 100%);
-}

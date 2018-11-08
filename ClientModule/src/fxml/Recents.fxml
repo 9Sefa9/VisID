@@ -4,10 +4,9 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 
-
-<ScrollPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RecentsController">
+<ScrollPane id="recents-scroll-pane" focusTraversable="false" stylesheets="@../css/Pane.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RecentsController">
    <content>
-      <TableView fx:id="recentTableView" maxWidth="-Infinity" prefHeight="550.0">
+      <TableView id="recents-scroll-pane" fx:id="recentTableView" prefHeight="550.0" stylesheets="@../css/Pane.css">
         <columns>
           <TableColumn fx:id="buttonColumn" prefWidth="181.0" />
           <TableColumn fx:id="nameColumn" prefWidth="350.0" text="Name" />

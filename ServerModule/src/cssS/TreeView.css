@@ -8,3 +8,9 @@
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 18px;
 }
+.scroll-bar{
+    -fx-background-color: #28ff00;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0.5em;
+}
+
