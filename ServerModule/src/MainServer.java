@@ -1,3 +1,4 @@
+import controllersS.PreferencesController;
 import controllersS.ReceivedController;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -14,18 +15,21 @@ public class MainServer extends Application {
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader main = new FXMLLoader(getClass().getResource("/fxmlS/Main.fxml"));
         FXMLLoader received = new FXMLLoader(getClass().getResource("fxmlS/Received.fxml"));
+        FXMLLoader preferences = new FXMLLoader(getClass().getResource("fxmlS/Preference.fxml"));
 
         Parent root = main.load();
-
         controllersS.ViewController vc = (controllersS.ViewController)main.getController();
 
-        vc.recentsParent = received.load();
-
+        vc.receivedParent = received.load();
         ReceivedController f = received.getController();
+        vc.receivedController = f;
 
-        vc.receivedController = received.getController();
+        vc.preferencesParent = preferences.load();
+        PreferencesController p = preferences.getController();
+        vc.preferencesController = p;
 
         f.setViewController(vc);
+        p.setViewController(vc);
 
         primaryStage.setTitle("VisID");
         primaryStage.setResizable(false);

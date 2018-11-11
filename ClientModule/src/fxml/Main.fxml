@@ -65,7 +65,7 @@
                   <Insets />
                </BorderPane.margin>
                <children>
-                  <ImageView fitHeight="615.0" fitWidth="893.0" layoutX="41.0" layoutY="4.0" nodeOrientation="INHERIT" opacity="0.13" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="40.91339111328125" AnchorPane.topAnchor="4.0">
+                  <ImageView fitHeight="642.0" fitWidth="809.0" layoutX="40.0" layoutY="3.0" nodeOrientation="INHERIT" opacity="0.13" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-23.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="3.0">
                      <image>
                         <Image url="@../image/BayerLeverkusen.png" />
                      </image>

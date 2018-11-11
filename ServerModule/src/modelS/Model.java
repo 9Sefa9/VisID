@@ -9,21 +9,14 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Locale;
-import java.util.function.Predicate;
 
 public class Model {
 
@@ -60,22 +53,22 @@ public class Model {
 
     public void receiveFormAction(ViewController viewController) {
 
-        fitSizeFromTo(viewController.contentPane,viewController.recentsParent);
+        fitSizeFromTo(viewController.contentPane,viewController.receivedParent);
 
         viewController.notificationText.setText(Text.receivedFormularsText);
 
-        viewController.contentPane.getChildren().setAll(viewController.recentsParent);
+        viewController.contentPane.getChildren().setAll(viewController.receivedParent);
 
     }
 
     public void settingsAction(ViewController viewController) {
-        //fitSizeFromTo(viewController.contentPane,viewController.recentsParent);
+        fitSizeFromTo(viewController.contentPane,viewController.receivedParent);
 
         viewController.notificationText.setText(Text.preferencesText);
     }
 
     public void updateProgramAction(ViewController viewController) {
-      //  fitSizeFromTo(viewController.contentPane,viewController.recentsParent);
+        fitSizeFromTo(viewController.contentPane,viewController.receivedParent);
 
         viewController.notificationText.setText(Text.notificationTextUpdate);
     }
@@ -104,7 +97,6 @@ public class Model {
               //  e.printStackTrace();
                 form.setVonDatum("");
             }
-
             try {
 
                 SimpleDateFormat input = new SimpleDateFormat("yyyy-MM-dd");
@@ -133,7 +125,6 @@ public class Model {
             form.setKreuz22((String)transmittedList.get(22));
 
             receivedTableView.getItems().add(form);
-
 
     }
     public void fitSizeFromTo(AnchorPane from, Parent to){

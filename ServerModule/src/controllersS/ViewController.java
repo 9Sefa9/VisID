@@ -11,8 +11,12 @@ import modelS.Model;
 
 public class ViewController {
 
-    public Parent recentsParent;
+    public Parent receivedParent;
+    public Parent preferencesParent;
+
     public ReceivedController receivedController;
+    public PreferencesController preferencesController;
+
     public Model model;
 
     @FXML public Label notificationText;
@@ -42,8 +46,10 @@ public class ViewController {
     public void updateProgram(){
         this.model.updateProgramAction(this);
     }
+
     @FXML
-    public void settings(){
+    public void preferences(){
         this.model.settingsAction(this);
     }
+
 }

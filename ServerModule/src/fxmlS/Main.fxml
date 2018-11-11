@@ -76,7 +76,7 @@
                      <children>
                         <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#receiveForm" prefHeight="61.0" prefWidth="274.0" stylesheets="@../cssS/Button.css" text="Empfangene Formulare" textAlignment="CENTER" textFill="#e9eeb8" />
                         <Button contentDisplay="CENTER" layoutX="20.0" layoutY="132.0" mnemonicParsing="false" onAction="#updateProgram" prefHeight="61.0" prefWidth="421.0" stylesheets="@../cssS/Button.css" text="Programm aktualisieren" textAlignment="CENTER" textFill="#e9eeb8" />
-                        <Button contentDisplay="CENTER" layoutX="20.0" layoutY="71.0" mnemonicParsing="false" onAction="#settings" prefHeight="61.0" prefWidth="421.0" stylesheets="@../cssS/Button.css" text="Einstellungen" textAlignment="CENTER" textFill="#e9eeb8" />
+                        <Button contentDisplay="CENTER" layoutX="20.0" layoutY="71.0" mnemonicParsing="false" onAction="#preferences" prefHeight="61.0" prefWidth="421.0" stylesheets="@../cssS/Button.css" text="Einstellungen" textAlignment="CENTER" textFill="#e9eeb8" />
                      </children>
                   </VBox>
                </children>
